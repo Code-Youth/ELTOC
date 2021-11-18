@@ -1,0 +1,56 @@
+#blue{
+    border: 30px solid blue;
+    background-color:blue;
+    height:5px;
+    width:200px;
+  }
+  
+  #red{
+    border: 30px solid red;
+    background-color:red;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
+  
+  #green{
+    border: 30px solid green;
+    background-color:green;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
+  
+  #pink{
+    border: 30px solid pink;
+    background-color:pink;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
+  
+  #orange{
+    border: 30px solid orange;
+    background-color:orange;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
+  
+  
+  #purple{
+    border: 30px solid purple;
+    background-color:purple;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
+  
+  
+  #yellow{
+    border: 30px solid yellow;
+    background-color:yellow;
+    height:5px;
+    width:200px;
+    margin-left:-50px;
+  }
