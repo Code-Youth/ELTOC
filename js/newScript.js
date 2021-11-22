@@ -19,12 +19,9 @@ function loadNumbers(){
     audio.setAttribute("id", "num " + i)
     audio.setAttribute("src","Audio/Numbers/" + i + ".m4a")
     var a = document.createElement("a")
-    console.log(audio)
     var eye = document.createElement("i")
     eye.setAttribute("class","fa fa-play-circle fa-2x")
     eye.setAttribute("onclick","playSoundNumbers('" + i + "')") 
-console.log(i)
-console.log(eye)
     numRow.appendChild(div)
     div.appendChild(number)
     div.appendChild(audio)
@@ -34,7 +31,5 @@ console.log(eye)
 }
 
 function playSoundNumbers(four){
-    console.log(four)
     document.getElementById("num " + four).play()
 }
-console.log(numRow)
