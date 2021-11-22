@@ -6,3 +6,35 @@ function playSound(letter){
     console.log(beta[wawa])
     var letId = document.getElementById(beta[wawa]).play()
 }
+
+var numRow = document.getElementById("numRow")
+function loadNumbers(){
+    for(var i = 1; i<101; i++){
+    var div = document.createElement("div")
+    div.setAttribute("class", "col-sm-2")
+    var number = document.createElement("p")
+    number.innerHTML = i
+    var audio = document.createElement("audio")
+    audio.setAttribute("preload","auto")
+    audio.setAttribute("id", "num " + i)
+    audio.setAttribute("src","Audio/Numbers/" + i + ".m4a")
+    var a = document.createElement("a")
+    console.log(audio)
+    var eye = document.createElement("i")
+    eye.setAttribute("class","fa fa-play-circle fa-2x")
+    eye.setAttribute("onclick","playSoundNumbers('" + i + "')") 
+console.log(i)
+console.log(eye)
+    numRow.appendChild(div)
+    div.appendChild(number)
+    div.appendChild(audio)
+    div.appendChild(a)
+    a.appendChild(eye)
+    }
+}
+
+function playSoundNumbers(four){
+    console.log(four)
+    document.getElementById("num " + four).play()
+}
+console.log(numRow)

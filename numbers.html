@@ -23,7 +23,7 @@
 	<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
-<body class="hidden-bar-wrapper">
+<body onload="loadNumbers()" class="hidden-bar-wrapper">
 
 	<div class="page-wrapper">
 
@@ -325,10 +325,11 @@
 						</h2>
 					</div>
 					<div class="container-fluid">
-						<div class="row">
+						<div id="numRow" class="row">
+							<!--
 							<div class="col-sm-2">
 								<p>0</p>
-								<a href=""><i class="fas fa-play-circle"></i></a>
+								<a href=""><i class="fa fa-play-circle fa-2x"></i></a>
 							</div>
 							<div class="col-sm-2">
 								<p>1</p>
@@ -571,6 +572,7 @@
 								<a href=""><i class="fas fa-play-circle"></i></a>
 							</div>
 							<div class="text">An intro to numbers</div>
+						-->
 						</div>
 					</div>
 		</section>
@@ -685,7 +687,7 @@
 	<script src="js/nav-tool.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/script.js"></script>
-
+<script src="js/newScript.js"></script>
 </body>
 
 </html>
