@@ -9,7 +9,7 @@ function playSound(letter){
 
 var numRow = document.getElementById("numRow")
 function loadNumbers(){
-    for(var i = 1; i<101; i++){
+    for(var i = 1; i<11; i++){
     var div = document.createElement("div")
     div.setAttribute("class", "col-sm-2")
     var number = document.createElement("p")
