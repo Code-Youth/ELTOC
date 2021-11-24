@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
 		rel="stylesheet">
-
+<link rel="stylesheet" href="css/NewStyles.css">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
@@ -211,10 +211,7 @@
 			<!-- Sticky Header  -->
 			<div class="sticky-header">
 				<div class="auto-container clearfix">
-					<!--Logo-->
-					<div class="logo pull-left">
-						<a href="index.html" title=""><img src="images/logo.png" alt="" title=""></a>
-					</div>
+
 					<!--Right Col-->
 					<div class="pull-right">
 						<!-- Main Menu -->
@@ -366,7 +363,100 @@
 
 
 
-		<!-- Carter: excersize 2 -->
+		<!-- Carter: quiz 1 (excersize 2) -->
+<div class="container">
+		<h3>Quiz</h3>
+		<button onclick="openQ1()" id="startoButton">Start</button>
+		<div id="question1">
+			<table style="margin-bottom:1em;">
+				<tr class="playButton">
+					<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
+				</tr>
+				</table>
+		<table class="border">
+			<tr>
+				<th onclick="checkAnswer(this)" class="answers" id="Monday">Monday</th> 	<!--Possible answers-->
+			</tr>
+			<tr>
+				<th onclick="checkAnswer(this)" class="answers" id="Wednesday">Wednesday</th>	<!--Possible answers-->
+			</tr>
+		</table>
+		<br>
+		<div style="width: 150px; text-align: center;" id="checks1">	<!--Checkmarks for visual confirmation-->
+			<i id="checks1One" class="fa fa-circle fa-2x"></i>
+			<i class="fa fa-circle fa-2x"></i>
+			<i class="fa fa-circle fa-2x"></i>
+			<!-- <i class="fa fa-times-circle"></i>
+		<i class="fa fa-check-circle"></i>-->
+		
+	</div>
+	</div>
+			<br>
+			<div class="border">
+			</div>
+			<br>
+			<div id="question2">
+				<table style="margin-bottom:1em;">
+					<tr class="playButton">
+						<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+					</tr>
+					</table>	
+				
+				<table class="border">
+					<tr>
+						<th onclick="checkAnswer2(this)" class="answers" id="Sunday">Sunday</th>
+					</tr>
+					<tr>
+						<th onclick="checkAnswer2(this)" class="answers" id="Wednesday">Wednesday</th>
+					</tr>
+					<tr>
+						<th onclick="checkAnswer2(this)" class="answers" id="Thursday">Thursday</th>
+					</tr>
+				</table>
+				<br>
+				<div style="width: 150px; text-align: center;" id="checks2">
+					<i id="checks11One" class="fa fa-circle fa-2x"></i>
+					<i id="checks22Two" class="fa fa-circle fa-2x"></i>
+					<i class="fa fa-circle fa-2x"></i>
+					<!-- <i class="fa fa-times-circle"></i>
+				<i class="fa fa-check-circle"></i>-->
+				
+			</div>
+				</div>
+				<br>
+				<div class="border">
+				</div>
+				<br>
+				<div id="question3">
+					<table style="margin-bottom:1em;">
+						<tr class="playButton">
+							<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+						</tr>
+					</table>
+					<table class="border">
+						<tr>
+							<th onclick="checkAnswer3(this)" class="answers" id="Saturday">Saturday</th>
+						</tr>
+						<tr>
+							<th onclick="checkAnswer3(this)" class="answers" id="Tuesday">Tuesday</th>
+						</tr>
+						<tr>
+							<th onclick="checkAnswer3(this)" class="answers" id="Friday">Friday</th>
+						</tr>
+						<tr>
+							<th onclick="checkAnswer3(this)" class="answers" id="Monday">Monday</th>
+						</tr>
+					</table>
+					<br>
+					<div style="width: 150px; text-align: center;" id="checks3">
+						<i id="checks111One" class="fa fa-circle fa-2x"></i>
+						<i id="checks222Two" class="fa fa-circle fa-2x"></i>
+						<i id="checks333Three" class="fa fa-circle fa-2x"></i>
+						<!-- <i class="fa fa-times-circle"></i>
+					<i class="fa fa-check-circle"></i>-->
+					
+				</div>
+	</div>
 
 		<!-- Error Section Alphabet -->
 		<section class="error-section">
@@ -451,26 +541,32 @@
 				</div>
 				<!--End pagewrapper-->
 
-				<!--Scroll to top-->
-				<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span>
-				</div>
 
-				<script src="js/jquery.js"></script>
-				<script src="js/popper.min.js"></script>
-				<script src="js/bootstrap.min.js"></script>
-				<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-				<script src="js/jquery.fancybox.js"></script>
-				<script src="js/appear.js"></script>
-				<script src="js/parallax.min.js"></script>
-				<script src="js/tilt.jquery.min.js"></script>
-				<script src="js/jquery.paroller.min.js"></script>
-				<script src="js/owl.js"></script>
-				<script src="js/wow.js"></script>
-				<script src="js/validate.js"></script>
-				<script src="js/nav-tool.js"></script>
-				<script src="js/jquery-ui.js"></script>
-				<script src="js/script.js"></script>
+					</div>
+		</footer>
 
+	</div>
+	<!--End pagewrapper-->
+
+	<!--Scroll to top-->
+	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/tilt.jquery.min.js"></script>
+	<script src="js/jquery.paroller.min.js"></script>
+	<script src="js/owl.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/nav-tool.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/newScript.js"></script>
 </body>
 
 </html>
