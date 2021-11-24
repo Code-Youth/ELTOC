@@ -6,7 +6,41 @@
     color: #0056B3;
 }
 
-table, th, td {
+#section1 table{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+}
+#section1 th{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+}
+
+#section1 td {
+    border:1px solid black;
+    font-size: large;
+    color: black;
+  }
+
+  #section1 th:hover{
+    background-color: rgb(19, 219, 19) !important;
+cursor:pointer
+  }
+
+#quiz table{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
+}
+#quiz th{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
+}
+#quiz td {
     border:1px solid black;
     font-size: large;
     color: black;
@@ -17,7 +51,7 @@ table, th, td {
       text-align: center;
       width: 150px
   }
-th:hover{
+#quiz th:hover{
       background-color: rgb(19, 219, 19) !important;
   }
 
@@ -46,4 +80,13 @@ th:hover{
 }
 .red{
     color: red
+}
+
+.fillInBlankCapital{
+    width: 15px;
+    text-align: center;
+}
+.fillInBlank{
+    text-align: center;
+    width: 12px
 }

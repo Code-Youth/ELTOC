@@ -131,3 +131,44 @@ function openQ3(){
     let Q3 = document.getElementById("question3")
     Q3.style.display = "block"
 }
+
+function daySound(sound){
+    let noise = document.getElementById(sound)
+    console.log(sound)
+    console.log(noise)
+    noise.play()
+}
+
+function jump(field, autoMove){
+    console.log(field.value)
+if (field.value.length >= field.maxLength){
+    document.getElementById(autoMove).focus()
+}
+}
+
+function s2Check(a,b,c){
+    let ans1 = document.getElementById(a)
+    let ans2 = document.getElementById(b)
+    if(c.value.length >= c.maxLength){
+    if(ans1.value !== "W"){
+        ans1.className = "fillInBlankCapital red"
+    }
+    else{
+        ans1.className = "fillInBlankCapital green"
+    }
+    if(ans2.value !== "e"){
+        ans2.className = "fillInBlank red"
+    }
+    else{
+        ans2.className = "fillInBlank green"
+    }
+    if (c.value !== "a"){
+        c.className = "fillInBlank red"
+    }
+    else{
+        c.className = ("fillInBlank green")
+    }
+  var s = document.getElementById("ans1")
+  s.style.display = "block"
+}
+}

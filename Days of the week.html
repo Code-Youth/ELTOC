@@ -316,7 +316,7 @@
 		</section>
 
 		<!-- Majid: Days of the week table and audio (exercise 1) -->
-
+<div id="section1" class="container">
 		<table>
 			<tr>
 				<th>Days of the week</th>
@@ -324,20 +324,26 @@
 			</tr>
 			<tr>
 				<td>Monday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="Mo" src="Audio/Days of the Week/Monday.mp3"></audio>
+
+				<th onclick="daySound('Mo')"" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 			<tr>
 				<td>Tuesday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="Tu" src="Audio/Days of the Week/Tuesday.mp3"></audio>
+
+				<th onclick="daySound('Tu')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 			<tr>
 				<td>Wednesday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="We" src="Audio/Days of the Week/Wednesday.mp3"></audio>
+
+				<th onclick="daySound('We')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 			<tr>
 				<td>Thursday</td>
-				<td> <audio preload="auto" id="Th" src="Audio/Days of the Week/Thursday.m4a"></audio>
-					<a><i onclick="playSound('Th')" class="fa fa-play-circle fa-3x"></i></a>
+				<audio preload="auto" id="Th" src="Audio/Days of the Week/Thursday.mp3"></audio>
+					<th onclick="daySound('Th')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 				</td>
 
 
@@ -345,32 +351,38 @@
 			</tr>
 			<tr>
 				<td>Friday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="Fr" src="Audio/Days of the Week/Friday.mp3"></audio>
+
+				<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 			<tr>
 				<td>Saturday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="Sa" src="Audio/Days of the Week/Saturday.mp3"></audio>
+
+				<th onclick="daySound('Sa')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 			<tr>
 				<td>Sunday</td>
-				<td><button onclick=''>Sound</button></td>
+				<audio preload="auto" id="Su" src="Audio/Days of the Week/Sunday.m4a"></audio>
+
+				<th onclick="daySound('Su')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 			</tr>
 
 		</table>
-
+</div>
 
 
 
 
 
 		<!-- Carter: quiz 1 (excersize 2) -->
-<div class="container">
+<div id="quiz" class="container">
 		<h3>Quiz</h3>
 		<button onclick="openQ1()" id="startoButton">Start</button>
 		<div id="question1">
 			<table style="margin-bottom:1em;">
 				<tr class="playButton">
-					<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
+					<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
 				</tr>
 				</table>
 		<table class="border">
@@ -398,7 +410,7 @@
 			<div id="question2">
 				<table style="margin-bottom:1em;">
 					<tr class="playButton">
-						<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+						<th onclick="daySound('Su')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 					</tr>
 					</table>	
 				
@@ -430,7 +442,7 @@
 				<div id="question3">
 					<table style="margin-bottom:1em;">
 						<tr class="playButton">
-							<th onclick="" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+							<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 						</tr>
 					</table>
 					<table class="border">
@@ -457,6 +469,15 @@
 					
 				</div>
 	</div>
+	</div>
+	<!--Carter Spelling? (section 3)-->
+<div class="container">
+	<form>
+		<h4>Fill in the blank</h4>
+		<input onkeyup="jump(this, 'j2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j1" name="fname"><span>edn</span><input onkeyup="jump(this,'j31')" id="j2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>sd</span><input onkeyup="s2Check('j1','j2',this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j31"><span>y</span>
+		<p style="display: none; margin-left: 1%;" id="ans1" class="green">Wednesday</p>
+	  </form>
+</div>
 
 		<!-- Error Section Alphabet -->
 		<section class="error-section">
