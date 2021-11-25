@@ -172,3 +172,21 @@ function s2Check(a,b,c){
   s.style.display = "block"
 }
 }
+
+
+// Function for section 4 quiz
+
+function answer1() {
+    let box = document.querySelector('#Tue_sec4')
+    box.style.backgroundColor = 'red';
+}
+
+function answer2() {
+    let box = document.querySelector('#Thu_sec4')
+    box.style.backgroundColor = 'red';
+}
+
+function answer4() {
+    let box = document.querySelector('#Fri_sec4')
+    box.style.backgroundColor = 'red';
+}
