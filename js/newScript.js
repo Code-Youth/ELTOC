@@ -115,7 +115,7 @@ function checkAnswer3(check){
 
     myFunction()
 }
-
+var borders = document.getElementsByClassName("divide")
 //functions to display questions as required//
 function openQ1(){
     let Q1 = document.getElementById("question1")
@@ -125,11 +125,13 @@ function openQ1(){
 function openQ2(){
     let Q2 = document.getElementById("question2")
     Q2.style.display = "block"
+    borders[0].style.display = "block"
 }
 
 function openQ3(){
     let Q3 = document.getElementById("question3")
     Q3.style.display = "block"
+    borders[1].style.display = "block"
 }
 
 function daySound(sound){
@@ -138,37 +140,45 @@ function daySound(sound){
     console.log(noise)
     noise.play()
 }
-
+var question = [0,"3","3","3"]
+var tut = {
+    One1: "W",
+    One2: "e",
+    One3: "a",
+    Two1: "a",
+    Two2: "r",
+    Two3: "y",
+    Thr1: "T",
+    Thr2: "e",
+    Thr3: "d",
+}
+var whatQuestion = 0
 function jump(field, autoMove){
-    console.log(field.value)
-if (field.value.length >= field.maxLength){
+    if (field.value.length >= field.maxLength){
+        var answerKey = field.id.slice(field.id.length-4)
+        whatQuestion = question[field.id.slice(field.id.length-5,field.id.length-4)]
+    if(field.id.slice(field.id.length-1) !== 1){
+        if(field.value !== tut[answerKey]){
+        field.className = "fillInBlank red ul"
+    }
+    else{
+        field.className = "fillInBlank green"
+    }
+}
+    if(field.id.slice(field.id.length-1) == 1){
+        if(field.value !== tut[answerKey]){
+            field.className = "fillInBlankCapital red ul"
+        }
+        else{
+            field.className = "fillInBlankCapital green"
+        }
+    }
+    
+    if(field.id.slice(field.id.length-1) !== question[field.id.slice(field.id.length-5, field.id.length-4)]){
     document.getElementById(autoMove).focus()
-}
-}
-
-function s2Check(a,b,c){
-    let ans1 = document.getElementById(a)
-    let ans2 = document.getElementById(b)
-    if(c.value.length >= c.maxLength){
-    if(ans1.value !== "W"){
-        ans1.className = "fillInBlankCapital red"
     }
     else{
-        ans1.className = "fillInBlankCapital green"
+        field.blur()
     }
-    if(ans2.value !== "e"){
-        ans2.className = "fillInBlank red"
-    }
-    else{
-        ans2.className = "fillInBlank green"
-    }
-    if (c.value !== "a"){
-        c.className = "fillInBlank red"
-    }
-    else{
-        c.className = ("fillInBlank green")
-    }
-  var s = document.getElementById("ans1")
-  s.style.display = "block"
 }
 }

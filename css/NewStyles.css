@@ -79,14 +79,20 @@ cursor:pointer
     color: yellowgreen
 }
 .red{
-    color: red
+    color: red;
+}
+.ul{
+    text-decoration: dotted underline;
 }
 
 .fillInBlankCapital{
-    width: 15px;
+    width: 16px;
     text-align: center;
 }
 .fillInBlank{
     text-align: center;
-    width: 12px
+    width: 14px
+}
+.divide{
+    display: none
 }
