@@ -498,6 +498,113 @@
 	</form>
 </div>
 
+<br>
+<div id="matchParent" class="container">
+	<table class="matchTable" style="float: left;">
+		<tr onclick="click1(this)" class="Mondas" id="match035">
+			<th>Monday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Tuesdas" id="match105">
+			<th>Tuesday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Wednesdas" id="match175">
+			<th>Wednesday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Thursdas" id="match245">
+			<th>Thursday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Fridas" id="match315">
+			<th>Friday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Saturdas" id="match385">
+			<th>Saturday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Sundas" id="match455">
+			<th>Sunday</th>
+		</tr>
+	</table>
+<canvas class="border" id="myCanvas" width="200" height="490" style="z-index: 1; position: relative; float: left;"></canvas>
+<table class="matchTable" style="float: left;">
+	<tr onclick="click1(this)" class="Saturdas" id="matchA035">
+		<th>Sat.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Thursdas" id="matchA105">
+		<th>Thu.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="Tuesdas" id="matchA175">
+		<th>Tue.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Sundas" id="matchA245">
+		<th>Sun.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="Mondas" id="matchA315">
+		<th>Mon.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Wednesdas" id="matchA385">
+		<th>Wed.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Fridas" id="matchA455">
+		<th>Fri.</th>
+	</tr>
+</table>
+<button onclick="resetLines()">Hello</button>
+</div>
+<script>
+var y1 = 0
+var y2 = 0
+var cc1 = []
+var cc2 = []
+function click1(dayClick){
+	console.log(dayClick.id.slice(dayClick.id.length-3))
+	console.log(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3))
+	if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A"){
+	y1=dayClick.id.slice(dayClick.id.length-3)
+	y1 = parseInt(y1)
+	cc1 = dayClick.className
+	dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+	}
+else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A"){
+	console.log("helo")
+	y2 = dayClick.id.slice(dayClick.id.length-3)
+	y2 = parseInt(y2)
+	cc2 = dayClick.className
+	dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+}
+console.log(cc1+ ":" +cc2)
+console.log(y1 + ":" + y2)
+if (y1 !== 0 && y2 !== 0){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//Change color here//
+if (cc1 !== cc2){
+ctx.strokeStyle = "rgb(255,0,0)"
+}
+else{
+ctx.strokeStyle = "rgb(0,255,0)"
+}
+ctx.beginPath();
+ctx.moveTo(0, y1);
+ctx.lineTo(200, y2);
+ctx.stroke();
+y1 = 0
+y2 = 0
+}
+}
+function resetLines(){
+	var par = document.getElementById("matchParent".tr)
+	console.log(par)
+	var canva = document.getElementById("myCanvas")
+	const context = canva.getContext('2d');
+context.clearRect(0, 0, canva.width, canva.height);
+// reset class of the buttons//
+
+}
+</script>
+<div style="height: 500px;">
+
+</div>
 		<!-- Error Section Alphabet -->
 		<section class="error-section">
 			<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>

@@ -182,3 +182,4 @@ function jump(field, autoMove){
     }
 }
 }
+
