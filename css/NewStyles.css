@@ -65,6 +65,11 @@
   cursor: pointer;
 }
 #quiz td {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+}
 
 /* Change the background color of answers */
 .backRed {
@@ -75,79 +80,78 @@
   background-color: yellowgreen;
 }
 
-    border:1px solid black;
-    font-size: large;
-    color: black;
-    cursor: pointer;
-  }
-
-  th{
-      text-align: center;
-      width: 150px
-  }
-#quiz th:hover{
-      background-color: rgb(19, 219, 19) !important;
-  }
-
-  .correct{
-      background-color: greenyellow;
-  }
-
-  .incorrect{
-      background-color: red;
-  }
-
-  #question1{display: none}
-  #question2{display: none}
-  #question3{display: none}
-
-  #startoButton{
-    width: 100px;
-    font-size: 150%;
+th {
+  text-align: center;
+  width: 150px;
+}
+#quiz th:hover {
+  background-color: rgb(19, 219, 19) !important;
 }
 
-    #startoButton:hover{
-        background-color: rgb(206, 255, 133);
-    }
-.green{
-    color: yellowgreen
-}
-.red{
-    color: red;
-}
-.ul{
-    text-decoration: dotted underline;
+.correct {
+  background-color: greenyellow;
 }
 
-.fillInBlankCapital{
-    width: 16px;
-    text-align: center;
-}
-.fillInBlank{
-    text-align: center;
-    width: 14px
-}
-.divide{
-    display: none
+.incorrect {
+  background-color: red;
 }
 
-.matchTable{
-    border:1px solid black;
-    font-size: large;
-    color: black;
-    cursor: pointer;
+#question1 {
+  display: none;
+}
+#question2 {
+  display: none;
+}
+#question3 {
+  display: none;
 }
 
-
-.matchTable tr{
-    border:1px solid black;
-    font-size: large;
-    color: black;
-    cursor: pointer;
-    height: 70px;
+#startoButton {
+  width: 100px;
+  font-size: 150%;
 }
-.disable{
-    background-color: rgb(179, 179, 179);
-    color: ghostwhite;
-    cursor: not-allowed;
+
+#startoButton:hover {
+  background-color: rgb(206, 255, 133);
+}
+.green {
+  color: yellowgreen;
+}
+.red {
+  color: red;
+}
+.ul {
+  text-decoration: dotted underline;
+}
+
+.fillInBlankCapital {
+  width: 16px;
+  text-align: center;
+}
+.fillInBlank {
+  text-align: center;
+  width: 14px;
+}
+.divide {
+  display: none;
+}
+
+.matchTable {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+}
+
+.matchTable tr {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+  height: 70px;
+}
+.disable {
+  background-color: rgb(179, 179, 179);
+  color: ghostwhite;
+  cursor: not-allowed;
 }
