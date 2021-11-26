@@ -1,80 +1,46 @@
-.fa-play-circle {
-  color: #43b97e;
+.fa-play-circle{
+    color: #43B97E;
 }
 
-.fa-play-circle:hover {
-  color: #0056b3;
+.fa-play-circle:hover{
+    color: #0056B3;
 }
 
-/* Styling for the table in exercise 1 */
-#section1 table {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
+#section1 table{
+    border:1px solid black;
+    font-size: large;
+    color: black;
 }
-#section1 th {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
+#section1 th{
+    border:1px solid black;
+    font-size: large;
+    color: black;
 }
 
 #section1 td {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
-}
+    border:1px solid black;
+    font-size: large;
+    color: black;
+  }
 
-#section1 th:hover {
-  background-color: rgb(19, 219, 19) !important;
-  cursor: pointer;
-}
+  #section1 th:hover{
+    background-color: rgb(19, 219, 19) !important;
+cursor:pointer
+  }
 
-/* Styling for the table in exercise 4 */
-#section4 table {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
+#quiz table{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
 }
-#section4 th {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
-}
-
-#section4 td {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
-}
-
-#section4 th:hover {
-  background-color: rgb(19, 219, 19) !important;
-  cursor: pointer; /* changes the cursos when you hover over it*/
-}
-
-#quiz table {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
-  cursor: pointer;
-}
-#quiz th {
-  border: 1px solid black;
-  font-size: large;
-  color: black;
-  cursor: pointer;
+#quiz th{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
 }
 #quiz td {
-
-/* Change the background color of answers */
-.backRed {
-  background-color: red;
-}
-
-.backGreen {
-  background-color: yellowgreen;
-}
-
     border:1px solid black;
     font-size: large;
     color: black;
