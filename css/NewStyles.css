@@ -96,3 +96,24 @@ cursor:pointer
 .divide{
     display: none
 }
+
+.matchTable{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
+}
+
+
+.matchTable tr{
+    border:1px solid black;
+    font-size: large;
+    color: black;
+    cursor: pointer;
+    height: 70px;
+}
+.disable{
+    background-color: rgb(179, 179, 179);
+    color: ghostwhite;
+    cursor: not-allowed;
+}
