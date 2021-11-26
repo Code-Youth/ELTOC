@@ -519,23 +519,26 @@
 					<div id='section4' class='container'>
 						<h3>Match the Sound</h3>
 						<table>
+							<!-- First Row of audio and answers -->
 							<tr>
 								<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-								<th onclick='answer1()' id='Tue_sec4'>Tuesday</th>
-								<th onclick='answer2()' id='Thu_sec4'>Thursday</th>
+								<th onclick='answer1(this)' id='Tue_sec4'>Tuesday</th>
+								<th onclick='answer1(this)' id='Thu_sec4'>Thursday</th>
 								<th>Monday</th>
-								<th onclick='answer4()' id='Fri_sec4'>Friday</th>
+								<th onclick='answer1(this)' id='Fri_sec4'>Friday</th>
 							</tr>
-
+							<!-- Second row of audio and answers -->
 							<tr>
 								<th onclick="daySound('Sa')" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-								<th>Sunday</th>
-								<th>Saturday</th>
-								<th>Tuesday</th>
-								<th>Monday</th>
+								<th onclick='answer2(this)' class='wrong4' id='i1'>Sunday</th>
+								<th onclick='answer2(this)' class='wrong4'>Saturday</th>
+								<th onclick='answer2(this)' class='right4'>Tuesday</th>
+								<th onclick='answer2(this)' class='wrong4'>Monday</th>
 							</tr>
+
+
 							<tr>
 								<th onclick="daySound('We')" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
@@ -554,6 +557,17 @@
 								<th>Sunday</th>
 							</tr>
 						</table>
+						<!-- Check mark and x's to check final score -->
+						<i class="fa fa-circle fa-3x icon4_1"></i>
+						<i class="fa fa-circle fa-3x icon4_2"></i>
+						<i class="fa fa-circle fa-3x icon4_3"></i>
+						<i class="fa fa-circle fa-3x icon4_4"></i>
+						<!-- <i class="fa fa-times-circle fa-3x"></i> -->
+						<!-- Was having a lot of trouble with the icons, turns out you just need to remove
+						the 's' at the end of the first 'fa' because this code is using font-awe ver 4 
+						and the 's' is probably only added on ver 5 -->
+
+
 
 					</div>
 

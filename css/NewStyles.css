@@ -112,6 +112,15 @@ th {
   color: red;
 }
 
+/* Change the background color of answers */
+.backRed {
+  background-color: red;
+}
+
+.backGreen {
+  background-color: yellowgreen;
+}
+
 .fillInBlankCapital {
   width: 15px;
   text-align: center;
