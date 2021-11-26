@@ -46,6 +46,33 @@ cursor:pointer
     color: black;
     cursor: pointer;
   }
+  .backRed {
+    background-color: red;
+  }
+  .backGreen {
+    background-color: yellowgreen;
+  }
+
+  #section1 th:hover {
+    background-color: rgb(19, 219, 19) !important;
+    cursor: pointer;
+  }
+  /* Styling for the table in exercise 4 */
+  #section4 table {
+    border: 1px solid black;
+    font-size: large;
+    color: black;
+  }
+  #section4 th {
+    border: 1px solid black;
+    font-size: large;
+    color: black;
+  }
+  #section4 td {
+    border: 1px solid black;
+    font-size: large;
+    color: black;
+  }
 
   th{
       text-align: center;
