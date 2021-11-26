@@ -501,53 +501,52 @@
 <br>
 <div id="matchParent" class="container">
 	<table class="matchTable" style="float: left;">
-		<tr onclick="click1(this)" class="Mondas" id="match035">
+		<tr onclick="click1(this)" class="Mondas" id="match025">
 			<th>Monday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Tuesdas" id="match105">
+		<tr onclick="click1(this)" class="Tuesdas" id="match075">
 			<th>Tuesday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Wednesdas" id="match175">
+		<tr onclick="click1(this)" class="Wednesdas" id="match125">
 			<th>Wednesday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Thursdas" id="match245">
+		<tr onclick="click1(this)" class="Thursdas" id="match175">
 			<th>Thursday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Fridas" id="match315">
+		<tr onclick="click1(this)" class="Fridas" id="match225">
 			<th>Friday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Saturdas" id="match385">
+		<tr onclick="click1(this)" class="Saturdas" id="match275">
 			<th>Saturday</th>
 		</tr>
-		<tr onclick="click1(this)" class="Sundas" id="match455">
+		<tr onclick="click1(this)" class="Sundas" id="match325">
 			<th>Sunday</th>
 		</tr>
 	</table>
-<canvas class="border" id="myCanvas" width="200" height="490" style="z-index: 1; position: relative; float: left;"></canvas>
+<canvas class="border" id="myCanvas" width="189" height="350" style="z-index: 1; position: relative; float: left;"></canvas>
 <table class="matchTable" style="float: left;">
-	<tr onclick="click1(this)" class="Saturdas" id="matchA035">
+	<tr onclick="click1(this)" class="Saturdas" id="matchA025">
 		<th>Sat.</th>
 	</tr>
-	<tr onclick="click1(this)" class="Thursdas" id="matchA105">
+	<tr onclick="click1(this)" class="Thursdas" id="matchA075">
 		<th>Thu.</th>
 	</tr>
-	<tr  onclick="click1(this)" class="Tuesdas" id="matchA175">
+	<tr  onclick="click1(this)" class="Tuesdas" id="matchA125">
 		<th>Tue.</th>
 	</tr>
-	<tr onclick="click1(this)" class="Sundas" id="matchA245">
+	<tr onclick="click1(this)" class="Sundas" id="matchA175">
 		<th>Sun.</th>
 	</tr>
-	<tr  onclick="click1(this)" class="Mondas" id="matchA315">
+	<tr  onclick="click1(this)" class="Mondas" id="matchA225">
 		<th>Mon.</th>
 	</tr>
-	<tr onclick="click1(this)" class="Wednesdas" id="matchA385">
+	<tr onclick="click1(this)" class="Wednesdas" id="matchA275">
 		<th>Wed.</th>
 	</tr>
-	<tr onclick="click1(this)" class="Fridas" id="matchA455">
+	<tr onclick="click1(this)" class="Fridas" id="matchA325">
 		<th>Fri.</th>
 	</tr>
 </table>
-<button onclick="resetLines()">Hello</button>
 </div>
 <script>
 var y1 = 0
@@ -592,15 +591,20 @@ y1 = 0
 y2 = 0
 }
 }
-function resetLines(){
-	var par = document.getElementById("matchParent".tr)
-	console.log(par)
-	var canva = document.getElementById("myCanvas")
-	const context = canva.getContext('2d');
-context.clearRect(0, 0, canva.width, canva.height);
-// reset class of the buttons//
+// function resetLines(){
+// 	var par = document.getElementsByClassName("disable")
+// 	console.log(par)
 
-}
+// 	for(let quick = 0; quick<14; quick++){
+// 		console.log(par[quick] + " : " + helpdays[quick] + " : " +quick)
+// 		par[quick].className=par[quick].id
+// 	}
+// 	console.log(par)
+// 	var canva = document.getElementById("myCanvas")
+// 	const context = canva.getContext('2d');
+// context.clearRect(0, 0, canva.width, canva.height);
+//}
+// reset class of the buttons//
 </script>
 <div style="height: 500px;">
 
