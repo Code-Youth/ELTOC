@@ -182,4 +182,35 @@ function jump(field, autoMove){
     }
 }
 }
-
+// Function for section 4 quiz
+function answer1(box) {
+    box.style.backgroundColor = 'red';
+}
+// function answer2(item) {
+//     if (item.className='wrong4') {
+//     item.className='red';
+//     }
+//     else if (item.class='right') {
+//     item.className='green')
+//     }
+//     else {
+//         return false 
+//     }
+// }
+// The fa icons at the bottom of the sec 4 table
+let icon1 = document.querySelector('.icon4_1')
+console.log(icon1)
+let icon2 = document.querySelector('.icon4_2')
+function answer2(item) {
+    if (item.className === 'wrong4') {  //If the answer if wrong,
+        item.className='backRed';  // background turns red
+        icon1.className = 'fa fa-times-circle fa-3x red'
+        console.log(icons.className)
+    }
+    else if (item.className ==='right4') { //If the answer is right,
+        item.className='backGreen' //  background turn green
+        console.log(item.className)
+        console.log(icons.className)
+    };
+    // if (item.) {                        //Seeing if multiple if statements work
+    }
