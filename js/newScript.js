@@ -183,3 +183,59 @@ function jump(field, autoMove){
 }
 }
 
+var y1 = 0
+var y2 = 0
+var cc1 = []
+var cc2 = []
+function click1(dayClick){
+	console.log(dayClick.id.slice(dayClick.id.length-3))
+	console.log(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3))
+	if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A"){
+	y1=dayClick.id.slice(dayClick.id.length-3)
+	y1 = parseInt(y1)
+	cc1 = dayClick.className
+	dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+	}
+else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A"){
+	console.log("helo")
+	y2 = dayClick.id.slice(dayClick.id.length-3)
+	y2 = parseInt(y2)
+	cc2 = dayClick.className
+	dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+}
+console.log(cc1+ ":" +cc2)
+console.log(y1 + ":" + y2)
+if (y1 !== 0 && y2 !== 0){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//Change color here//
+if (cc1 !== cc2){
+ctx.strokeStyle = "rgb(255,0,0)"
+}
+else{
+ctx.strokeStyle = "rgb(0,255,0)"
+}
+ctx.beginPath();
+ctx.moveTo(0, y1);
+ctx.lineTo(200, y2);
+ctx.stroke();
+y1 = 0
+y2 = 0
+}
+}
+// function resetLines(){
+// 	var par = document.getElementsByClassName("disable")
+// 	console.log(par)
+
+// 	for(let quick = 0; quick<14; quick++){
+// 		console.log(par[quick] + " : " + helpdays[quick] + " : " +quick)
+// 		par[quick].className=par[quick].id
+// 	}
+// 	console.log(par)
+// 	var canva = document.getElementById("myCanvas")
+// 	const context = canva.getContext('2d');
+// context.clearRect(0, 0, canva.width, canva.height);
+//}
+// reset class of the buttons//
