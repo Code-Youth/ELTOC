@@ -646,6 +646,31 @@
 function allowDrop(ev) {
   ev.preventDefault();
 }
+var checkStore = 0
+function autostuff(){
+	console.log("running")
+	for(let bigI = 0; bigI <2; bigI++){
+	for(let i = 0; i<50; i++){
+var rng = Math.random()*10
+rng = Math.floor(rng)
+if(rng > 7 || rng == 0 || rng == checkStore){
+	i-1
+}
+else{
+	i = 500
+}
+console.log(rng)
+}
+let appendThis = document.getElementById("drag" + rng)
+let appendHere = document.getElementById("div" + rng)
+document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
+document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
+document.getElementById("div" + rng).className = "dropsCorrect"
+checkStore = rng
+rng = 0
+}
+}
+autostuff()
 
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
