@@ -666,6 +666,10 @@ let appendHere = document.getElementById("div" + rng)
 document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
 document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
 document.getElementById("div" + rng).className = "dropsCorrect"
+document.getElementById("drag" + rng).removeAttribute("ondragstart")
+document.getElementById("drag" + rng).removeAttribute("draggable")
+
+
 checkStore = rng
 rng = 0
 }
@@ -684,9 +688,10 @@ function drag(ev) {
 		  ev.target.parentElement.style.border = "2px solid black"
 	  }
 	}
-	if(ev.target.parentElement.className == "dragDiv"){
+	if(ev.target.parentElement.className == "dragDiv" || ev.target.parentElement.className.slice(0, ev.target.parentElement.className.length-1) == "dragDiv drag"){
 		ev.target.parentElement.className = "dragDiv " + ev.target.id
 		ev.target.parentElement.id = "dragDropDistance" + ev.target.id.slice(ev.target.length-1)
+		console.log(document.getElementsByClassName("drag1"))
 	}
 }
 
@@ -705,6 +710,7 @@ function drop(ev) {
 	ev.target.firstChild.draggable = "false"
 	console.log(ev.target.firstChild.id)
 	document.getElementsByClassName("dragDiv " + ev.target.firstChild.id)[0].style.visibility = "hidden"
+	console.log(document.getElementsByClassName("dragDiv").length)
 	if(document.getElementsByClassName("dropsCorrect").length == 7){
 		let confirm = document.createElement("p")
 		confirm.setAttribute("id","confirmMessage")
@@ -712,7 +718,7 @@ function drop(ev) {
 		document.getElementById("dragAndDropContainer").appendChild(confirm)
 		for(let k = 1; k<8; k++){
 			console.log(document.getElementsByClassName("dragDiv drag" + k)[0])
-			document.getElementsByClassName("dragDiv drag" + k)[0].style.display = "none"
+			document.getElementsByClassName("dragDiv")[0].style.display = "none"
 		}
 	}
 	}
