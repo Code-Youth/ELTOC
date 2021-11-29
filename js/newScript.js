@@ -182,7 +182,7 @@ function jump(field, autoMove){
     }
 }
 }
-
+//Carter match (section 7)//
 var y1 = 0
 var y2 = 0
 var cc1 = []
@@ -239,3 +239,88 @@ y2 = 0
 // context.clearRect(0, 0, canva.width, canva.height);
 //}
 // reset class of the buttons//
+
+
+//Carter drag and drop (section 5)//
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  var checkStore = 0
+  function autostuff(){
+      console.log("running")
+      for(let bigI = 0; bigI <2; bigI++){
+      for(let i = 0; i<50; i++){
+  var rng = Math.random()*10
+  rng = Math.floor(rng)
+  if(rng > 7 || rng == 0 || rng == checkStore){
+      i-1
+  }
+  else{
+      i = 500
+  }
+  console.log(rng)
+  }
+  let appendThis = document.getElementById("drag" + rng)
+  let appendHere = document.getElementById("div" + rng)
+  document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
+  document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
+  document.getElementById("div" + rng).className = "dropsCorrect"
+  document.getElementById("drag" + rng).removeAttribute("ondragstart")
+  document.getElementById("drag" + rng).removeAttribute("draggable")
+  
+  
+  checkStore = rng
+  rng = 0
+  }
+  }
+  autostuff()
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    console.log(ev.target.parentElement.className)
+    console.log(ev.target.parentElement.hasAttribute("ondrop"))
+    if((ev.target.parentElement.className == "drops" || ev.target.parentElement.className == "dragDiv") && ev.target.parentElement.hasAttribute("ondrop") == false){
+        ev.target.parentElement.setAttribute("ondrop","drop(event)")
+        ev.target.parentElement.style.border = "1px solid #aaaaaa"
+        if(ev.target.parentElement.hasAttribute("ondragover") == false){
+            ev.target.parentElement.setAttribute("ondragover","allowDrop(event)")
+            ev.target.parentElement.style.border = "2px solid black"
+        }
+      }
+      if(ev.target.parentElement.className == "dragDiv" || ev.target.parentElement.className.slice(0, ev.target.parentElement.className.length-1) == "dragDiv drag"){
+          ev.target.parentElement.className = "dragDiv " + ev.target.id
+          ev.target.parentElement.id = "dragDropDistance" + ev.target.id.slice(ev.target.length-1)
+          console.log(document.getElementsByClassName("drag1"))
+      }
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    console.log(ev.target.firstChild)
+    if(ev.target.id.slice(ev.target.id.length-1) !== ev.target.firstChild.id.slice(ev.target.firstChild.id.length-1)){
+        ev.target.style.border = "2px solid red"
+    }
+    else{
+        ev.target.style.border = "2px solid greenyellow"
+        ev.target.className = "dropsCorrect"
+         ev.target.firstChild.removeAttribute("ondragstart")
+      ev.target.firstChild.draggable = "false"
+      console.log(ev.target.firstChild.id)
+      document.getElementsByClassName("dragDiv " + ev.target.firstChild.id)[0].style.visibility = "hidden"
+      console.log(document.getElementsByClassName("dragDiv").length)
+      if(document.getElementsByClassName("dropsCorrect").length == 7){
+          let confirm = document.createElement("p")
+          confirm.setAttribute("id","confirmMessage")
+          confirm.innerHTML = "Correct!"
+          document.getElementById("dragAndDropContainer").appendChild(confirm)
+          for(let k = 1; k<8; k++){
+              console.log(document.getElementsByClassName("dragDiv drag" + k)[0])
+              document.getElementsByClassName("dragDiv")[0].style.display = "none"
+          }
+      }
+      }
+    ev.target.removeAttribute("ondrop")
+  }
+  
