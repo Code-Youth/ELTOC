@@ -33,106 +33,6 @@ function loadNumbers(){
 function playSoundNumbers(four){
     document.getElementById("num " + four).play()
 }
-var c1 = document.getElementById("checks1")
-var c2 = document.getElementById("checks2")
-var c3 = document.getElementById("checks3")
- // Declaring the checkmark/X //
-var c1One = document.getElementById("checks1One")
-var c11One = document.getElementById("checks11One")
-var c111One = document.getElementById("checks111One")
-var c22Two = document.getElementById("checks22Two")
-var c222Two = document.getElementById("checks222Two")
-var c333Three = document.getElementById("checks333Three")
-function checkAnswer(check){           //Checks answer
-    let theAnswer = document.getElementById("February")
-    let wrong = document.getElementById("July")
-    console.log(check.id)
-    if(check.id == "February"){    //Checks to see if button clicked is "Wednesday"
-    check.className = "correct"    //Makes correct answer green
-    c1One.className = "fa fa-check-circle fa-2x green"
-    c11One.className = "fa fa-check-circle fa-2x green"
-    c111One.className = "fa fa-check-circle fa-2x green"
-}
-    else{   //If button clicked is not correct, mark answer green, and clicked button red
-        check.className = "incorrect"
-        theAnswer.className = "correct"
-        c1One.className= "fa fa-times-circle fa-2x red"
-        c11One.className= "fa fa-times-circle fa-2x red"
-        c111One.className= "fa fa-times-circle fa-2x red"
-    }
-    console.log(check)
-    theAnswer.removeAttribute("onclick") //makes all buttons unclickable
-    wrong.removeAttribute("onclick")
-    console.log(check)
-    c1.style.display = "none"
-    openQ2()
-}
-
-//same as last function but with more buttons//
-function checkAnswer2(check){
-    let theAnswer = document.getElementById("September")
-    let wrong = document.getElementById("January")
-    let wrong2 = document.getElementById("December")
-    console.log(check.id)
-    if(check.id == "September"){
-    check.className = "correct"
-    c22Two.className = "fa fa-check-circle fa-2x green"
-    c222Two.className = "fa fa-check-circle fa-2x green"  
-  
-}
-    else{
-        check.className = "incorrect"
-        theAnswer.className = "correct"
-        c22Two.className = "fa fa-times-circle fa-2x red"
-        c222Two.className = "fa fa-times-circle fa-2x red"
-    }
-    c2.style.display = "none"
-    openQ3()
-    theAnswer.removeAttribute("onclick")
-    wrong.removeAttribute("onclick")
-    wrong2.removeAttribute("onclick")  
-}
-
-function checkAnswer3(check){
-    let theAnswer = document.getElementById("August")
-    let wrong = document.getElementById("June")
-    let wrong2 = document.getElementById("April")
-    let wrong3 = document.getElementById("May")
-    console.log(check.id)
-    if(check.id !== "August"){
-    check.className = "incorrect"
-    theAnswer.className = "correct"
-    c333Three.className = "fa fa-times-circle fa-2x red"
-    }
-    else{
-        check.className = "correct"
-        c333Three.className="fa fa-check-circle fa-2x green"
-    }
-    theAnswer.removeAttribute("onclick")
-    wrong.removeAttribute("onclick")
-    wrong2.removeAttribute("onclick")
-    wrong3.removeAttribute("onclick")
-
-    myFunction()
-}
-var borders = document.getElementsByClassName("divide")
-//functions to display questions as required//
-function openQ1(){
-    let Q1 = document.getElementById("question1")
-    Q1.style.display = "block"
-}
-
-function openQ2(){
-    let Q2 = document.getElementById("question2")
-    Q2.style.display = "block"
-    borders[0].style.display = "block"
-}
-
-function openQ3(){
-    let Q3 = document.getElementById("question3")
-    Q3.style.display = "block"
-    borders[1].style.display = "block"
-}
 
 function daySound(sound){
     let noise = document.getElementById(sound)
@@ -196,17 +96,22 @@ var y1 = 0
 var y2 = 0
 var cc1 = []
 var cc2 = []
+//Function runs onclick//
 function click1(dayClick){
 	console.log(dayClick.id.slice(dayClick.id.length-3))
 	console.log(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3))
-	if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A"){
-	y1=dayClick.id.slice(dayClick.id.length-3)
+	//if button clicked does not have A in the id, the button is from the first column//
+    if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A" && y1==0){
+	//sets y1 to the three numbers at the end of dayclick id (ex: 175)//
+        y1=dayClick.id.slice(dayClick.id.length-3)
 	y1 = parseInt(y1)
 	cc1 = dayClick.className
-	dayClick.removeAttribute("onclick")
+	//removing clickability from buttons//
+    dayClick.removeAttribute("onclick")
 	dayClick.className = "disable"
 	}
-else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A"){
+    //Same as above but if button clicked is from column 2//
+else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A" && y2==0){
 	console.log("helo")
 	y2 = dayClick.id.slice(dayClick.id.length-3)
 	y2 = parseInt(y2)
@@ -226,10 +131,12 @@ ctx.strokeStyle = "rgb(255,0,0)"
 else{
 ctx.strokeStyle = "rgb(0,255,0)"
 }
+//Drawing line from (x,y) to (x,y)//
 ctx.beginPath();
 ctx.moveTo(0, y1);
-ctx.lineTo(200, y2);
+ctx.lineTo(189, y2);
 ctx.stroke();
+//Reset y1 and y2//
 y1 = 0
 y2 = 0
 }
@@ -251,15 +158,19 @@ y2 = 0
 
 
 //Carter drag and drop (section 5)//
+//Stops default browser behaviour//
 function allowDrop(ev) {
     ev.preventDefault();
   }
   var checkStore = 0
   var autoNums = 0
   autoId = []
+  //Randomizes which days are auto completed on page load//
   function autostuff(){
       console.log("running")
+      //bigI runs for 2 iterations because 2 days are auto completed//
       for(let bigI = 0; bigI <2; bigI++){
+          //i is set to run until rng is less than 7//
       for(let i = 0; i<50; i++){
   var rng = Math.random()*10
   rng = Math.floor(rng)
@@ -271,7 +182,7 @@ function allowDrop(ev) {
   }
   console.log(rng)
   }
-
+//Appending the randomized days and modifying the empty divs they leave behind//
   document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
   document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
   autoId.push("drag" + rng)
@@ -321,7 +232,6 @@ autoNums += rng
          ev.target.firstChild.removeAttribute("ondragstart")
       ev.target.firstChild.draggable = "false"
       console.log(ev.target.firstChild.id)
-      document.getElementsByClassName("dragDiv " + ev.target.firstChild.id)[0].style.visibility = "hidden"
       console.log(document.getElementsByClassName("dragDiv").length)
       correctAgain += 1
     console.log(correctAgain)
