@@ -44,10 +44,10 @@ var c22Two = document.getElementById("checks22Two")
 var c222Two = document.getElementById("checks222Two")
 var c333Three = document.getElementById("checks333Three")
 function checkAnswer(check){           //Checks answer
-    let theAnswer = document.getElementById("Wednesday")
-    let wrong = document.getElementById("Monday")
+    let theAnswer = document.getElementById("February")
+    let wrong = document.getElementById("July")
     console.log(check.id)
-    if(check.id == "Wednesday"){    //Checks to see if button clicked is "Wednesday"
+    if(check.id == "February"){    //Checks to see if button clicked is "Wednesday"
     check.className = "correct"    //Makes correct answer green
     c1One.className = "fa fa-check-circle fa-2x green"
     c11One.className = "fa fa-check-circle fa-2x green"
@@ -70,11 +70,11 @@ function checkAnswer(check){           //Checks answer
 
 //same as last function but with more buttons//
 function checkAnswer2(check){
-    let theAnswer = document.getElementById("Sunday")
-    let wrong = document.getElementById("Thursday")
-    let wrong2 = document.getElementById("Wednesday")
+    let theAnswer = document.getElementById("September")
+    let wrong = document.getElementById("January")
+    let wrong2 = document.getElementById("December")
     console.log(check.id)
-    if(check.id == "Sunday"){
+    if(check.id == "September"){
     check.className = "correct"
     c22Two.className = "fa fa-check-circle fa-2x green"
     c222Two.className = "fa fa-check-circle fa-2x green"  
@@ -94,12 +94,12 @@ function checkAnswer2(check){
 }
 
 function checkAnswer3(check){
-    let theAnswer = document.getElementById("Friday")
-    let wrong = document.getElementById("Tuesday")
-    let wrong2 = document.getElementById("Monday")
-    let wrong3 = document.getElementById("Saturday")
+    let theAnswer = document.getElementById("August")
+    let wrong = document.getElementById("June")
+    let wrong2 = document.getElementById("April")
+    let wrong3 = document.getElementById("May")
     console.log(check.id)
-    if(check.id !== "Friday"){
+    if(check.id !== "August"){
     check.className = "incorrect"
     theAnswer.className = "correct"
     c333Three.className = "fa fa-times-circle fa-2x red"
@@ -140,7 +140,7 @@ function daySound(sound){
     console.log(noise)
     noise.play()
 }
-var question = [0,"3","3","3"]
+var question = [0,"3","3","3","3"]
 var tut = {
     One1: "W",
     One2: "e",
@@ -151,6 +151,15 @@ var tut = {
     Thr1: "T",
     Thr2: "e",
     Thr3: "d",
+    For1: "c",
+    For2: "b",
+    For3: "r",
+    Fiv1: "A",
+    Fiv2: "u",
+    Fiv3: "t",
+    Six1: "a",
+    Six2: "c",
+    Six3: "h"
 }
 var whatQuestion = 0
 function jump(field, autoMove){
@@ -246,6 +255,8 @@ function allowDrop(ev) {
     ev.preventDefault();
   }
   var checkStore = 0
+  var autoNums = 0
+  autoId = []
   function autostuff(){
       console.log("running")
       for(let bigI = 0; bigI <2; bigI++){
@@ -260,21 +271,22 @@ function allowDrop(ev) {
   }
   console.log(rng)
   }
-  let appendThis = document.getElementById("drag" + rng)
-  let appendHere = document.getElementById("div" + rng)
+
   document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
+  document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
+  autoId.push("drag" + rng)
   document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
   document.getElementById("div" + rng).className = "dropsCorrect"
   document.getElementById("drag" + rng).removeAttribute("ondragstart")
   document.getElementById("drag" + rng).removeAttribute("draggable")
   
-  
+autoNums += rng
   checkStore = rng
   rng = 0
   }
   }
   autostuff()
-  
+  autoNums -= checkStore
   function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
     console.log(ev.target.parentElement.className)
@@ -293,7 +305,8 @@ function allowDrop(ev) {
           console.log(document.getElementsByClassName("drag1"))
       }
   }
-  
+  var correctAgain = 2
+  var correctId = []
   function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -310,15 +323,23 @@ function allowDrop(ev) {
       console.log(ev.target.firstChild.id)
       document.getElementsByClassName("dragDiv " + ev.target.firstChild.id)[0].style.visibility = "hidden"
       console.log(document.getElementsByClassName("dragDiv").length)
-      if(document.getElementsByClassName("dropsCorrect").length == 7){
+      correctAgain += 1
+    console.log(correctAgain)
+        correctId.push(ev.target.firstChild.id)
+        console.log(correctId)
+      if(correctAgain == 7){
+    
           let confirm = document.createElement("p")
           confirm.setAttribute("id","confirmMessage")
           confirm.innerHTML = "Correct!"
           document.getElementById("dragAndDropContainer").appendChild(confirm)
-          for(let k = 1; k<8; k++){
-              console.log(document.getElementsByClassName("dragDiv drag" + k)[0])
-              document.getElementsByClassName("dragDiv")[0].style.display = "none"
-          }
+          for(let k = 0; k<5; k++){
+              console.log(document.getElementsByClassName("dragDiv " + correctId[k])[0])
+              document.getElementsByClassName("dragDiv " + correctId[k])[0].style.display = "none"
+              for(let aut = 0; aut<2; aut++){
+                  document.getElementsByClassName("dragDiv " + autoId[aut])[0].style.display = "none"
+              }
+            }
       }
       }
     ev.target.removeAttribute("ondrop")
