@@ -225,7 +225,74 @@ function answer2(item) {                                    // 'Item' refers to 
         item.className='backGreen' //  background turn green
     };
 
+<<<<<<< Updated upstream
 //Change the circle icon below the table to indicate if person got answer right or wrong
+=======
+
+// Making boxes unclickable after answering, and highlighting right answer
+
+    // Making first row unclickable after first attempt and show wrong choice and right answer
+    // wrTu1
+    // wrTh1
+    // riMo1
+    // wrFr1
+    if (item.id == 'wrTu1') {
+        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTh1.className = 'noclick' , wrFr1.className = 'noclick'
+    }
+    else if (item.id == 'wrTh1') {
+        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrFr1.className = 'noclick'
+    }
+    else if (item.id == 'riMo1') {
+        item.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick' ,  wrFr1.className = 'noclick'
+    }
+    else if (item.id == 'wrFr1') {
+        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick'
+    }
+  
+        //Making the second row unclickable after first attempt and show wrong choice and right answer
+    if (item.id == 'wrSu2') {
+        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrSa2.className = 'noclick' , wrMo2.className = 'noclick'
+    }
+    else if (item.id == 'wrSa2') {
+        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrMo2.className = 'noclick' , wrSu2.className = 'noclick'
+    }
+    else if (item.id == 'riTu2') {
+        item.className = 'noclick backGreen' , wrMo2.className = 'noclick' , wrSa2.className = 'noclick' , wrSu2.className = 'noclick'
+    }
+    else if (item.id == 'wrMo2') {
+        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrSu2.className = 'noclick' , wrSa1.className = 'noclick'
+    }
+
+    // Making third row unclickable after first attempt and change color only of box clicked and right answer
+    if (item.id == 'wrMo3') {
+        item.className = 'noclick backRed' , wrSa3.className='noclick' , riWe3.className='noclick backGreen', wrTh3.className='noclick'
+    }
+    else if (item.id == 'wrSa3') {
+        item.className = 'noclick backRed' , riWe3.className='noclick backGreen', wrTh3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    else if (item.id == 'wrTh3') {
+        item.className = 'noclick backRed' , riWe3.className='noclick backGreen', wrSa3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    else if (item.id == 'riWe3') {
+        item.className = 'noclick backGreen' , wrTh3.className='noclick',  wrSa3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    //Making foruth row unclickable after first attempt and highlight only right and wrong answer
+    if (item.id == 'wrMo4') {
+        item.className = 'noclick backRed' , riFr4.className = 'noclick backGreen' , wrTu4.className = 'noclick' , wrSu4.className = 'noclick'
+    }
+    else if (item.id == 'riFr4') {
+        item.className = 'noclick backGreen' , wrMo4.className = 'noclick' ,  wrTu4.className = 'noclick' , wrSu4.className = 'noclick'
+    }
+    else if (item.id == 'wrTu4') {
+        item.className = 'noclick backRed' , riFr4.className = 'noclick backGreen' , wrMo4.className = 'noclick' , wrSu4.className = 'noclick'
+    }
+    else if (item.id == 'wrSu4') {
+        item.className = 'noclick backRed' , riFr4.className = 'noclick backGreen' , wrMo4.className = 'noclick' , wrTu4.className = 'noclick'
+    }
+    
+
+//Change the circle icon below the table to correct or wrong
+>>>>>>> Stashed changes
 
     // This if statement is to change the first dark circle based on answer given in first row
     if (item.id == 'wrTu1' || item.id == 'wrTh1' || item.id == 'wrFr1') {  
