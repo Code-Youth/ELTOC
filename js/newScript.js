@@ -34,7 +34,7 @@ function playSoundNumbers(four){
     document.getElementById("num " + four).play()
 }
 
-function daySound(sound){
+function daySound(sound){ //The parameter refers to the argument put into the function in the html (ex: 'Fr')
     let noise = document.getElementById(sound)
     console.log(sound)
     console.log(noise)
@@ -157,6 +157,111 @@ y2 = 0
 // reset class of the buttons//
 
 
+// Function for section 4 quiz table
+
+// The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
+let icon1 = document.querySelector('#ic1')
+console.log(icon1)
+
+let icon2 = document.querySelector('#ic2')
+console.log(icon2)
+
+let icon3 = document.querySelector('#ic3')
+console.log(icon3)
+
+let icon4 = document.querySelector('#ic4')
+console.log(icon4)
+
+// Reference to all the days in the table in row 1
+let wrTu1 = document.querySelector('#wrTu1')
+let wrTh1 = document.querySelector('#wrTh1')
+let wrFr1 = document.querySelector('#wrFr1')
+let riMo1 = document.querySelector('#riMo1')
+// Reference to all the days in the table in row 2
+let wrSa2 = document.querySelector('#wrSa2')
+let wrSu2 = document.querySelector('#wrSu2')
+let riTu2 = document.querySelector('#riTu2')
+let wrMo2 = document.querySelector('#wrMo2')
+// Reference to all the days row 3 of the table
+let wrMo3 = document.querySelector('#wrMo3')
+let wrSa3 = document.querySelector('#wrSa3')
+let riWe3 = document.querySelector('#riWe3')
+let wrTh3 = document.querySelector('#wrTh3')
+
+
+
+// Changes the background color of the days in the tables
+function answer2(item) {                                    // 'Item' refers to each day of the week table header
+    if (item.className === 'wrong4') {                      // If the answer if wrong,
+        item.className='backRed';                           // background turns red
+    }
+    else if (item.className ==='right4') { //If the answer is right,
+        item.className='backGreen' //  background turn green
+    };
+
+//Change the circle icon below the table to indicate if person got answer right or wrong
+
+    // This if statement is to change the first dark circle based on answer given in first row
+    if (item.id == 'wrTu1' || item.id == 'wrTh1' || item.id == 'wrFr1') {  
+        icon1.className = 'fa fa-times-circle fa-3x red'   // 1: Black circle changes to a red (X) 2: the color will be red 
+    }
+    else if (item.id == 'riMo1') {
+        icon1.className = 'fa fa-check-circle fa-3x green' // 1: X changes to check mark 2: the color will be green
+    }
+    // This if statement is to change the second dark circle based on answer given in second row
+    if (item.id === 'wrSu2' || item.id === 'wrSa2' || item.id === 'wrMo2') {
+        icon2.className = 'fa fa-times-circle fa-3x red'
+    }
+    else if (item.id == 'riTu2') {
+        icon2.className = 'fa fa-check-circle fa-3x green'
+    }
+    // This if statement is to change the third dark circle based on answer given in third row
+    if (item.id == 'wrMo3' || item.id == 'wrSa3' || item.id == 'wrTh3') {
+        icon3.className = 'fa fa-times-circle fa-3x red'
+    }
+    else if (item.id =='riWe3') {
+        icon3.className = 'fa fa-check-circle fa-3x green'
+    }
+      // This if statement is to change the fourth dark circle based on answer given in fourth row
+    if (item.id == 'wrMo4' || item.id == 'wrSu4' || item.id == 'wrTu4') {
+        icon4.className = 'fa fa-times-circle fa-3x red'
+    }
+    else if (item.id == 'riFr4') {
+        icon4.className = 'fa fa-check-circle fa-3x green'
+    }
+
+// Making boxes unclickable after answering, and highlighting right answer
+
+    // Making first row unclickable after first attempt 
+    if (icon1.className == 'fa fa-times-circle fa-3x red' || icon1.className == 'fa fa-check-circle fa-3x green') {
+       wrTu1.className = 'noclick backRed' , wrTh1.className = 'noclick backRed' , wrFr1.className = 'noclick backRed' , riMo1.className = 'noclick backGreen'
+        //Had to add background color because it disappears when I change classname to noclick
+    }
+    // Making second row unclickable after first attempt
+    if (icon2.className == 'fa fa-times-circle fa-3x red' || icon2.className == 'fa fa-check-circle fa=3x green') {
+        wrSa2.className = 'noclick' , wrSu2.className = 'noclick' , riTu2.className = 'noclick' , wrMo2.className = 'noclick'
+    }
+    // Making third row unclickable after first attempt and change color only of box clicked and right answer
+    if (item.id == 'wrMo3') {
+        item.className = 'noclick backRed' , wrSa3.className='noclick' , riWe3.className='noclick backGreen', wrTh3.className='noclick'
+    }
+    else if (item.id == 'wrSa3') {
+        item.className = 'noclick backRed' , riWe3.className='noclick backGreen', wrTh3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    else if (item.id == 'wrTh3') {
+        item.className = 'noclick backRed' , riWe3.className='noclick backGreen', wrSa3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    else if (item.id == 'riWe3') {
+        item.className = 'noclick backGreen' , wrTh3.className='noclick',  wrSa3.className='noclick' , wrMo3.className = 'noclick'
+    }
+    
+
+    // This function is a very good example of the difference between 'id' and 'class'
+    // Through the use of class, we were able to change all 12 wrong answers to red with just two lines and 1 class specified
+    // This caused problems with changing the icon as it needed to be changed by row by row
+
+}// end of function
+
 //Carter drag and drop (section 5)//
 //Stops default browser behaviour//
 function allowDrop(ev) {
@@ -253,5 +358,4 @@ autoNums += rng
       }
       }
     ev.target.removeAttribute("ondrop")
-  }
-  
+  }  

@@ -1,0 +1,69 @@
+<!--  This section is where I write my pseudo code to solve problems
+     
+Section 4 Problem 1: Trying to link wrong answer with fa icon
+Summary
+    In sec 4, we have a a table that has audio of a weekday then the user selects the right day of the week they heard. I'm able to have all 
+    of the days of the week turn different colors with just one function thanks to (this) and the use of class names. But now I want to also
+    display a check or x on the bottom of the table to keep track of how many answers they got right and wrong. I want to do this without
+    having to create mulitple functions.  
+
+Solution 1: Create a 2nd class name for the days of the week to link them individually to the fa icons
+    This doesn't work. All the days don't change color unless you reference both their classnames
+
+Solution 2: Use multiple If statements  
+
+Outcome: This ended up working! What I did was create an if statement for each icon. Then I matched
+    each icons ID with the ID's of all the days on in one row. I had to have the background changing color if statement seperate from the icons changing because the former
+    will effect every day with the "wrong4" class while for icons, I need only the days in one row to effect it. It's hard to put it in words but basically the key
+    to this was finding a way to get only certain days with an ID. One issue I was having was I forget to write out the proper syntax at the end of the first 
+    if statement and that caused an error where both other icons changed when I clicked in the first row. I guess they were right when they said most issues come
+    from sytnax errors. 
+
+
+        if (item.id === 'wrSu2' || item.id === 'wrSa2' || item.id === 'wrMo2') {
+        icon2.className = 'fa fa-times-circle fa-3x red'
+    }
+Section 4 Problem 2: Lock in answers at bottom so they can't be changed
+
+Solution 1: Remove the ability for other boxes to be clicked after first attempt using an if statement
+    = Create an if statement that says once an icon is changed to either right or wrong, make the other
+    boxes in the that row unclickable 
+    - In CSS, create a class (noclick) and set 'pointer-events: none'
+
+Outcome: This worked great. I got the other boxes in the row to become unclickable but it created another problem. The color
+of the boxes no longer changes. I need to now to deal with this problem
+
+Section 4 Problem 2.1: Have only the box that was clicked change color and the right answer
+
+Solution 1: In the IF statement that gives class of "noclick" to lock box, also add its background color
+
+Outcome: Now every box changes color when clicked, showing all wrong answers and the right answer
+
+Solution 2: Use 'item' in the IF statement as it refers to the exact box that is clicked
+
+Outcome: This worked as 'item' refers to the box that is clicked so I can easily reference it
+    - Tbh, this didn't do much overall. I ended up having to create seperate if and else if statements for every single box
+ -->
+
+
+
+
+<!-- This is section is where I explain how we got things working
+
+Section 1: Getting the audio to play on click
+Step 1: The audio tag
+    - Create an audio tag with a src that links to the audio file
+    - Give it an id so it can be referenced later for the button click
+Step 2: The button
+    - Created a th (table heading) an set it CSS to make it a point when hovering and change background color [design]
+    - Put a font awesome icon inside of it [design]
+    - Placed an onclick functoin inside the th called (daySound) to add play audio and placed it's ID as an argument to be used in the function
+Step 3: Create the function in JS to play audio
+    - In JS, gave the daySound function a parameter of 'sound' to reference each ID placed in as an argument
+    - Referenced the argument and put it into a variable
+    - Added a .play method to the variable to get it to play the audio ID it took
+
+
+
+
+-->
