@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="css/NewStyles.css">
+<link rel="stylesheet" href="css/NewStyles.css">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
@@ -241,7 +241,7 @@
 		</header>
 		<!-- End Main Header -->
 
-
+		
 		<!-- Sidebar Cart Item -->
 		<div class="xs-sidebar-group info-group">
 			<div class="xs-overlay xs-bg-black"></div>
@@ -310,146 +310,69 @@
 				</ul>
 				<div class="content-box">
 					<h1>
-						<center>Days of the Week
+						<center>Months of the year
 					</h1>
 				</div>
 		</section>
-
-		<!-- Majid: Days of the week table and audio (exercise 1) -->
-		<div id="section1" class="container">
-			<table>
-				<tr>
-					<th>Days of the week</th>
-					<th>Sounds</th>
-				</tr>
-				<tr>
-					<td>Monday</td>
-					<audio preload="auto" id="Mo" src="Audio/Days of the Week/Monday.mp3"></audio>
-
-					<th onclick="daySound('Mo')"" style=" background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-				<tr>
-					<td>Tuesday</td>
-					<audio preload="auto" id="Tu" src="Audio/Days of the Week/Tuesday.mp3"></audio>
-
-					<th onclick="daySound('Tu')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-				<tr>
-					<td>Wednesday</td>
-					<audio preload="auto" id="We" src="Audio/Days of the Week/Wednesday.mp3"></audio>
-
-					<th onclick="daySound('We')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-				<tr>
-					<td>Thursday</td>
-					<audio preload="auto" id="Th" src="Audio/Days of the Week/Thursday.mp3"></audio>
-					<th onclick="daySound('Th')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-					</td>
-
-
-
-				</tr>
-				<tr>
-					<td>Friday</td>
-					<audio preload="auto" id="Fr" src="Audio/Days of the Week/Friday_2.mp3"></audio>
-
-					<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-				<tr>
-					<td>Saturday</td>
-					<audio preload="auto" id="Sa" src="Audio/Days of the Week/Saturday.mp3"></audio>
-
-					<th onclick="daySound('Sa')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-				<tr>
-					<td>Sunday</td>
-					<audio preload="auto" id="Su" src="Audio/Days of the Week/Sunday.m4a"></audio>
-
-					<th onclick="daySound('Su')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<!--Button to play sound-->
-				</tr>
-
+<!--Sections start here-->
+<div id="quiz" class="container">
+	<h3>Quiz</h3>
+	<button onclick="openQ1()" id="startoButton">Start</button>
+	<div id="question1">
+		<table style="margin-bottom:1em;">
+			<tr class="playButton">
+				<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
+			</tr>
 			</table>
+	<table class="border">
+		<tr>
+			<th onclick="checkAnswer(this)" class="answers" id="July">July</th> 	<!--Possible answers-->
+		</tr>
+		<tr>
+			<th onclick="checkAnswer(this)" class="answers" id="February">February</th>	<!--Possible answers-->
+		</tr>
+	</table>
+	<br>
+	<div style="width: 150px; text-align: center;" id="checks1">	<!--Checkmarks for visual confirmation-->
+		<i id="checks1One" class="fa fa-circle fa-2x"></i>
+		<i class="fa fa-circle fa-2x"></i>
+		<i class="fa fa-circle fa-2x"></i>
+		<!-- <i class="fa fa-times-circle"></i>
+	<i class="fa fa-check-circle"></i>-->
+	
+</div>
+</div>
+		<br>
+		<div class="border divide">
 		</div>
-
 		<br>
-		<div class="border"></div>
-
-		<!-- Carter: quiz 1 (excersize 2) -->
-		<div id="quiz" class="container">
-			<h3>Quiz</h3>
-			<button onclick="openQ1()" id="startoButton">Start</button>
-			<div id="question1">
-				<table style="margin-bottom:1em;">
-					<tr class="playButton">
-						<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i
-								style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-						<!--Button to play sound-->
-					</tr>
-				</table>
-
-		<table class="border">
-			<tr>
-				<th onclick="checkAnswer(this)" class="answers0" id="Monday">Monday</th> 	<!--Possible answers-->
-			</tr>
-			<tr>
-				<th onclick="checkAnswer(this)" class="answers1" id="Wednesday">Wednesday</th>	<!--Possible answers-->
-			</tr>
-		</table>
-		<br>
-		<div style="width: 150px; text-align: center;" id="checks1">	<!--Checkmarks for visual confirmation-->
-			<i id="checks1One" class="fa fa-circle fa-2x"></i>
-			<i class="fa fa-circle fa-2x"></i>
-			<i class="fa fa-circle fa-2x"></i>
-			<!-- <i class="fa fa-times-circle"></i>
-		<i class="fa fa-check-circle"></i>-->
-				</div>
-			</div>
+		<div id="question2">
+			<table style="margin-bottom:1em;">
+				<tr class="playButton">
+					<th onclick="daySound('Su')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+				</tr>
+				</table>	
+			
+			<table class="border">
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="January">January</th>
+				</tr>
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="December">December</th>
+				</tr>
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="September">September</th>
+				</tr>
+			</table>
 			<br>
-			<div class="border divide">
-			</div>
-			<br>
-			<div id="question2">
-				<table style="margin-bottom:1em;">
-					<tr class="playButton">
-						<th onclick="daySound('Su')" style="background-color: greenyellow;"><i
-								style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					</tr>
-				</table>
-
-				<table class="border">
-					<tr>
-						<th onclick="checkAnswer2(this)" class="answers" id="Sunday">Sunday</th>
-					</tr>
-					<tr>
-						<th onclick="checkAnswer2(this)" class="answers" id="Wednesday">Wednesday</th>
-					</tr>
-					<tr>
-						<th onclick="checkAnswer2(this)" class="answers" id="Thursday">Thursday</th>
-					</tr>
-				</table>
-				<br>
-				<div style="width: 150px; text-align: center;" id="checks2">
-					<i id="checks11One" class="fa fa-circle fa-2x"></i>
-					<i id="checks22Two" class="fa fa-circle fa-2x"></i>
-					<i class="fa fa-circle fa-2x"></i>
-					<!-- <i class="fa fa-times-circle"></i>
-				<i class="fa fa-check-circle"></i>-->
-
-				</div>
+			<div style="width: 150px; text-align: center;" id="checks2">
+				<i id="checks11One" class="fa fa-circle fa-2x"></i>
+				<i id="checks22Two" class="fa fa-circle fa-2x"></i>
+				<i class="fa fa-circle fa-2x"></i>
+				<!-- <i class="fa fa-times-circle"></i>
+			<i class="fa fa-check-circle"></i>-->
+			
+		</div>
 			</div>
 			<br>
 			<div class="border divide">
@@ -458,22 +381,21 @@
 			<div id="question3">
 				<table style="margin-bottom:1em;">
 					<tr class="playButton">
-						<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i
-								style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+						<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 					</tr>
 				</table>
 				<table class="border">
 					<tr>
-						<th onclick="checkAnswer3(this)" class="answers" id="Saturday">Saturday</th>
+						<th onclick="checkAnswer3(this)" class="answers" id="June">June</th>
 					</tr>
 					<tr>
-						<th onclick="checkAnswer3(this)" class="answers" id="Tuesday">Tuesday</th>
+						<th onclick="checkAnswer3(this)" class="answers" id="May">May</th>
 					</tr>
 					<tr>
-						<th onclick="checkAnswer3(this)" class="answers" id="Friday">Friday</th>
+						<th onclick="checkAnswer3(this)" class="answers" id="August">August</th>
 					</tr>
 					<tr>
-						<th onclick="checkAnswer3(this)" class="answers" id="Monday">Monday</th>
+						<th onclick="checkAnswer3(this)" class="answers" id="April">April</th>
 					</tr>
 				</table>
 				<br>
@@ -482,186 +404,44 @@
 					<i id="checks222Two" class="fa fa-circle fa-2x"></i>
 					<i id="checks333Three" class="fa fa-circle fa-2x"></i>
 					<!-- <i class="fa fa-times-circle"></i>
-					<i class="fa fa-check-circle"></i>-->
+				<i class="fa fa-check-circle"></i>-->
+				
+			</div>
+</div>
+</div>
 
-				</div>
-
-		<!-- Maid: Quiz 2 (section 4) -->
-		<div id='section4' class='container'>
-			<h3>Match the Sound</h3>
-			<table>
-				<!-- First Row of audio and answers -->
-				<tr>
-					<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<th onclick='answer2(this)' class='wrong4' id='wrTu1'>Tuesday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrTh1'>Thursday</th>
-					<th onclick='answer2(this)' class='right4' id='riMo1'>Monday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrFr1'>Friday</th>
-				</tr>
-				<!-- Second row of audio and answers -->
-				<tr>
-					<th onclick="daySound('Sa')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<th onclick='answer2(this)' class='wrong4' id='wrSu2'>Sunday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrSa2'>Saturday</th>
-					<th onclick='answer2(this)' class='right4' id='riTu2'>Tuesday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrMo2'>Monday</th>
-				</tr>
-				<tr>
-					<th onclick="daySound('We')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<th onclick='answer2(this)' class='wrong4' id='wrMo3'>Monday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrSa3'>Saturday</th>
-					<th onclick='answer2(this)' class='right4' id='riWe3'>Wednesday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrTh3'>Thursday</th>
-				</tr>
-				<tr>
-					<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i
-							style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-					<th onclick='answer2(this)' class='wrong4' id='wrMo4'>Monday</th>
-					<th onclick='answer2(this)' class='right4' id='riFr4'>Friday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrTu4'>Tuesday</th>
-					<th onclick='answer2(this)' class='wrong4' id='wrSu4'>Sunday</th>
-				</tr>
-			</table>
-			<!-- Check mark and x's to check final score -->
-			<i class="fa fa-circle fa-3x" id='ic1'></i>
-			<i class="fa fa-circle fa-3x" id='ic2'></i>
-			<i class="fa fa-circle fa-3x" id='ic3'></i>
-			<i class="fa fa-circle fa-3x" id='ic4'></i>
-
-			<!-- <i class="fa fa-times-circle fa-3x"></i> -->
-			<!-- Was having a lot of trouble with the icons, turns out you just need to remove
-the 's' at the end of the first 'fa' because this code is using font-awe ver 4 						and the 's' is probably only added on ver 5 -->
-		</div>
-
-	</div>
-	</div>
 	<!--Carter Spelling? (section 3)-->
 	<br><div class="border"></div>
 <div class="container">
 	<h4>Fill in the blank</h4>
-	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Wednesday</p>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">October</p>
 
 	<form style="margin-top: -1%; font-size: large;">
-		<input onkeyup="jump(this, 'j1One2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j1One1" name="fname"><span>edn</span><input onkeyup="jump(this,'j1One3')" id="j1One2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>sd</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j1One3"><span>y</span>
+		<span>O</span><input onkeyup="jump(this, 'j1For2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j1For1" name="fname"><span>to</span><input onkeyup="jump(this,'j1For3')" id="j1For2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>e</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j1For3">
 	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
 	</form>
 
 <br>
-	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Saturday</p>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">August</p>
 
 	<form style="margin-top: -1%; font-size: large;">
-		<span>S</span><input onkeyup="jump(this, 'j2Two2')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Two1" name="fname"><span>tu</span><input onkeyup="jump(this,'j2Two3')" id="j2Two2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>da</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Two3">
+		<input onkeyup="jump(this, 'j2Fiv2')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Fiv1" name="fname"><span>ug</span><input onkeyup="jump(this,'j2Fiv3')" id="j2Fiv2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>s</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Fiv3">
 	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
 	</form>
 	<br>
-	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Tuesday</p>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">March</p>
 
 	<form style="margin-top: -1%; font-size: large;">
-		<input onkeyup="jump(this, 'j3Thr2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j3Thr1" name="fname"><span>u</span><input onkeyup="jump(this,'j3Thr3')" id="j3Thr2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>s</span><input onkeyup="jump(this, 'j3Thr4')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j3Thr3"><span>ay</span>
+		<span>M</span><input onkeyup="jump(this, 'j3Six2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j3Six1" name="fname"><span>r</span><input onkeyup="jump(this,'j3Six3')" id="j3Six2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><input onkeyup="jump(this, 'j3Six4')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j3Six3">
 	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
 	</form>
 </div>
 
-<!--Carter: Drag and Drop (section 5)-->
-<hr>
-<div class="container screenSizeErrorDnD"><p>Drag and drop section not available on smaller screens</p></div>
-	<div id="dragAndDropContainer" class="container">
-	<h4>Put in order</h4>		
-<div class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<hr>
-<br>
-<div class="dragDiv">
-<img id="drag2" draggable="true" src="images/Days/Tuesday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-<img id="drag6" draggable="true" src="images/Days/Saturday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-<img id="drag1" draggable="true" src="images/Days/Monday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-<img id="drag5" draggable="true" src="images/Days/Friday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-	<img id="drag7" draggable="true" src="images/Days/Sunday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-	<img id="drag3" draggable="true" src="images/Days/Wednesday.png" ondragstart="drag(event)">
-</div>
-<div class="dragDiv">
-	<img id="drag4" draggable="true" src="images/Days/Thursday.png" ondragstart="drag(event)">
-</div>
-</div>
-<hr>
 
-<!--Carter: Matching (section 7)-->
-<br>
-<div class="container screenSizeError"> 	<p class="screenSizeError">Match section not available on smaller screens</p>
-</div>
 
-<div id="matchParent" class="container">
-	<table class="matchTable" style="float: left;">
-		<tr onclick="click1(this)" class="Mondas" id="match025">
-			<th>Monday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Tuesdas" id="match075">
-			<th>Tuesday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Wednesdas" id="match125">
-			<th>Wednesday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Thursdas" id="match175">
-			<th>Thursday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Fridas" id="match225">
-			<th>Friday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Saturdas" id="match275">
-			<th>Saturday</th>
-		</tr>
-		<tr onclick="click1(this)" class="Sundas" id="match325">
-			<th>Sunday</th>
-		</tr>
-	</table>
-<canvas  id="myCanvas" width="189" height="350" style="z-index: 1; position: relative; float: left;"></canvas>
-<table class="matchTable" style="float: left;">
-	<tr onclick="click1(this)" class="Saturdas" id="matchA025">
-		<th>Sat.</th>
-	</tr>
-	<tr onclick="click1(this)" class="Thursdas" id="matchA075">
-		<th>Thu.</th>
-	</tr>
-	<tr  onclick="click1(this)" class="Tuesdas" id="matchA125">
-		<th>Tue.</th>
-	</tr>
-	<tr onclick="click1(this)" class="Sundas" id="matchA175">
-		<th>Sun.</th>
-	</tr>
-	<tr  onclick="click1(this)" class="Mondas" id="matchA225">
-		<th>Mon.</th>
-	</tr>
-	<tr onclick="click1(this)" class="Wednesdas" id="matchA275">
-		<th>Wed.</th>
-	</tr>
-	<tr onclick="click1(this)" class="Fridas" id="matchA325">
-		<th>Fri.</th>
-	</tr>
-</table>
-</div>
 <div style="height: 500px;">
 
 </div>
-
 		<!-- Error Section Alphabet -->
 		<section class="error-section">
 			<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>
@@ -746,8 +526,8 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 	
 				<!--End pagewrapper-->
 
 
-			</div>
-			</footer>
+					</div>
+		</footer>
 
 	</div>
 	<!--End pagewrapper-->
@@ -771,7 +551,7 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 	
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/newScript.js"></script>
-	<script src="js/quizDay.js"></script>
+	<script src="js/quizMonth.js"></script>
 </body>
 
 </html>

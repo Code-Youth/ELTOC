@@ -158,10 +158,150 @@ th {
   font-size: large;
   color: black;
   cursor: pointer;
-  height: 70px;
+  height: 50px;
 }
 .disable {
   background-color: rgb(179, 179, 179);
   color: ghostwhite;
   cursor: not-allowed;
+}
+.disable{
+    background-color: rgb(179, 179, 179);
+    color: ghostwhite;
+    cursor: not-allowed;
+}
+
+
+/*Carter drag and drop (section 5)*/
+#div1 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div2 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div3 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div4 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div5 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div6 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}	#div7 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#drag1{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag2{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag3{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag4{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag5{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag6{
+  width: auto;
+  height: 50px;
+  display: inline;
+}	#drag7{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#div1 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div2 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div3 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div4 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div5 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div6 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}	#div7 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+
+.dragDiv{
+  display: inline-block;
+  width: 150px;
+  height: 54px;
+  border: 2px solid black
+}
+#confirmMessage{
+  font-size: x-large;
+  font-weight: bold;
+}
+.screenSizeError{
+  display: none;
+}
+.screenSizeErrorDnD{
+  display: none;
+}
+@media only screen and (max-width: 540px){
+
+#matchParent{
+  display: none;
+}
+
+.screenSizeError{
+  display: block;
+}
+
+}
+@media only screen and (max-width: 1200px){
+
+#dragAndDropContainer{
+  display: none;
+}
+
+.screenSizeErrorDnD{
+  display: block;
+}
 }
