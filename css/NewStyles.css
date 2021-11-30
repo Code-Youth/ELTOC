@@ -1,79 +1,80 @@
-.fa-play-circle{
-    color: #43B97E;
+.fa-play-circle {
+  color: #43b97e;
 }
 
-.fa-play-circle:hover{
-    color: #0056B3;
+.fa-play-circle:hover {
+  color: #0056b3;
 }
 
-#section1 table{
-    border:1px solid black;
-    font-size: large;
-    color: black;
+#section1 table {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
 }
-#section1 th{
-    border:1px solid black;
-    font-size: large;
-    color: black;
+#section1 th {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
 }
 
 #section1 td {
-    border:1px solid black;
-    font-size: large;
-    color: black;
-  }
-
-  #section1 th:hover{
-    background-color: rgb(19, 219, 19) !important;
-cursor:pointer
-  }
-
-#quiz table{
-    border:1px solid black;
-    font-size: large;
-    color: black;
-    cursor: pointer;
+  border: 1px solid black;
+  font-size: large;
+  color: black;
 }
-#quiz th{
-    border:1px solid black;
-    font-size: large;
-    color: black;
-    cursor: pointer;
-}
-#quiz td {
 
+#section1 th:hover {
+  background-color: rgb(19, 219, 19) !important;
+  cursor: pointer;
+}
+
+#quiz table {
   border: 1px solid black;
   font-size: large;
   color: black;
   cursor: pointer;
 }
-  .backRed {
-    background-color: red;
-  }
-  .backGreen {
-    background-color: yellowgreen;
-  }
+#quiz th {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+}
+#quiz td {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+}
+.backRed {
+  background-color: red;
+}
+.backGreen {
+  background-color: yellowgreen;
+}
 
-  #section1 th:hover {
-    background-color: rgb(19, 219, 19) !important;
-    cursor: pointer;
-  }
-  /* Styling for the table in exercise 4 */
-  #section4 table {
-    border: 1px solid black;
-    font-size: large;
-    color: black;
-  }
-  #section4 th {
-    border: 1px solid black;
-    font-size: large;
-    color: black;
-  }
-  #section4 td {
-    border: 1px solid black;
-    font-size: large;
-    color: black;
-  }
+#section1 th:hover {
+  background-color: rgb(19, 219, 19) !important;
+  cursor: pointer;
+}
+/* Styling for the table in exercise 4 */
+#section4 table {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+}
+#section4 th {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+}
+#section4 td {
+  border: 1px solid black;
+  font-size: large;
+  color: black;
+}
+
 /* Change the background color of answers */
 .backRed {
   background-color: red;
@@ -81,6 +82,12 @@ cursor:pointer
 
 .backGreen {
   background-color: yellowgreen;
+}
+
+/*Remove pointer and clickability*/
+.noclick {
+  pointer-events: none;
+  cursor: none;
 }
 
 th {
@@ -118,10 +125,10 @@ th {
   background-color: rgb(206, 255, 133);
 }
 .green {
-  color: yellowgreen;
+  color: yellowgreen; /*The same as correct above*/
 }
 .red {
-  color: red;
+  color: red; /*The same as correct above*/
 }
 .ul {
   text-decoration: dotted underline;
