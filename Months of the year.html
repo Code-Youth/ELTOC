@@ -315,6 +315,127 @@
 				</div>
 		</section>
 <!--Sections start here-->
+<div id="quiz" class="container">
+	<h3>Quiz</h3>
+	<button onclick="openQ1()" id="startoButton">Start</button>
+	<div id="question1">
+		<table style="margin-bottom:1em;">
+			<tr class="playButton">
+				<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th> <!--Button to play sound-->
+			</tr>
+			</table>
+	<table class="border">
+		<tr>
+			<th onclick="checkAnswer(this)" class="answers" id="July">July</th> 	<!--Possible answers-->
+		</tr>
+		<tr>
+			<th onclick="checkAnswer(this)" class="answers" id="February">February</th>	<!--Possible answers-->
+		</tr>
+	</table>
+	<br>
+	<div style="width: 150px; text-align: center;" id="checks1">	<!--Checkmarks for visual confirmation-->
+		<i id="checks1One" class="fa fa-circle fa-2x"></i>
+		<i class="fa fa-circle fa-2x"></i>
+		<i class="fa fa-circle fa-2x"></i>
+		<!-- <i class="fa fa-times-circle"></i>
+	<i class="fa fa-check-circle"></i>-->
+	
+</div>
+</div>
+		<br>
+		<div class="border divide">
+		</div>
+		<br>
+		<div id="question2">
+			<table style="margin-bottom:1em;">
+				<tr class="playButton">
+					<th onclick="daySound('Su')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+				</tr>
+				</table>	
+			
+			<table class="border">
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="January">January</th>
+				</tr>
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="December">December</th>
+				</tr>
+				<tr>
+					<th onclick="checkAnswer2(this)" class="answers" id="September">September</th>
+				</tr>
+			</table>
+			<br>
+			<div style="width: 150px; text-align: center;" id="checks2">
+				<i id="checks11One" class="fa fa-circle fa-2x"></i>
+				<i id="checks22Two" class="fa fa-circle fa-2x"></i>
+				<i class="fa fa-circle fa-2x"></i>
+				<!-- <i class="fa fa-times-circle"></i>
+			<i class="fa fa-check-circle"></i>-->
+			
+		</div>
+			</div>
+			<br>
+			<div class="border divide">
+			</div>
+			<br>
+			<div id="question3">
+				<table style="margin-bottom:1em;">
+					<tr class="playButton">
+						<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+					</tr>
+				</table>
+				<table class="border">
+					<tr>
+						<th onclick="checkAnswer3(this)" class="answers" id="June">June</th>
+					</tr>
+					<tr>
+						<th onclick="checkAnswer3(this)" class="answers" id="May">May</th>
+					</tr>
+					<tr>
+						<th onclick="checkAnswer3(this)" class="answers" id="August">August</th>
+					</tr>
+					<tr>
+						<th onclick="checkAnswer3(this)" class="answers" id="April">April</th>
+					</tr>
+				</table>
+				<br>
+				<div style="width: 150px; text-align: center;" id="checks3">
+					<i id="checks111One" class="fa fa-circle fa-2x"></i>
+					<i id="checks222Two" class="fa fa-circle fa-2x"></i>
+					<i id="checks333Three" class="fa fa-circle fa-2x"></i>
+					<!-- <i class="fa fa-times-circle"></i>
+				<i class="fa fa-check-circle"></i>-->
+				
+			</div>
+</div>
+</div>
+
+	<!--Carter Spelling? (section 3)-->
+	<br><div class="border"></div>
+<div class="container">
+	<h4>Fill in the blank</h4>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">October</p>
+
+	<form style="margin-top: -1%; font-size: large;">
+		<span>O</span><input onkeyup="jump(this, 'j1For2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j1For1" name="fname"><span>to</span><input onkeyup="jump(this,'j1For3')" id="j1For2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>e</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j1For3">
+	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
+	</form>
+
+<br>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">August</p>
+
+	<form style="margin-top: -1%; font-size: large;">
+		<input onkeyup="jump(this, 'j2Fiv2')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Fiv1" name="fname"><span>ug</span><input onkeyup="jump(this,'j2Fiv3')" id="j2Fiv2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>s</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Fiv3">
+	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
+	</form>
+	<br>
+	<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">March</p>
+
+	<form style="margin-top: -1%; font-size: large;">
+		<span>M</span><input onkeyup="jump(this, 'j3Six2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j3Six1" name="fname"><span>r</span><input onkeyup="jump(this,'j3Six3')" id="j3Six2" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><input onkeyup="jump(this, 'j3Six4')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j3Six3">
+	<button style="background-color: white; margin-left: 1em;" type="reset"><i class="fa fa-reply fa-1x"></i></button>
+	</form>
+</div>
 
 
 
@@ -430,6 +551,7 @@
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/newScript.js"></script>
+	<script src="js/quizMonth.js"></script>
 </body>
 
 </html>

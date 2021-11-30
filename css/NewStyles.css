@@ -244,3 +244,30 @@ th {
   font-size: x-large;
   font-weight: bold;
 }
+.screenSizeError{
+  display: none;
+}
+.screenSizeErrorDnD{
+  display: none;
+}
+@media only screen and (max-width: 540px){
+
+#matchParent{
+  display: none;
+}
+
+.screenSizeError{
+  display: block;
+}
+
+}
+@media only screen and (max-width: 1200px){
+
+#dragAndDropContainer{
+  display: none;
+}
+
+.screenSizeErrorDnD{
+  display: block;
+}
+}
