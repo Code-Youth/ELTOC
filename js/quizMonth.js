@@ -98,3 +98,54 @@ function openQ3(){
     Q3.style.display = "block"
     borders[1].style.display = "block"
 }
+
+//Carter match (section 7)//
+var y1 = 0
+var y2 = 0
+var cc1 = []
+var cc2 = []
+//Function runs onclick//
+function click1(dayClick){
+	console.log(dayClick.id.slice(dayClick.id.length-3))
+	console.log(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3))
+	//if button clicked does not have A in the id, the button is from the first column//
+    if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A" && y1==0){
+	//sets y1 to the three numbers at the end of dayclick id (ex: 175)//
+        y1=dayClick.id.slice(dayClick.id.length-3)
+	y1 = parseInt(y1)
+	cc1 = dayClick.className
+	//removing clickability from buttons//
+    dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+	}
+    //Same as above but if button clicked is from column 2//
+else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A" && y2==0){
+	console.log("helo")
+	y2 = dayClick.id.slice(dayClick.id.length-3)
+	y2 = parseInt(y2)
+	cc2 = dayClick.className
+	dayClick.removeAttribute("onclick")
+	dayClick.className = "disable"
+}
+console.log(cc1+ ":" +cc2)
+console.log(y1 + ":" + y2)
+if (y1 !== 0 && y2 !== 0){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//Change color here//
+if (cc1 !== cc2){
+ctx.strokeStyle = "rgb(255,0,0)"
+}
+else{
+ctx.strokeStyle = "rgb(0,255,0)"
+}
+//Drawing line from (x,y) to (x,y)//
+ctx.beginPath();
+ctx.moveTo(0, y1);
+ctx.lineTo(189, y2);
+ctx.stroke();
+//Reset y1 and y2//
+y1 = 0
+y2 = 0
+}
+}

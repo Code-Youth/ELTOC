@@ -209,6 +209,36 @@ th {
   border: 1px solid #aaaaaa;
   display: inline-block;
 }
+	#div8 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div9 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div10 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div11 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div12 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
 #drag1{
   width: auto;
   height: 50px;
@@ -234,6 +264,31 @@ th {
   height: 50px;
   display: inline;
 }	#drag7{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag8{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag9{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag10{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag11{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag12{
   width: auto;
   height: 50px;
   display: inline;
@@ -267,6 +322,32 @@ th {
   width: auto;
   height: 100%;
 }
+#div8 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div9 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div10 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div11 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div12 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+
 
 .dragDiv{
   display: inline-block;

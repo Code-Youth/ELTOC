@@ -91,56 +91,6 @@ function jump(field, autoMove){
     }
 }
 }
-//Carter match (section 7)//
-var y1 = 0
-var y2 = 0
-var cc1 = []
-var cc2 = []
-//Function runs onclick//
-function click1(dayClick){
-	console.log(dayClick.id.slice(dayClick.id.length-3))
-	console.log(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3))
-	//if button clicked does not have A in the id, the button is from the first column//
-    if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) !== "A" && y1==0){
-	//sets y1 to the three numbers at the end of dayclick id (ex: 175)//
-        y1=dayClick.id.slice(dayClick.id.length-3)
-	y1 = parseInt(y1)
-	cc1 = dayClick.className
-	//removing clickability from buttons//
-    dayClick.removeAttribute("onclick")
-	dayClick.className = "disable"
-	}
-    //Same as above but if button clicked is from column 2//
-else if(dayClick.id.slice(dayClick.id.length-4,dayClick.id.length-3) == "A" && y2==0){
-	console.log("helo")
-	y2 = dayClick.id.slice(dayClick.id.length-3)
-	y2 = parseInt(y2)
-	cc2 = dayClick.className
-	dayClick.removeAttribute("onclick")
-	dayClick.className = "disable"
-}
-console.log(cc1+ ":" +cc2)
-console.log(y1 + ":" + y2)
-if (y1 !== 0 && y2 !== 0){
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-//Change color here//
-if (cc1 !== cc2){
-ctx.strokeStyle = "rgb(255,0,0)"
-}
-else{
-ctx.strokeStyle = "rgb(0,255,0)"
-}
-//Drawing line from (x,y) to (x,y)//
-ctx.beginPath();
-ctx.moveTo(0, y1);
-ctx.lineTo(189, y2);
-ctx.stroke();
-//Reset y1 and y2//
-y1 = 0
-y2 = 0
-}
-}
 // function resetLines(){
 // 	var par = document.getElementsByClassName("disable")
 // 	console.log(par)
@@ -274,12 +224,12 @@ function allowDrop(ev) {
   function autostuff(){
       console.log("running")
       //bigI runs for 2 iterations because 2 days are auto completed//
-      for(let bigI = 0; bigI <2; bigI++){
+      for(let bigI = 0; bigI <5; bigI++){
           //i is set to run until rng is less than 7//
       for(let i = 0; i<50; i++){
-  var rng = Math.random()*10
+  var rng = Math.random()*100
   rng = Math.floor(rng)
-  if(rng > 7 || rng == 0 || rng == checkStore){
+  if(rng > 12 || rng == 0 || rng == checkStore){
       i-1
   }
   else{
@@ -288,7 +238,6 @@ function allowDrop(ev) {
   console.log(rng)
   }
 //Appending the randomized days and modifying the empty divs they leave behind//
-  document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
   document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
   autoId.push("drag" + rng)
   document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
@@ -321,14 +270,14 @@ autoNums += rng
           console.log(document.getElementsByClassName("drag1"))
       }
   }
-  var correctAgain = 2
+  var correctAgain = 4
   var correctId = []
   function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     console.log(ev.target.firstChild)
-    if(ev.target.id.slice(ev.target.id.length-1) !== ev.target.firstChild.id.slice(ev.target.firstChild.id.length-1)){
+    if(ev.target.title !== ev.target.firstChild.title){
         ev.target.style.border = "2px solid red"
     }
     else{
@@ -342,16 +291,16 @@ autoNums += rng
     console.log(correctAgain)
         correctId.push(ev.target.firstChild.id)
         console.log(correctId)
-      if(correctAgain == 7){
+      if(correctAgain == 12){
     
           let confirm = document.createElement("p")
           confirm.setAttribute("id","confirmMessage")
           confirm.innerHTML = "Correct!"
           document.getElementById("dragAndDropContainer").appendChild(confirm)
-          for(let k = 0; k<5; k++){
+          for(let k = 0; k<11; k++){
               console.log(document.getElementsByClassName("dragDiv " + correctId[k])[0])
               document.getElementsByClassName("dragDiv " + correctId[k])[0].style.display = "none"
-              for(let aut = 0; aut<2; aut++){
+              for(let aut = 0; aut<5; aut++){
                   document.getElementsByClassName("dragDiv " + autoId[aut])[0].style.display = "none"
               }
             }
