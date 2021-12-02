@@ -34,11 +34,13 @@ function playSoundNumbers(four){
     document.getElementById("num " + four).play()
 }
 
-function daySound(sound){ //The parameter refers to the argument put into the function in the html (ex: 'Fr')
-    let noise = document.getElementById(sound)
+// This function plays the audio
+function daySound(sound){ //The parameter 'sound' refers to the argument put into the daySound function in the html (ex: 'Fr')
+    // and that argument is an ID of an audio tag with a recording of a month
+    let noise = document.getElementById(sound)//Variable 'noise' will reference the argument 'sound'
     console.log(sound)
     console.log(noise)
-    noise.play()
+    noise.play() //Noise is essentially an audio tag and we are telling it to play with the .play method
 }
 var question = [0,"3","3","3","3"]
 var tut = {
@@ -157,7 +159,7 @@ y2 = 0
 // reset class of the buttons//
 
 
-// Function for section 4 quiz table
+// Function for section 4 quiz table (days of the week)
 
 // The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
 let icon1 = document.querySelector('#ic1')
@@ -203,10 +205,6 @@ function answer2(item) {                                    // 'Item' refers to 
 // Making boxes unclickable after answering, and highlighting right answer
 
     // Making first row unclickable after first attempt and show wrong choice and right answer
-    // wrTu1
-    // wrTh1
-    // riMo1
-    // wrFr1
     if (item.id == 'wrTu1') {
         item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTh1.className = 'noclick' , wrFr1.className = 'noclick'
     }
@@ -299,6 +297,145 @@ function answer2(item) {                                    // 'Item' refers to 
 
 
 }// end of function
+
+// Function for section 4 quiz table (days of the week)
+
+// The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
+let icon1_2 = document.querySelector('#ic1_2')
+console.log(icon1_2)
+
+let icon2_2 = document.querySelector('#ic2_2')
+console.log(icon2_2)
+
+let icon3_2 = document.querySelector('#ic3_2')
+console.log(icon3_2)
+
+let icon4_2 = document.querySelector('#ic4_2')
+console.log(icon4_2)
+
+// The function that will be doing everything
+function answer3(item) {
+    
+// Step 1: Highlight wrong and right answer when clicked, and make every other box unclickable in that row
+
+    // The first row
+
+        // When you click on February
+if (item.id=='wrFe1') {
+    item.className='noclick backRed' , wrDe1.className='noclick' , wrAu1.className='noclick' , riJa1.className='noclick backGreen'
+}
+        // When you click on December
+if (item.id=='wrDe1') {
+    item.className='noclick backRed' , wrFe1.className='noclick', wrAu1.className='noclick' , riJa1.className='noclick backGreen'
+}
+        // When you click on August
+if (item.id=='wrAu1') {
+    item.className='noclick backRed' , wrFe1.className='noclick' , wrDe1.className='noclick' , riJa1.className='noclick backGreen'
+}
+        // When you click on January
+if (item.id=='riJa1') {
+    item.className='noclick backGreen', wrFe1.className='noclick', wrDe1.className='noclick', wrAu1.className='noclick'
+}
+
+    // The second row
+
+        //When you click on September
+if (item.id=='wrSe2') {
+    item.className='noclick backRed', wrMay2.className='noclick', riMar2.className='noclick backGreen', wrNo2.className='noclick'
+}
+        //When you click on May
+if (item.id=='wrMay2') {
+    item.className='noclick backRed', wrSe2.className='noclick', riMar2.className='noclick backGreen', wrNo2.className='noclick'
+}
+        // When you click on March
+if (item.id=='riMar2') {
+    item.className='noclick backGreen', wrSe2.className='noclick', wrMay2.className='noclick', wrNo2.className='noclick'
+}
+        // When you click on November
+if (item.id=='wrNo2') {
+    item.className='noclick backRed', wrSe2.className='noclick', wrMay2.className='noclick', riMar2.className='noclick backGreen'
+}
+
+    // The third row
+
+
+        // When you click January
+if (item.id=='wrJn3') {
+    item.className='noclick backRed', riJl3.className='noclick backGreen', wrOc3.className='noclick', wrFe3.className='noclick'
+}
+       // When you click on July
+if (item.id=='riJl3') {
+    item.className='noclick backGreen', wrJn3.className='noclick', wrOc3.className='noclick', wrFe3.className='noclick'
+}
+        // When you click on October
+if (item.id=='wrOc3') {
+    item.className='noclick backRed', riJl3.className='noclick backGreen', wrJn3.className='noclick', wrFe3.className='noclick'
+}
+        // When you click on February
+if (item.id=='wrFe3') {
+    item.className='noclick backRed', riJl3.className='noclick backGreen', wrJn3.className='noclick', wrOc3.className='noclick'
+}
+
+    // The fourth row
+
+        // When you click on August
+if (item.id=='wrAu4') {
+    item.className='noclick backRed', wrMar4.className='noclick', riOc4.className='noclick backGreen', wrJa4.className='noclick'
+}
+        // When you click on March
+if (item.id=='wrMar4') {
+    item.className='noclick backRed', wrAu4.className='noclick', riOc4.className='noclick backGreen', wrJa4.className='noclick'
+}
+        // When you click on October
+if (item.id=='riOc4') {
+    item.className='noclick backGreen', wrAu4.className='noclick', wrMar4.className='noclick', wrJa4.className='noclick'
+}
+        //When you click on Janurary
+if (item.id=='wrJa4') {
+    item.className='noclick backRed', wrAu4.className='noclick', wrMar4.className='noclick', riOc4.className='noclick backGreen'
+}
+    
+
+//Step 2: Show how many answer they got right and wrong at the bottom of the table
+
+    // Results from the first row
+if (item.id=='riJa1') {
+    icon1_2.className='fa fa-check-circle fa-3x green' // Could have created a class instead of typing all this out
+}
+else if (item.id=='wrFe1'||item.id=='wrDe1'||item.id=='wrAu1') {
+    icon1_2.className='fa fa-times-circle fa-3x red'
+}
+    // Resutls from the second row
+  
+if (item.id=='riMar2') {
+    icon2_2.className='fa fa-check-circle fa-3x green'
+}
+else if(item.id=='wrSe2'||item.id=='wrMay2'||item.id=='wrNo2') {
+    icon2_2.className='fa fa-times-circle fa-3x red'
+}
+    // Results from the third row
+ 
+if (item.id=='riJl3') {
+    icon3_2.className='fa fa-check-circle fa-3x green'
+}
+else if (item.id=='wrJn3'||item.id=='wrOc3'||item.id=='wrFe3') (
+    icon3_2.className='fa fa-times-circle fa-3x red'
+)
+
+    // Results from the fourth row
+    // wrAu4
+    // wrMar4
+    // riOc4
+    // wrJa4
+if (item.id=='riOc4') {
+    icon4_2.className='fa fa-check-circle fa-3x green'
+}
+else if (item.id=='wrAu4'||item.id=='wrMar4'||item.id=='wrJa4') {
+    icon4_2.className='fa fa-times-circle fa-3x red'
+}
+}// end of function
+console.log(answer3)
+
 
 //Carter drag and drop (section 5)//
 //Stops default browser behaviour//
