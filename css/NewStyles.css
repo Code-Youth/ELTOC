@@ -57,7 +57,7 @@
   background-color: rgb(19, 219, 19) !important;
   cursor: pointer;
 }
-/* Styling for the table in exercise 4 */
+/* Styling for the table in exercise 4; days and months page */
 #section4 table {
   border: 1px solid black;
   font-size: large;
@@ -75,6 +75,37 @@
   color: black;
 }
 
+/*Styling for the first exercises on page 3: ABC table*/
+
+#section3_1 table {
+  border: 1px solid black;
+  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#section3_1 th {
+  font-size: large;
+  cursor: pointer;
+  padding: 1em;
+}
+#section3_1 th:hover {
+  border: 2px dotted black; /*Create a dotted box when hovering*/
+  background-color: yellowgreen;
+}
+
+/* Styling for third exercise on page 3: Listen and type letter */
+#section3_3 table {
+  border: 2px solid black;
+}
+
+#section3_3 input {
+  border: 1px dashed grey;
+}
+
+#section3_3 button:hover {
+  cursor: pointer;
+}
 /* Change the background color of answers */
 .backRed {
   background-color: red;
@@ -165,12 +196,11 @@ th {
   color: ghostwhite;
   cursor: not-allowed;
 }
-.disable{
-    background-color: rgb(179, 179, 179);
-    color: ghostwhite;
-    cursor: not-allowed;
+.disable {
+  background-color: rgb(179, 179, 179);
+  color: ghostwhite;
+  cursor: not-allowed;
 }
-
 
 /*Carter drag and drop (section 5)*/
 #div1 {
@@ -178,130 +208,145 @@ th {
   height: 55px;
   border: 1px solid #aaaaaa;
   display: inline-block;
-}	#div2 {
-  width: 150px;
-  height: 55px;
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-}	#div3 {
-  width: 150px;
-  height: 55px;
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-}	#div4 {
-  width: 150px;
-  height: 55px;
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-}	#div5 {
-  width: 150px;
-  height: 55px;
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-}	#div6 {
-  width: 150px;
-  height: 55px;
-  border: 1px solid #aaaaaa;
-  display: inline-block;
-}	#div7 {
+}
+#div2 {
   width: 150px;
   height: 55px;
   border: 1px solid #aaaaaa;
   display: inline-block;
 }
-#drag1{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag2{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag3{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag4{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag5{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag6{
-  width: auto;
-  height: 50px;
-  display: inline;
-}	#drag7{
+#div3 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div4 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div5 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div6 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div7 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#drag1 {
   width: auto;
   height: 50px;
   display: inline;
 }
-#div1 img{
+#drag2 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag3 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag4 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag5 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag6 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag7 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#div1 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div2 img{
+}
+#div2 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div3 img{
+}
+#div3 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div4 img{
+}
+#div4 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div5 img{
+}
+#div5 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div6 img{
+}
+#div6 img {
   text-align: center;
   width: auto;
   height: 100%;
-}	#div7 img{
+}
+#div7 img {
   text-align: center;
   width: auto;
   height: 100%;
 }
 
-.dragDiv{
+.dragDiv {
   display: inline-block;
   width: 150px;
   height: 54px;
-  border: 2px solid black
+  border: 2px solid black;
 }
-#confirmMessage{
+#confirmMessage {
   font-size: x-large;
   font-weight: bold;
 }
-.screenSizeError{
+.screenSizeError {
   display: none;
 }
-.screenSizeErrorDnD{
+.screenSizeErrorDnD {
   display: none;
 }
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 540px) {
+  #matchParent {
+    display: none;
+  }
 
-#matchParent{
-  display: none;
+  .screenSizeError {
+    display: block;
+  }
 }
+@media only screen and (max-width: 1200px) {
+  #dragAndDropContainer {
+    display: none;
+  }
 
-.screenSizeError{
-  display: block;
-}
-
-}
-@media only screen and (max-width: 1200px){
-
-#dragAndDropContainer{
-  display: none;
-}
-
-.screenSizeErrorDnD{
-  display: block;
-}
+  .screenSizeErrorDnD {
+    display: block;
+  }
 }

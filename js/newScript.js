@@ -298,7 +298,7 @@ function answer2(item) {                                    // 'Item' refers to 
 
 }// end of function
 
-// Function for section 4 quiz table (days of the week)
+// Function for section 4 quiz table (Months of the year)
 
 // The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
 let icon1_2 = document.querySelector('#ic1_2')
@@ -423,10 +423,6 @@ else if (item.id=='wrJn3'||item.id=='wrOc3'||item.id=='wrFe3') (
 )
 
     // Results from the fourth row
-    // wrAu4
-    // wrMar4
-    // riOc4
-    // wrJa4
 if (item.id=='riOc4') {
     icon4_2.className='fa fa-check-circle fa-3x green'
 }
@@ -434,7 +430,7 @@ else if (item.id=='wrAu4'||item.id=='wrMar4'||item.id=='wrJa4') {
     icon4_2.className='fa fa-times-circle fa-3x red'
 }
 }// end of function
-console.log(answer3)
+
 
 
 //Carter drag and drop (section 5)//
@@ -463,13 +459,13 @@ function allowDrop(ev) {
   console.log(rng)
   }
 //Appending the randomized days and modifying the empty divs they leave behind//
-  document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
-  document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
-  autoId.push("drag" + rng)
-  document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
-  document.getElementById("div" + rng).className = "dropsCorrect"
-  document.getElementById("drag" + rng).removeAttribute("ondragstart")
-  document.getElementById("drag" + rng).removeAttribute("draggable")
+//   document.getElementById("drag" + rng).parentElement.style.visibility = "hidden"
+//   document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
+//   autoId.push("drag" + rng)
+//   document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
+//   document.getElementById("div" + rng).className = "dropsCorrect"
+//   document.getElementById("drag" + rng).removeAttribute("ondragstart")
+//   document.getElementById("drag" + rng).removeAttribute("draggable")
   
 autoNums += rng
   checkStore = rng
@@ -534,3 +530,50 @@ autoNums += rng
       }
     ev.target.removeAttribute("ondrop")
   }  
+
+//   Page 3: Function for exercise 3 - Writing lettre from audio
+
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+let btn3 = document.querySelector('#btn3')
+let btn4 = document.querySelector('#btn4')
+
+
+
+function EX3_1 () {
+    if (Let1.value=='A'||Let1.value=='a') {
+        iconP3_1.className='fa fa-check-circle fa-3x green', btn1.className='noclick'
+    }
+    else {
+        iconP3_1.className='fa fa-times-circle fa-3x red' , btn1.className='noclick'
+    }
+}// end of function P3_EC3
+
+function EX3_2 () {
+    if (Let2.value=='F'||Let2.value=='f') {
+        iconP3_2.className='fa fa-check-circle fa-3x green', btn2.className='noclick'
+    }
+    else {
+        iconP3_2.className='fa fa-times-circle fa-3x red' , btn2.className='noclick'
+    }
+}
+
+function EX3_3 () {
+    if (Let3.value=='R'||Let3.value=='r') {
+        iconP3_3.className='fa fa-check-circle fa-3x green', btn3.className='noclick'
+    }
+    else {
+        iconP3_3.className='fa fa-times-circle fa-3x red' , btn3.className='noclick'
+    }
+}
+
+function EX3_4 () {
+    if (Let4.value=='W'||Let4.value=='w') {
+        iconP3_4.className='fa fa-check-circle fa-3x green', btn4.className='noclick'
+    }
+    else {
+        iconP3_4.className='fa fa-times-circle fa-3x red' , btn4.className='noclick'
+    }
+}
+
+
