@@ -101,6 +101,7 @@
 
 #section3_3 input {
   border: 1px dashed grey;
+  width: 10%;
 }
 
 #section3_3 button:hover {
