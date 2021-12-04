@@ -107,6 +107,41 @@
 #section3_3 button:hover {
   cursor: pointer;
 }
+
+/* Styling for the fourth exercise on page 3: Write letters in right order */
+
+#section3_4 {
+  margin: 0;
+  padding: 0;
+}
+
+#section3_4 p {
+  margin: 0;
+  padding: 0;
+}
+
+.let_order {
+  border-bottom: solid black;
+  width: 1.5%;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.right_order {
+  border-bottom: solid green;
+  width: 1.5%;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.wrong_order {
+  border-bottom: dotted red;
+  width: 1.5%;
+  user-select: none;
+  text-transform: capitalize;
+}
+
 /* Change the background color of answers */
 .backRed {
   background-color: red;

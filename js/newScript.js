@@ -531,7 +531,7 @@ autoNums += rng
     ev.target.removeAttribute("ondrop")
   }  
 
-//   Page 3: Function for exercise 3 - Writing lettre from audio
+//   Page 3: Function for exercise 3 - Writing letter from audio
 
 let btn1 = document.querySelector('#btn1')
 let btn2 = document.querySelector('#btn2')
@@ -539,7 +539,8 @@ let btn3 = document.querySelector('#btn3')
 let btn4 = document.querySelector('#btn4')
 
 
-
+// The function is saying that if the what the person types in is equal to the uppcercase or lowercase letter heard in the audio,
+// the black circle green and if it isn't, turn it red
 function EX3_1 () {
     if (Let1.value=='A'||Let1.value=='a') {
         iconP3_1.className='fa fa-check-circle fa-3x green', btn1.className='noclick'
@@ -547,7 +548,7 @@ function EX3_1 () {
     else {
         iconP3_1.className='fa fa-times-circle fa-3x red' , btn1.className='noclick'
     }
-}// end of function P3_EC3
+}
 
 function EX3_2 () {
     if (Let2.value=='F'||Let2.value=='f') {
@@ -575,5 +576,55 @@ function EX3_4 () {
         iconP3_4.className='fa fa-times-circle fa-3x red' , btn4.className='noclick'
     }
 }
+
+// Page 3: Function for exercise 4 - Write letters in the right order
+
+function order_1(field, autoMove) {
+    if (field.value == 'A' || field.value=='a') {
+        field.className='right_order', field.setAttribute('readonly','disabled' )
+    }
+    else {
+        field.className='wrong_order'
+    }
+    if (field.value.length == field.maxLength) {
+        document.getElementById(autoMove).focus()
+    }
+}
+function order_2(field, autoMove) {
+    if (field.value == 'B' || field.value=='b') {
+        field.className='right_order', field.setAttribute('readonly','disabled' )
+    }
+    else {
+        field.className='wrong_order'
+    }
+    if (field.value.length == field.maxLength) {
+        document.getElementById(autoMove).focus()
+    }
+}
+
+function order_3(field, autoMove) {
+    if (field.value == 'C' || field.value=='c') {
+        field.className='right_order', field.setAttribute('readonly','disabled' )
+    }
+    else {
+        field.className='wrong_order'
+    }
+    if (field.value.length == field.maxLength) {
+        document.getElementById(autoMove).focus()
+    }
+}
+
+function order_4(field,) {
+    if (field.value == 'D' || field.value=='d') {
+        field.className='right_order', field.setAttribute('readonly','disabled' )
+    }
+    else {
+        field.className='wrong_order'
+    }
+    if (field.value.length == field.maxLength) {
+    }
+}
+
+
 
 
