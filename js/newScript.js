@@ -579,51 +579,64 @@ function EX3_4 () {
 
 // Page 3: Function for exercise 4 - Write letters in the right order
 
-function order_1(field, autoMove) {
-    if (field.value == 'A' || field.value=='a') {
-        field.className='right_order', field.setAttribute('readonly','disabled' )
+function order_1(item, autoMove) { // '' references the entire input, autoMove is the ID of the next input box
+    if (item.value == 'A' || item.value=='a') {
+        item.className='right_order', item.setAttribute('readonly','disabled' )
     }
     else {
-        field.className='wrong_order'
+        item.className='wrong_order'
     }
-    if (field.value.length == field.maxLength) {
+    if (item.value.length == item.maxLength) {
         document.getElementById(autoMove).focus()
     }
 }
-function order_2(field, autoMove) {
-    if (field.value == 'B' || field.value=='b') {
-        field.className='right_order', field.setAttribute('readonly','disabled' )
+function order_2(item, autoMove) {
+    if (item.value == 'B' || item.value=='b') {
+        item.className='right_order', item.setAttribute('readonly','disabled' )
     }
     else {
-        field.className='wrong_order'
+        item.className='wrong_order'
     }
-    if (field.value.length == field.maxLength) {
-        document.getElementById(autoMove).focus()
-    }
-}
-
-function order_3(field, autoMove) {
-    if (field.value == 'C' || field.value=='c') {
-        field.className='right_order', field.setAttribute('readonly','disabled' )
-    }
-    else {
-        field.className='wrong_order'
-    }
-    if (field.value.length == field.maxLength) {
+    if (item.value.length == item.maxLength) {
         document.getElementById(autoMove).focus()
     }
 }
 
-function order_4(field,) {
-    if (field.value == 'D' || field.value=='d') {
-        field.className='right_order', field.setAttribute('readonly','disabled' )
+function order_3(item, autoMove) {
+    if (item.value == 'C' || item.value=='c') {
+        item.className='right_order', item.setAttribute('readonly','disabled' )
     }
     else {
-        field.className='wrong_order'
+        item.className='wrong_order'
     }
-    if (field.value.length == field.maxLength) {
+    if (item.value.length == item.maxLength) {
+        document.getElementById(autoMove).focus()
     }
 }
+
+function order_4(item,) {
+    if (item.value == 'D' || item.value=='d') {
+        item.className='right_order', item.setAttribute('readonly','disabled' )
+    }
+    else {
+        item.className='wrong_order'
+    }
+    if (item.value.length == item.maxLength) {
+    }
+}
+
+/* How this function works?
+It's focused around the two parameters, item and autoMove
+item: It references the entire input box thanks to putting (this) in the function name
+autoMove: It references the ID of the next input, I put in the second parameter of the function the ID of the next input in HTML
+
+- The disabled attribute is have them not be able to change their answer
+
+- The last line for the first three function is a document.getElement function where I add the focus method which goes to the next input (using 
+    its parameter name automove), the reason I believe we had to use document.getElement here when normally we don't is because it's referencing
+    something that is not attached to the function.
+*/
+
 
 
 
