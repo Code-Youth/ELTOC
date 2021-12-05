@@ -476,41 +476,21 @@
 			</div>
 		</section>
 		<!--Number Audio Section-->
-		<audio preload="auto" id="one" src="Audio/Letters/1.m4a"></audio>
+		<audio preload="auto" id="zero" src="Audio/Numbers/0.m4a"></audio>
+		<audio preload="auto" id="one" src="Audio/Numbers/1.m4a"></audio>
+		<audio preload="auto" id="two" src="Audio/Numbers/2.m4a"></audio>
+		<audio preload="auto" id="three" src="Audio/Numbers/3.m4a"></audio>
+		<audio preload="auto" id="four" src="Audio/Numbers/4.m4a"></audio>
+		<audio preload="auto" id="five" src="Audio/Numbers/5.m4a"></audio>
+		<audio preload="auto" id="six" src="Audio/Numbers/6.m4a"></audio>
+		<audio preload="auto" id="seven" src="Audio/Numbers/7.m4a"></audio>
+		<audio preload="auto" id="eight" src="Audio/Numbers/8.m4a"></audio>
+		<audio preload="auto" id="nine" src="Audio/Numbers/9.m4a"></audio>
+		<!--Number Audio Section End-->
+
+
 		<!--Carter listen and select (section 2) Start-->
-		<style>
-			.lASTable{
-				font-size: large;
-				display: inline-table;
-			}
-			.lASTable tr{
-				border: 1px solid black;
 
-			}
-			.lASTable th{
-				width: 40px;
-				height: 40px;
-
-			}
-			.s2Num:hover{
-				border: dashed;
-border-width: 2px 2px;
-border-radius: 40px;
-			}
-			.s2NumA:hover{
-				border: dashed;
-border-width: 2px 2px;
-border-radius: 40px;
-			}
-			.s2Play{
-				background-color: greenyellow; 
-				border-right: 1px solid black;
-			}
-			.s2Play:hover{
-				background-color: rgb(19, 219, 19)
-			}
-			
-		</style>
 				<div class="container">
 					<table class="lASTable">
 						<tr>
@@ -590,191 +570,171 @@ border-radius: 40px;
 
 		</div>
 
-<script>
-	var beta = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-	var numSoundBank = ["zero","one","two","three","four","five","six","seven","eight","nine"]
-	var checkNum = []
-	var wpw = 0
-	var checkNumA = []
-	var wpwA = 0
 
-	function AnswerTheQuestionA(ww){
-	if(ww.innerHTML == ww.parentElement.firstElementChild.title){
-		for(let c = 1; c<4; c++){
-			ww.className = "correct"
-		ww.parentElement.children[c].removeAttribute("onclick")
-	}
-	}
-	else{
-		ww.className="incorrect"
-		for(let c2 = 1; c2<4; c2++){
-			if(ww.parentElement.children[c2].innerHTML == ww.parentElement.firstElementChild.title){
-				ww.parentElement.children[c2].className = "correct"
-			}
-			ww.parentElement.children[c2].removeAttribute("onclick")
-
-		}
-	}
-}
-
-
-
-	function s2RngA(){
-	// let qBank = {one1:[1,2,3],two2:[4,5,6],three3:[7,8,9]}
-		for(let s2i2 = 0; s2i2 < 10; s2i2++){
-			//Rng for what position the playbutton should refrence for audio//
-			let audioNumberA = Math.random()*10
-			audioNumberA = Math.floor(audioNumberA)
-			if(audioNumberA <= 3){
-				audioNumberA = 0
-			}
-			else if(audioNumberA >= 4 && audioNumberA <= 7){
-				audioNumberA = 1
-			}
-			else if(audioNumberA >= 8){
-				audioNumberA = 2
-			}
-			//loops 3 times too randomize each 3 possible answers//
-		for(let s2i = 0; s2i<3; s2i++){
-		let numboidA = Math.random()*100
-		numboidA = Math.floor(numboidA)
-		//checking if number has been used for this question//
-		if(checkNumA.includes(beta[numboidA]) == false && numboidA < 26){
-		checkNumA.push(beta[numboidA])
-		console.log(checkNumA)
-		document.getElementsByClassName("s2NumA")[wpwA].innerHTML = beta[numboidA]
-			console.log(wpwA)
-		document.getElementsByClassName("s2NumA")[wpwA].id = "an" + beta[numboidA]
-			wpwA+=1
-		}
-	
-		else{
-			s2i -= 1
-			console.log("issue" + s2i)
-		}
-	}
-	//passNum is the argument that will decide what audio file to play//
-	passNum = checkNumA[audioNumberA]
-	if (passNum == undefined){
-		console.log(audioNumberA)
-		console.log("undefined at:" +s2i2)
-	}
-//	console.log(passNum)
-	//adds onclick to play button
-	document.getElementById("playA" + s2i2).setAttribute("onclick","s2playsoundA(" + passNum + ")")
-	document.getElementById("playA" + s2i2).setAttribute("title",passNum)
-if(checkNumA.length == 3){
-	console.log("= 3")
-	checkNumA.length = 0;
-	}
-	else if(checkNumA.length >3){
-		console.log("> 3")
-		checkNumA.length =0
-	}
-}
-	}
-	function s2playsoundA(letter){
-		l1 = letter.id
-		document.getElementById(l1).play()
-	}
-	// 	console.log(document.getElementsByClassName("s2Num")[0].innerHTML)
-	// function AnswerTheQuestionN(numAnswer){
-	// 	console.log(numAnswer.parentElement.childNodes)
-	// 	let ax = numAnswer.parentElement.childNodes[1].title
-	// 	if(numAnswer.innerHTML == ax){
-	// 		numAnswer.className = "correct"
-	// 		for(let c = 1; c<11; c++){
-	// 			for(let c2 = 0; c2<3; c2++){
-	// 				console.log(c + " " + c2)
-	// 				console.log(document.getElementsByClassName("q" + c))
-	// 			document.getElementsByClassName("q" + c)[c2].removeAttribute("onclick")
-	// 	//  let y = numAnswer.parentElement.childNodes[c].id
-	// 	//  console.log("removing onclick for:" + numAnswer.className)
-	// 	// 	document.getElementById(y).removeAttribute("onclick")
-	// 	// 	console.log(document.getElementById(y))
-	// 	}
-	// }
-	// 	}
-	// 	else{
-	// 		numAnswer.className = "incorrect"
-	// 	}
-	// }
-
-function AnswerTheQuestionN(ww){
-	if(ww.innerHTML == ww.parentElement.firstElementChild.title){
-		for(let c = 1; c<4; c++){
-			ww.className = "correct"
-		ww.parentElement.children[c].removeAttribute("onclick")
-	}
-	}
-	else{
-		ww.className="incorrect"
-		for(let c2 = 1; c2<4; c2++){
-			if(ww.parentElement.children[c2].innerHTML == ww.parentElement.firstElementChild.title){
-				ww.parentElement.children[c2].className = "correct"
-			}
-			ww.parentElement.children[c2].removeAttribute("onclick")
-
-		}
-	}
-}
-
-
-
-	function s2RngN(){
-	// let qBank = {one1:[1,2,3],two2:[4,5,6],three3:[7,8,9]}
-		for(let s2i2 = 0; s2i2 < 10; s2i2++){
-			//Rng for what position the playbutton should refrence for audio//
-			let audioNumberN = Math.random()*10
-			audioNumberN = Math.floor(audioNumberN)
-			if(audioNumberN <= 3){
-				audioNumberN = 0
-			}
-			else if(audioNumberN >= 4 && audioNumberN <= 7){
-				audioNumberN = 1
-			}
-			else if(audioNumberN >= 8){
-				audioNumberN = 2
-			}
-			//loops 3 times too randomize each 3 possible answers//
-		for(let s2i = 0; s2i<3; s2i++){
-		let numboid = Math.random()*10
-		numboid = Math.floor(numboid)
-		//checking if number has been used for this question//
-		if(checkNum.includes(numboid) == false){
-		checkNum.push(numboid)
-		document.getElementsByClassName("s2Num")[wpw].innerHTML = numboid
-		document.getElementsByClassName("s2Num")[wpw].id = "an" + numboid
-			wpw+=1
-		}
-		else{
-			s2i -= 1
-		}
-	}
-	//passNum is the argument that will decide what audio file to play//
-	passNum = checkNum[audioNumberN]
-	if (passNum == undefined){
-		console.log(audioNumberN)
-		console.log("undefined at:" +s2i2)
-	}
-	//adds onclick to play button
-	document.getElementById("play" + s2i2).setAttribute("onclick","s2playsoundN(" + passNum + ")")
-	document.getElementById("play" + s2i2).setAttribute("title",passNum)
-
-	checkNum.length = 0;
-	}
-	}
-	function load(){
-		s2RngA()
-		s2RngN()
-	}
-	function s2playsoundN(numSound){
-		console.log(numSoundBank[numSound])
-		document.getElementById(numSoundBank[numSound]).play()
-	}
-</script>
 		<!--Carter listen and select (section 2) End-->
+		<!--Carter Match alpha-->
+		<br>
+		<hr>
+		<br>
+		<style>
+			.s4Answers{
+				width: 40px;
+				height: 40px;
+				font-size: 200%;
+			}
+			.s4Answers:hover{
+				border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+cursor: pointer;
+			}
+			.s4First{
+				width: 40px;
+				height: 40px;
+				font-size: 200%;
+				border-right: 2px solid black;
 
+			}
+			.winnerWinner{
+				width: 40px;
+				height: 40px;
+				font-size: 200%;
+				color: yellowgreen;
+			}
+			.loser{
+				width: 40px;
+				height: 40px;
+				font-size: 200%;
+			}
+			.loserLoser{
+				width: 40px;
+				height: 40px;
+				font-size: 200%;
+				color: red;
+			}
+		</style>
+		<div class=container>
+			<table id="matchingTable">
+
+			</table>	
+		</div>
+		<script>
+			var iteration = 0
+			var ansBank = []
+			var s4Bank = []
+			var alphaBank = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+			//run twice with loop?
+			function s4Rng(){
+				for(let rngS4 = 0; rngS4 < 8; rngS4++){
+        s4Pos = Math.random()*100
+        s4Pos = Math.floor(s4Pos)
+        if (s4Pos > 25 || s4Pos == 0){
+            rngS4-=1
+        }
+		else if(s4Bank.includes(alphaBank[s4Pos])){
+			rngS4-=1
+		}
+        else if(s4Bank.length == 0){
+			//Storing the answer for later
+			ansBank.push(alphaBank[s4Pos])
+			//pushing the answer into the answers array
+			s4Bank.push(alphaBank[s4Pos])
+        }
+        else{
+			s4Bank.push(alphaBank[s4Pos])	
+        }
+    }
+	console.log(ansBank)
+	console.log(s4Bank)
+	shuffle(s4Bank,ansBank)	
+}
+			//Before appending, check if ansBank[0] == ansBank[1]
+			s4Rng()
+			function shuffle(array,s4Answe) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  console.log(array)
+  s4Append(array,s4Answe)
+			}
+			function s4Append(answerArray,answerKey){
+			var tableApp = document.getElementById("matchingTable")
+			var tableRow = document.createElement("tr")
+			tableRow.setAttribute("style","border-bottom: 2px solid black;")
+					for(let appendI = -1; appendI<8;appendI++){
+					
+							let AAA = document.createElement("th")
+							if(appendI == -1){
+								AAA.innerHTML = ansBank[0]
+								AAA.setAttribute("class","s4First")
+								AAA.setAttribute("id","s4A" + iteration)
+							}
+							else{
+								AAA.innerHTML = answerArray[appendI]
+								AAA.setAttribute("class","s4Answers s4Ans" + iteration)
+								AAA.setAttribute("onclick","selectAnswer(this)")
+							}
+							tableRow.appendChild(AAA)
+					}
+					tableApp.appendChild(tableRow)
+					let br = document.createElement("br")
+					tableApp.appendChild(br)
+					iteration+=1
+					if(iteration == 1){
+						answerArray.length = 0
+						ansBank.length = 0
+						s4Bank.length = 0
+						s4Rng()
+					}
+			}
+			function selectAnswer(arg){
+				let it = arg.className.slice(arg.className.length-1)
+				console.log(it)
+				if(arg.innerHTML == document.getElementsByClassName("s4First")[it].innerHTML){
+					arg.className = "winnerWinner"
+					hope()
+					for(let p =0; p<50; p++)
+					if(document.getElementsByClassName("s4Ans" + it).length !== 0){
+						console.log(p)
+							hope(it)
+						}
+						else{
+							p = 100
+						}
+					
+				}
+				else{
+					arg.className = "loserLoser"
+				}
+			}
+			function hope(ut){
+				for(let i = 0; i<document.getElementsByClassName("s4Ans" + ut).length;i++){
+						document.getElementsByClassName("s4Ans" + ut)[i].className = "loser"
+					}
+			}
+		</script>
+
+		<!--Carter Match alpha End-->
+		<!--Carter Alphabet part-->
+		<br>
+		<hr>
+		<br>
+		<div class="container">
+		<h6 style="letter-spacing: 3px;">abcdefghijklmnopqrstuvwxyz</h6>
+		<div id=testBox>
+		</div>
+		</div>
+		<!--Carter Alphabet part End-->
 		<!-- End Error Section -->
 
 		<!-- Main Footer -->
@@ -863,7 +823,8 @@ function AnswerTheQuestionN(ww){
 	<script src="js/nav-tool.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/script.js"></script>
-	<!-- <script src="js/newScript.js"></script> -->
+	<script src="js/Alpha.js"></script>
+	<script src="js/newScript.js"></script>
 </body>
 
 </html>
