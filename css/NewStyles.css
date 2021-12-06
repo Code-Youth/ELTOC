@@ -69,6 +69,32 @@
   color: black;
   cursor: pointer;
 }
+@media only screen and (max-width: 415px){
+  #section4 th{
+    border: 1px solid black;
+  font-size: small;
+  color: black;
+  cursor: pointer;
+  }
+  #section4 td{
+    border: 1px solid black;
+  font-size: large;
+  color: black;
+  }
+  #ic1{
+    font-size: 2em;
+  }
+  #ic2{
+    font-size: 2em;
+  }
+  #ic4{
+    font-size: 2em;
+  }
+  #ic3{
+    font-size: 2em;
+  }
+
+}
 #section4 td {
   border: 1px solid black;
   font-size: large;
