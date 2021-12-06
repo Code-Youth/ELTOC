@@ -472,10 +472,113 @@
 								</div>
 							</div>
 						</div>
+					</div>
 				</div>
-			</div>
 		</section>
 		<!-- End Error Section -->
+
+		<!-- This is where the exercises begin -->
+
+		<!-- Majid: ABC table with audio (Exercise 1) -->
+		<section id='section3_1'>
+			<div class='container'>
+				<table>
+					<tr>
+						<th onclick="playSound('A')">Aa</th>
+						<th onclick="playSound('B')">Bb</th>
+						<th onclick="playSound('C')">Cc</th>
+						<th onclick="playSound('D')">Dd</th>
+						<th onclick="playSound('E')">Ee</th>
+						<th onclick="playSound('F')">Ff</th>
+					</tr>
+					<tr>
+						<th onclick="playSound('G')">Gg</th>
+						<th onclick="playSound('H')">Hh</th>
+						<th onclick="playSound('I')">Ii</th>
+						<th onclick="playSound('J')">Jj</th>
+						<th onclick="playSound('K')">Kk</th>
+						<th onclick="playSound('L')">Ll</th>
+					</tr>
+					<tr>
+						<th onclick="playSound('M')">Mm</th>
+						<th onclick="playSound('N')">Nn</th>
+						<th onclick="playSound('O')">Oo</th>
+						<th onclick="playSound('P')">Pp</th>
+						<th onclick="playSound('Q')">Qq</th>
+						<th onclick="playSound('R')">Rr</th>
+					</tr>
+					<tr>
+						<th onclick="playSound('S')">Ss</th>
+						<th onclick="playSound('T')">Tt</th>
+						<th onclick="playSound('U')">Uu</th>
+						<th onclick="playSound('V')">Vv</th>
+						<th onclick="playSound('W')">Ww</th>
+						<th onclick="playSound('X')">Xx</th>
+					</tr>
+					<tr>
+						<th onclick="playSound('Y')">Yy</th>
+						<th onclick="playSound('Z')">Zz</th>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+		<hr>
+
+		<!-- Majid: Quiz2 (Exercise 3) -->
+
+		<section id='section3_3'>
+			<div class='container'>
+				<h4>Write what letter you hear!</h4>
+				<table>
+					<tr>
+						<th><i onclick="playSound('A')" class='fa fa-play-circle fa-3x green'></i></th>
+						<th><input id='Let1' type='text' value='' maxlength="1"></th>
+						<th><button onclick='EX3_1()' id='btn1'>Check</button></th>
+						<th><i id='iconP3_1' class='fa fa-circle fa-3x'></i></th>
+					</tr>
+					<tr>
+						<th><i onclick="playSound('F')" class='fa fa-play-circle fa-3x green'></i></th>
+						<th><input id='Let2' type='text' value='' maxlength="1"></th>
+						<th><button onclick='EX3_2()' id='btn2'>Check</button></th>
+						<th><i id='iconP3_2' class='fa fa-circle fa-3x'></i></th>
+					</tr>
+					<tr>
+						<th><i onclick="playSound('R')" class='fa fa-play-circle fa-3x green'></i></th>
+						<th><input id='Let3' type='text' value='' maxlength="1"></th>
+						<th><button onclick='EX3_3()' id='btn3'>Check</button></th>
+						<th><i id='iconP3_3' class='fa fa-circle fa-3x'></i></th>
+					</tr>
+					<tr>
+						<th><i onclick="playSound('W')" class='fa fa-play-circle fa-3x green'></i></th>
+						<th><input id='Let4' type='text' value='' maxlength="1"></th>
+						<th><button onclick='EX3_4()' id='btn4'>Check</button></th>
+						<th><i id='iconP3_4' class='fa fa-circle fa-3x'></i></th>
+					</tr>
+				</table>
+			</div>
+		</section>
+
+
+		<!-- Majid: ABC order (Exercise 4) -->
+
+		<section id='section3_4'>
+			<div class='container'>
+				<h2>Write letters in right order</h2>
+				<p>D C A B</p>
+				<input type='text' value='' class='let_order' id="order1" maxlength="1"
+					onkeyup="order_1(this, 'order2')">
+				<input type='text' value='' class='let_order' id="order2" maxlength="1"
+					onkeyup="order_2(this, 'order3')">
+				<input type='text' value='' class='let_order' id="order3" maxlength="1"
+					onkeyup="order_3(this, 'order4')">
+				<input type='text' value='' class='let_order' id="order4" maxlength="1" onkeyup="order_4(this)">
+
+
+			</div>
+
+		</section>
+
 
 		<!-- Main Footer -->
 		<footer class="main-footer">
