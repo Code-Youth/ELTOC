@@ -412,7 +412,9 @@ autoNums += rng
   rng = 0
   }
   }
+  if(document.getElementsByClassName("screenSizeErrorDnD").display == "none"){
   autostuff()
+  }
   autoNums -= checkStore
   function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
@@ -622,7 +624,8 @@ ctx.strokeStyle = "rgb(0,255,0)"
 //Drawing line from (x,y) to (x,y)//
 ctx.beginPath();
 ctx.moveTo(0, y1);
-ctx.lineTo(189, y2);
+console.log(document.getElementById("myCanvas"))
+ctx.lineTo(document.getElementById("myCanvas").width, y2);
 ctx.stroke();
 //Reset y1 and y2//
 y1 = 0
@@ -807,7 +810,6 @@ checkNum.length = 0;
 function load(){
     s2RngA()
     s2RngN()
-    runtheSimulation()
 }
 function s2playsoundN(numSound){
     console.log(document.getElementById(numSoundBank[numSound]))
@@ -853,10 +855,10 @@ function s2playsoundN(numSound){
 			appendee.setAttribute("id","Position" + posData)
 			posData+=1
 		}
+        console.log(appendee)
 		tB.appendChild(appendee)
 		
 	}
-
 }
 function jumpCheck(cH){
 	if(cH.value.length >= cH.maxLength){
@@ -986,3 +988,106 @@ autoMove: It references the ID of the next input, I put in the second parameter 
     its parameter name automove), the reason I believe we had to use document.getElement here when normally we don't is because it's referencing
     something that is not attached to the function.
 */
+var iteration = 0
+			var ansBank = []
+			var s4Bank = []
+			var alphaBank = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+			//run twice with loop?
+			function s4Rng(){
+				for(let rngS4 = 0; rngS4 < 8; rngS4++){
+        s4Pos = Math.random()*100
+        s4Pos = Math.floor(s4Pos)
+        if (s4Pos > 25 || s4Pos == 0){
+            rngS4-=1
+        }
+		else if(s4Bank.includes(alphaBank[s4Pos])){
+			rngS4-=1
+		}
+        else if(s4Bank.length == 0){
+			//Storing the answer for later
+			ansBank.push(alphaBank[s4Pos])
+			//pushing the answer into the answers array
+			s4Bank.push(alphaBank[s4Pos])
+        }
+        else{
+			s4Bank.push(alphaBank[s4Pos])	
+        }
+    }
+	console.log(ansBank)
+	console.log(s4Bank)
+	shuffle(s4Bank,ansBank)	
+}
+			//Before appending, check if ansBank[0] == ansBank[1]
+			s4Rng()
+			function shuffle(array,s4Answe) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  console.log(array)
+  s4Append(array,s4Answe)
+			}
+			function s4Append(answerArray,answerKey){
+			var tableApp = document.getElementById("matchingTable")
+			var tableRow = document.createElement("tr")
+			tableRow.setAttribute("style","border-bottom: 2px solid black;")
+					for(let appendI = -1; appendI<8;appendI++){
+					
+							let AAA = document.createElement("th")
+							if(appendI == -1){
+								AAA.innerHTML = ansBank[0]
+								AAA.setAttribute("class","s4First")
+								AAA.setAttribute("id","s4A" + iteration)
+							}
+							else{
+								AAA.innerHTML = answerArray[appendI]
+								AAA.setAttribute("class","s4Answers s4Ans" + iteration)
+								AAA.setAttribute("onclick","selectAnswer(this)")
+							}
+							tableRow.appendChild(AAA)
+					}
+					tableApp.appendChild(tableRow)
+					let br = document.createElement("br")
+					tableApp.appendChild(br)
+					iteration+=1
+					if(iteration == 1){
+						answerArray.length = 0
+						ansBank.length = 0
+						s4Bank.length = 0
+						s4Rng()
+					}
+			}
+			function selectAnswer(arg){
+				let it = arg.className.slice(arg.className.length-1)
+				console.log(it)
+				if(arg.innerHTML == document.getElementsByClassName("s4First")[it].innerHTML){
+					arg.className = "winnerWinner"
+					hope()
+					for(let p =0; p<50; p++)
+					if(document.getElementsByClassName("s4Ans" + it).length !== 0){
+						console.log(p)
+							hope(it)
+						}
+						else{
+							p = 100
+						}
+					
+				}
+				else{
+					arg.className = "loserLoser"
+				}
+			}
+			function hope(ut){
+				for(let i = 0; i<document.getElementsByClassName("s4Ans" + ut).length;i++){
+						document.getElementsByClassName("s4Ans" + ut)[i].className = "loser"
+					}
+			}

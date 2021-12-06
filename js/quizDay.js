@@ -142,7 +142,7 @@ ctx.strokeStyle = "rgb(0,255,0)"
 //Drawing line from (x,y) to (x,y)//
 ctx.beginPath();
 ctx.moveTo(0, y1);
-ctx.lineTo(189, y2);
+ctx.lineTo(document.getElementById("myCanvas").width, y2);
 ctx.stroke();
 //Reset y1 and y2//
 y1 = 0
