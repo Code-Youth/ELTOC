@@ -93,7 +93,29 @@
   #ic3{
     font-size: 2em;
   }
-
+  #ic1_2{
+    font-size: 2em;
+  }
+  #ic2_2{
+    font-size: 2em;
+  }
+  #ic4_2{
+    font-size: 2em;
+  }
+  #ic3_2{
+    font-size: 2em;
+  }
+/* #section3_1 table{
+  border: 1px solid black;
+  font-size: 5em;
+  width: 1em !important;
+}
+#section3_1{
+  width: 1em !important;
+}
+#section3_1_A{
+  width: 1em !important;
+} */
 }
 #section4 td {
   border: 1px solid black;
@@ -476,12 +498,16 @@ th {
   display: none;
 }
 @media only screen and (max-width: 540px) {
-  #matchParent {
+  /* #matchParent {
     display: none;
   }
 
   .screenSizeError {
     display: block;
+  } */
+  
+  .matchTable th{
+    width: 100px !important;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -491,6 +517,11 @@ th {
 
   .screenSizeErrorDnD {
     display: block;
+  }
+}
+@media only screen and (max-width: 650px){
+  .pattern-layer-three{
+    display: none;
   }
 }
 .lASTable{
@@ -522,4 +553,40 @@ border-radius: 40px;
 }
 .s2Play:hover{
   background-color: rgb(19, 219, 19)
+}
+
+.s4Answers{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+}
+.s4Answers:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+cursor: pointer;
+}
+.s4First{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  border-right: 2px solid black;
+
+}
+.winnerWinner{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  color: yellowgreen;
+}
+.loser{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+}
+.loserLoser{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  color: red;
 }
