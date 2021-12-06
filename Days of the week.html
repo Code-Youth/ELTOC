@@ -593,244 +593,108 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 		<p>Drag and drop section not available on smaller screens</p>
 	</div>
 	<div id="dragAndDropContainer" class="container">
-		<h4>Put in order</h4>
-		<div class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<br>
-		<hr>
-		<br>
-		<div class="dragDiv">
-			<img id="drag2" draggable="true" src="images/Days/Tuesday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag6" draggable="true" src="images/Days/Saturday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag1" draggable="true" src="images/Days/Monday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag5" draggable="true" src="images/Days/Friday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag7" draggable="true" src="images/Days/Sunday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag3" draggable="true" src="images/Days/Wednesday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag4" draggable="true" src="images/Days/Thursday.png" ondragstart="drag(event)">
-		</div>
-	</div>
-	<hr>
+	<h4>Put in order</h4>		
+<div title="Mon" class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Tue" class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Wed" class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Thu" class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Fri" class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Sat" class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Sun" class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<hr>
+<br>
+<div class="dragDiv">
+<img title="Tue" id="drag2" draggable="true" src="images/Days/Tuesday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+<img title="Sat" id="drag6" draggable="true" src="images/Days/Saturday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+<img title="Mon" id="drag1" draggable="true" src="images/Days/Monday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+<img title="Fri" id="drag5" draggable="true" src="images/Days/Friday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Sun" id="drag7" draggable="true" src="images/Days/Sunday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Wed" id="drag3" draggable="true" src="images/Days/Wednesday.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Thu" id="drag4" draggable="true" src="images/Days/Thursday.png" ondragstart="drag(event)">
+</div>
+</div>
+<hr>
 
-	<!--Carter: Matching (section 7)-->
-	<br>
-	<div class="container screenSizeError">
-		<p class="screenSizeError">Match section not available on smaller screens</p>
-	</div>
+<!--Carter: Matching (section 7)-->
+<br>
+<div class="container screenSizeError"> 	<p class="screenSizeError">Match section not available on smaller screens</p>
+</div>
 
-	<div id="matchParent" class="container">
-		<table class="matchTable" style="float: left;">
-			<tr onclick="click1(this)" class="Mondas" id="match025">
-				<th>Monday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Tuesdas" id="match075">
-				<th>Tuesday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Wednesdas" id="match125">
-				<th>Wednesday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Thursdas" id="match175">
-				<th>Thursday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Fridas" id="match225">
-				<th>Friday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Saturdas" id="match275">
-				<th>Saturday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Sundas" id="match325">
-				<th>Sunday</th>
-			</tr>
-		</table>
-		<canvas id="myCanvas" width="189" height="350" style="z-index: 1; position: relative; float: left;"></canvas>
-		<table class="matchTable" style="float: left;">
-			<tr onclick="click1(this)" class="Saturdas" id="matchA025">
-				<th>Sat.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Thursdas" id="matchA075">
-				<th>Thu.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Tuesdas" id="matchA125">
-				<th>Tue.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Sundas" id="matchA175">
-				<th>Sun.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Mondas" id="matchA225">
-				<th>Mon.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Wednesdas" id="matchA275">
-				<th>Wed.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Fridas" id="matchA325">
-				<th>Fri.</th>
-			</tr>
-		</table>
-	</div>
-	<div style="height: 500px;">
+<div id="matchParent" class="container">
+	<table class="matchTable" style="float: left;">
+		<tr onclick="click1(this)" class="Mondas" id="match025">
+			<th>Monday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Tuesdas" id="match075">
+			<th>Tuesday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Wednesdas" id="match125">
+			<th>Wednesday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Thursdas" id="match175">
+			<th>Thursday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Fridas" id="match225">
+			<th>Friday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Saturdas" id="match275">
+			<th>Saturday</th>
+		</tr>
+		<tr onclick="click1(this)" class="Sundas" id="match325">
+			<th>Sunday</th>
+		</tr>
+	</table>
+<canvas  id="myCanvas" width="189" height="350" style="z-index: 1; position: relative; float: left;"></canvas>
+<table class="matchTable" style="float: left;">
+	<tr onclick="click1(this)" class="Saturdas" id="matchA025">
+		<th>Sat.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Thursdas" id="matchA075">
+		<th>Thu.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="Tuesdas" id="matchA125">
+		<th>Tue.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Sundas" id="matchA175">
+		<th>Sun.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="Mondas" id="matchA225">
+		<th>Mon.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Wednesdas" id="matchA275">
+		<th>Wed.</th>
+	</tr>
+	<tr onclick="click1(this)" class="Fridas" id="matchA325">
+		<th>Fri.</th>
+	</tr>
+</table>
+</div>
+<div style="height: 500px;">
 
-	</div>
-	
-	<!--Carter Spelling? (section 3)-->
-	<br>
-	<div class="border"></div>
-	<div class="container">
-		<h4>Fill in the blank</h4>
-		<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Wednesday</p>
+</div>
 
-		<form style="margin-top: -1%; font-size: large;">
-			<input onkeyup="jump(this, 'j1One2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1"
-				type="text" id="j1One1" name="fname"><span>edn</span><input onkeyup="jump(this,'j1One3')" id="j1One2"
-				class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>sd</span><input
-				onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"
-				id="j1One3"><span>y</span>
-			<button style="background-color: white; margin-left: 1em;" type="reset"><i
-					class="fa fa-reply fa-1x"></i></button>
-		</form>
+		<!-- Error Section Alphabet -->
+		<section class="error-section">
+			<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>
+			<div class="auto-container">
+				<div class="content">
+					<div id="heading">
 
-		<br>
-		<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Saturday</p>
-
-		<form style="margin-top: -1%; font-size: large;">
-			<span>S</span><input onkeyup="jump(this, 'j2Two2')" class="border-bottom border-dark fillInBlank"
-				maxlength="1" type="text" id="j2Two1" name="fname"><span>tu</span><input onkeyup="jump(this,'j2Two3')"
-				id="j2Two2" class="border-bottom border-dark fillInBlank" maxlength="1"
-				type="text"><span>da</span><input onkeyup="jump(this)" class="border-bottom border-dark fillInBlank"
-				maxlength="1" type="text" id="j2Two3">
-			<button style="background-color: white; margin-left: 1em;" type="reset"><i
-					class="fa fa-reply fa-1x"></i></button>
-		</form>
-		<br>
-		<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Tuesday</p>
-
-		<form style="margin-top: -1%; font-size: large;">
-			<input onkeyup="jump(this, 'j3Thr2')" class="border-bottom border-dark fillInBlankCapital" maxlength="1"
-				type="text" id="j3Thr1" name="fname"><span>u</span><input onkeyup="jump(this,'j3Thr3')" id="j3Thr2"
-				class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>s</span><input
-				onkeyup="jump(this, 'j3Thr4')" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"
-				id="j3Thr3"><span>ay</span>
-			<button style="background-color: white; margin-left: 1em;" type="reset"><i
-					class="fa fa-reply fa-1x"></i></button>
-		</form>
-	</div>
-
-	<!--Carter: Drag and Drop (section 5)-->
-	<hr>
-	<div class="container screenSizeErrorDnD">
-		<p>Drag and drop section not available on smaller screens</p>
-	</div>
-	<div id="dragAndDropContainer" class="container">
-		<h4>Put in order</h4>
-		<div class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<div class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-		<br>
-		<hr>
-		<br>
-		<div class="dragDiv">
-			<img id="drag2" draggable="true" src="images/Days/Tuesday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag6" draggable="true" src="images/Days/Saturday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag1" draggable="true" src="images/Days/Monday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag5" draggable="true" src="images/Days/Friday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag7" draggable="true" src="images/Days/Sunday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag3" draggable="true" src="images/Days/Wednesday.png" ondragstart="drag(event)">
-		</div>
-		<div class="dragDiv">
-			<img id="drag4" draggable="true" src="images/Days/Thursday.png" ondragstart="drag(event)">
-		</div>
-	</div>
-	<hr>
-
-	<!--Carter: Matching (section 7)-->
-	<br>
-	<div class="container screenSizeError">
-		<p class="screenSizeError">Match section not available on smaller screens</p>
-	</div>
-
-	<div id="matchParent" class="container">
-		<table class="matchTable" style="float: left;">
-			<tr onclick="click1(this)" class="Mondas" id="match025">
-				<th>Monday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Tuesdas" id="match075">
-				<th>Tuesday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Wednesdas" id="match125">
-				<th>Wednesday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Thursdas" id="match175">
-				<th>Thursday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Fridas" id="match225">
-				<th>Friday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Saturdas" id="match275">
-				<th>Saturday</th>
-			</tr>
-			<tr onclick="click1(this)" class="Sundas" id="match325">
-				<th>Sunday</th>
-			</tr>
-		</table>
-		<canvas id="myCanvas" width="189" height="350" style="z-index: 1; position: relative; float: left;"></canvas>
-		<table class="matchTable" style="float: left;">
-			<tr onclick="click1(this)" class="Saturdas" id="matchA025">
-				<th>Sat.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Thursdas" id="matchA075">
-				<th>Thu.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Tuesdas" id="matchA125">
-				<th>Tue.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Sundas" id="matchA175">
-				<th>Sun.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Mondas" id="matchA225">
-				<th>Mon.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Wednesdas" id="matchA275">
-				<th>Wed.</th>
-			</tr>
-			<tr onclick="click1(this)" class="Fridas" id="matchA325">
-				<th>Fri.</th>
-			</tr>
-		</table>
-	</div>
-	<div style="height: 500px;">
 
 	</div>
-	>>>>>>> Stashed changes
-
 	<!-- Error Section Alphabet -->
 	<section class="error-section">
 		<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>

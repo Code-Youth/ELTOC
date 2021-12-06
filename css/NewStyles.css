@@ -69,6 +69,32 @@
   color: black;
   cursor: pointer;
 }
+@media only screen and (max-width: 415px){
+  #section4 th{
+    border: 1px solid black;
+  font-size: small;
+  color: black;
+  cursor: pointer;
+  }
+  #section4 td{
+    border: 1px solid black;
+  font-size: large;
+  color: black;
+  }
+  #ic1{
+    font-size: 2em;
+  }
+  #ic2{
+    font-size: 2em;
+  }
+  #ic4{
+    font-size: 2em;
+  }
+  #ic3{
+    font-size: 2em;
+  }
+
+}
 #section4 td {
   border: 1px solid black;
   font-size: large;
@@ -281,7 +307,37 @@ th {
   border: 1px solid #aaaaaa;
   display: inline-block;
 }
-#drag1 {
+	#div8 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div9 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div10 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div11 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div12 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#drag1{
   width: auto;
   height: 50px;
   display: inline;
@@ -316,7 +372,32 @@ th {
   height: 50px;
   display: inline;
 }
-#div1 img {
+#drag8{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag9{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag10{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag11{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag12{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#div1 img{
   text-align: center;
   width: auto;
   height: 100%;
@@ -351,6 +432,32 @@ th {
   width: auto;
   height: 100%;
 }
+#div8 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div9 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div10 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div11 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div12 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+
 
 .dragDiv {
   display: inline-block;
@@ -385,4 +492,35 @@ th {
   .screenSizeErrorDnD {
     display: block;
   }
+}
+}
+.lASTable{
+  font-size: large;
+  display: inline-table;
+}
+.lASTable tr{
+  border: 1px solid black;
+
+}
+.lASTable th{
+  width: 40px;
+  height: 40px;
+
+}
+.s2Num:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+}
+.s2NumA:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+}
+.s2Play{
+  background-color: greenyellow; 
+  border-right: 1px solid black;
+}
+.s2Play:hover{
+  background-color: rgb(19, 219, 19)
 }

@@ -581,6 +581,7 @@
 
 		</div>
 
+
 		<!-- Majid Quiz 2: Exercise 4 -->
 
 		<div id='section4' class='container'>
@@ -633,8 +634,157 @@
 the 's' at the end of the first 'fa' because this code is using font-awe ver 4 and the 's' is probably only added on ver 5 -->
 		</div>
 
+<!--Carter: Drag and Drop (section 5)-->
+<hr>
+<div class="container screenSizeErrorDnD"><p>Drag and drop section not available on smaller screens</p></div>
+	<div id="dragAndDropContainer" class="container">
+	<h4>Put in order</h4>		
+<div title="Jan" class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Feb" class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Mar" class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Apr" class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="May" class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Jun" class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div title="Jul" class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Aug" class="drops" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Sep" class="drops" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Oct" class="drops" id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Nov" class="drops" id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div title="Dec" class="drops" id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<hr>
+<br>
+
+<div class="dragDiv">
+<img id="drag11" draggable="true" src="images/Months/Nov.png" ondragstart="drag(event)" title="Nov">
+</div>
+<div class="dragDiv">
+<img title="Jun" id="drag6" draggable="true" src="images/Months/Jun.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+<img title="Jan" id="drag1" draggable="true" src="images/Months/Jan.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+<img title="May" id="drag5" draggable="true" src="images/Months/May.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Aug" id="drag8" draggable="true" src="images/Months/Aug.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Mar" id="drag3" draggable="true" src="images/Months/Mar.png" ondragstart="drag(event)">
+</div>
+<br>
+<div class="dragDiv">
+	<img title="Apr" id="drag4" draggable="true" src="images/Months/Apr.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img id="drag10" draggable="true" src="images/Months/Oct.png" ondragstart="drag(event)" title="Oct">
+</div>
+<div class="dragDiv">
+	<img title="Feb" id="drag2" draggable="true" src="images/Months/Feb.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img title="Jul" id="drag7" draggable="true" src="images/Months/Jul.png" ondragstart="drag(event)">
+</div>
+<div class="dragDiv">
+	<img id="drag12" draggable="true" src="images/Months/Dec.png" ondragstart="drag(event)" title="Dec">
+</div>
+<div class="dragDiv">
+	<img title="Sep" id="drag9" draggable="true" src="images/Months/Sep.png" ondragstart="drag(event)">
+</div>
+</div>
+<hr>
+
+<!--Carter: Matching (section 7)-->
+<br>
+<div class="container screenSizeError"> 	<p class="screenSizeError">Match section not available on smaller screens</p>
+</div>
+
+<div id="matchParent" class="container">
+	<table class="matchTable" style="float: left;">
+		<tr onclick="click1(this)" class="January" id="match025">
+			<th>January</th>
+		</tr>
+		<tr onclick="click1(this)" class="February" id="match075">
+			<th>February</th>
+		</tr>
+		<tr onclick="click1(this)" class="March" id="match125">
+			<th>March</th>
+		</tr>
+		<tr onclick="click1(this)" class="April" id="match175">
+			<th>April</th>
+		</tr>
+		<tr onclick="click1(this)" class="May" id="match225">
+			<th>May</th>
+		</tr>
+		<tr onclick="click1(this)" class="June" id="match275">
+			<th>June</th>
+		</tr>
+		<tr onclick="click1(this)" class="July" id="match325">
+			<th>July</th>
+		</tr>
+		<tr onclick="click1(this)" class="August" id="match375">
+			<th>August</th>
+		</tr>
+		<tr onclick="click1(this)" class="September" id="match425">
+			<th>September</th>
+		</tr>
+		<tr onclick="click1(this)" class="October" id="match475">
+			<th>October</th>
+		</tr>
+		<tr onclick="click1(this)" class="November" id="match525">
+			<th>November</th>
+		</tr>
+		<tr onclick="click1(this)" class="December" id="match575">
+			<th>December</th>
+		</tr>
+	</table>
+<canvas  id="myCanvas" width="189" height="600" style="z-index: 1; position: relative; float: left;"></canvas>
+<table class="matchTable" style="float: left;">
+	<tr onclick="click1(this)" class="July" id="matchA025">
+		<th>July</th>
+	</tr>
+	<tr onclick="click1(this)" class="August" id="matchA075">
+		<th>Aug.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="February" id="matchA125">
+		<th>Feb.</th>
+	</tr>
+	<tr onclick="click1(this)" class="November" id="matchA175">
+		<th>Nov.</th>
+	</tr>
+	<tr  onclick="click1(this)" class="January" id="matchA225">
+		<th>Jan.</th>
+	</tr>
+	<tr onclick="click1(this)" class="December" id="matchA275">
+		<th>Dec.</th>
+	</tr>
+	<tr onclick="click1(this)" class="October" id="matchA325">
+		<th>Oct.</th>
+	</tr>
+	<tr onclick="click1(this)" class="May" id="matchA375">
+		<th>May</th>
+	</tr>
+	<tr onclick="click1(this)" class="June" id="matchA425">
+		<th>June</th>
+	</tr>
+	<tr onclick="click1(this)" class="April" id="matchA475">
+		<th>Apr.</th>
+	</tr>
+	<tr onclick="click1(this)" class="September" id="matchA525">
+		<th>Sept.</th>
+	</tr>
+	<tr onclick="click1(this)" class="March" id="matchA575">
+		<th>Mar.</th>
+	</tr>
+</table>
+</div>
+<div style="height: 500px;">
+
+</div>
 		<!-- Error Section Alphabet -->
-		<section class="error-section">
+		<section style="margin-top: 100px;" class="error-section">
 			<div class="pattern-layer-three" style="background-image: url(images/icons/icon-8.png)"></div>
 			<div class="auto-container">
 				<div class="content">
@@ -721,6 +871,8 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 			</footer>
 
 	</div>
+
+	
 	<!--End pagewrapper-->
 
 	<!--Scroll to top-->
