@@ -50,26 +50,7 @@ function daySound(sound){ //The parameter refers to the argument put into the fu
     noise.play()
 }
 var question = [0,"3","3","3","3"]
-var tut = {
-    One1: "W",
-    One2: "e",
-    One3: "a",
-    Two1: "a",
-    Two2: "r",
-    Two3: "y",
-    Thr1: "T",
-    Thr2: "e",
-    Thr3: "d",
-    For1: "c",
-    For2: "b",
-    For3: "r",
-    Fiv1: "A",
-    Fiv2: "u",
-    Fiv3: "t",
-    Six1: "a",
-    Six2: "c",
-    Six3: "h"
-}
+var tut = { One1: "W", One2: "e", One3: "a", Two1: "a", Two2: "r", Two3: "y", Thr1: "T", Thr2: "e", Thr3: "d", For1: "c", For2: "b", For3: "r", Fiv1: "A", Fiv2: "u", Fiv3: "t", Six1: "a", Six2: "c", Six3: "h"}
 var whatQuestion = 0
 function jump(field, autoMove){
     if (field.value.length >= field.maxLength){
