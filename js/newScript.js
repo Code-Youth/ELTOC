@@ -160,16 +160,16 @@ function answer2(item) {                                    // 'Item' refers to 
   
         //Making the second row unclickable after first attempt and show wrong choice and right answer
     if (item.id == 'wrSu2') {
-        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrSa2.className = 'noclick' , wrMo2.className = 'noclick'
+        item.className = 'noclick backRed' , riSa2.className = 'noclick backGreen' , wrTu2.className = 'noclick' , wrMo2.className = 'noclick'
     }
-    else if (item.id == 'wrSa2') {
-        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrMo2.className = 'noclick' , wrSu2.className = 'noclick'
+    else if (item.id == 'riSa2') {
+        item.className = 'noclick backGreen' , wrTu2.className = 'noclick' , wrMo2.className = 'noclick' , wrSu2.className = 'noclick'
     }
-    else if (item.id == 'riTu2') {
-        item.className = 'noclick backGreen' , wrMo2.className = 'noclick' , wrSa2.className = 'noclick' , wrSu2.className = 'noclick'
+    else if (item.id == 'wrTu2') {
+        item.className = 'noclick backRed' , wrMo2.className = 'noclick' , riSa2.className = 'noclick backGreen' , wrSu2.className = 'noclick'
     }
     else if (item.id == 'wrMo2') {
-        item.className = 'noclick backRed' , riTu2.className = 'noclick backGreen' , wrSu2.className = 'noclick' , wrSa1.className = 'noclick'
+        item.className = 'noclick backRed' , riSa2.className = 'noclick backGreen' , wrSu2.className = 'noclick' , wrTu2.className = 'noclick'
     }
 
     // Making third row unclickable after first attempt and change color only of box clicked and right answer
