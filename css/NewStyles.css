@@ -57,7 +57,7 @@
   background-color: rgb(19, 219, 19) !important;
   cursor: pointer;
 }
-/* Styling for the table in exercise 4 */
+/* Styling for the table in exercise 4; days and months page */
 #section4 table {
   border: 1px solid black;
   font-size: large;
@@ -69,10 +69,125 @@
   color: black;
   cursor: pointer;
 }
+@media only screen and (max-width: 415px){
+  #section4 th{
+    border: 1px solid black;
+  font-size: small;
+  color: black;
+  cursor: pointer;
+  }
+  #section4 td{
+    border: 1px solid black;
+  font-size: large;
+  color: black;
+  }
+  #ic1{
+    font-size: 2em;
+  }
+  #ic2{
+    font-size: 2em;
+  }
+  #ic4{
+    font-size: 2em;
+  }
+  #ic3{
+    font-size: 2em;
+  }
+  #ic1_2{
+    font-size: 2em;
+  }
+  #ic2_2{
+    font-size: 2em;
+  }
+  #ic4_2{
+    font-size: 2em;
+  }
+  #ic3_2{
+    font-size: 2em;
+  }
+/* #section3_1 table{
+  border: 1px solid black;
+  font-size: 5em;
+  width: 1em !important;
+}
+#section3_1{
+  width: 1em !important;
+}
+#section3_1_A{
+  width: 1em !important;
+} */
+}
 #section4 td {
   border: 1px solid black;
   font-size: large;
   color: black;
+}
+
+/*Styling for the first exercises on page 3: ABC table*/
+
+#section3_1 table {
+  border: 1px solid black;
+  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#section3_1 th {
+  font-size: large;
+  cursor: pointer;
+  padding: 1em;
+}
+#section3_1 th:hover {
+  border: 2px dotted black; /*Create a dotted box when hovering*/
+  background-color: yellowgreen;
+}
+
+/* Styling for third exercise on page 3: Listen and type letter */
+#section3_3 table {
+  border: 2px solid black;
+}
+
+#section3_3 input {
+  border: 1px dashed grey;
+  width: 10%;
+}
+
+#section3_3 button:hover {
+  cursor: pointer;
+}
+
+/* Styling for the fourth exercise on page 3: Write letters in right order */
+
+#section3_4 {
+  margin: 0;
+  padding: 0;
+}
+
+#section3_4 p {
+  margin: 0;
+  padding: 0;
+}
+
+.let_order {
+  border-bottom: solid black;
+  width: 1.5%;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.right_order {
+  border-bottom: solid green;
+  width: 1.5%;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.wrong_order {
+  border-bottom: dotted red;
+  width: 1.5%;
+  user-select: none;
+  text-transform: capitalize;
 }
 
 /* Change the background color of answers */
@@ -158,10 +273,320 @@ th {
   font-size: large;
   color: black;
   cursor: pointer;
-  height: 70px;
+  height: 50px;
 }
 .disable {
   background-color: rgb(179, 179, 179);
   color: ghostwhite;
   cursor: not-allowed;
+}
+.disable {
+  background-color: rgb(179, 179, 179);
+  color: ghostwhite;
+  cursor: not-allowed;
+}
+
+/*Carter drag and drop (section 5)*/
+#div1 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div2 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div3 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div4 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div5 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div6 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#div7 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div8 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div9 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div10 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div11 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+	#div12 {
+  width: 150px;
+  height: 55px;
+  border: 1px solid #aaaaaa;
+  display: inline-block;
+}
+#drag1{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag2 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag3 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag4 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag5 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag6 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag7 {
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag8{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag9{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag10{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag11{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#drag12{
+  width: auto;
+  height: 50px;
+  display: inline;
+}
+#div1 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div2 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div3 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div4 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div5 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div6 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div7 img {
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div8 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div9 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div10 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div11 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+#div12 img{
+  text-align: center;
+  width: auto;
+  height: 100%;
+}
+
+
+.dragDiv {
+  display: inline-block;
+  width: 150px;
+  height: 54px;
+  border: 2px solid black;
+}
+#confirmMessage {
+  font-size: x-large;
+  font-weight: bold;
+}
+.screenSizeError {
+  display: none;
+}
+.screenSizeErrorDnD {
+  display: none;
+}
+@media only screen and (max-width: 540px) {
+  /* #matchParent {
+    display: none;
+  }
+
+  .screenSizeError {
+    display: block;
+  } */
+  
+  .matchTable th{
+    width: 100px !important;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #dragAndDropContainer {
+    display: none;
+  }
+
+  .screenSizeErrorDnD {
+    display: block;
+  }
+}
+@media only screen and (max-width: 650px){
+  .pattern-layer-three{
+    display: none;
+  }
+}
+.lASTable{
+  font-size: large;
+  display: inline-table;
+}
+.lASTable tr{
+  border: 1px solid black;
+
+}
+.lASTable th{
+  width: 40px;
+  height: 40px;
+
+}
+.s2Num:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+}
+.s2NumA:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+}
+.s2Play{
+  background-color: greenyellow; 
+  border-right: 1px solid black;
+}
+.s2Play:hover{
+  background-color: rgb(19, 219, 19)
+}
+
+.s4Answers{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+}
+.s4Answers:hover{
+  border: dashed;
+border-width: 2px 2px;
+border-radius: 40px;
+cursor: pointer;
+}
+.s4First{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  border-right: 2px solid black;
+
+}
+.winnerWinner{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  color: yellowgreen;
+}
+.loser{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+}
+.loserLoser{
+  width: 40px;
+  height: 40px;
+  font-size: 200%;
+  color: red;
 }
