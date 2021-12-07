@@ -412,9 +412,8 @@ autoNums += rng
   rng = 0
   }
   }
-  if(document.getElementsByClassName("screenSizeErrorDnD").display == "none"){
   autostuff()
-  }
+  
   autoNums -= checkStore
   function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
@@ -441,7 +440,7 @@ autoNums += rng
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     console.log(ev.target.firstChild)
-    if(ev.target.title !== ev.target.firstChild.title){
+    if(ev.target.title !== ev.target.firstElementChild.title){
         ev.target.style.border = "2px solid red"
     }
     else{
