@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+  <title> Memory Game </title>
+</head>
+<body>
+<style>
+  body{
+  background-image: url("images/wood.jpg");no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1{
+  text-align: center;
+  font-size: 4em;
+  color: white;
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Bevan', cursive;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-shadow: -2px 3px #000;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  font-family: 'Bevan', cursive;
+  font-weight: 300;
+  text-shadow: -2px 3px #000;
+  margin-bottom: 5px;
+  margin-top: -15px;
+}
+
+#board{
+  background-color: transparent;
+  width: 720px;
+  height: 530px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin: 0px auto;
+}
+
+
+.card{
+  width: 160px;
+  height: 160px;
+  margin: 10px;
+  float:right;
+  background-image: url("images/back.jpg");
+  background-size: 160px 160px;
+  border-radius: 10px;
+  -moz-box-shadow: -3px 3px 10px #000;
+  -webkit-box-shadow: -3px 3px 10px #000;
+   box-shadow: -3px 3px 10px #000;
+}
+
+
+.card img{
+  display: none;
+}
+
+.card.image img {
+  display: block;
+}
+
+.image {
+    width: 160px;
+    height: 160px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+  }
+
+.image.match {
+  width: 160px;
+  height: 160px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+
+/* <div class="cards">Black</div>  */
+/* <div class="cards front">Blue</div>  */
+
+</style>
+<h1> Test Your Memory!</h1>
+<h2> Number of clicks left <span id="counter"> 20</span></h2>
+<div id="board"></div>
+<script>
+cardArray=[
+    {text: "A", image: "images/1.jpg"},
+    {text: "A", image: "images/1a.jpg"},
+    {text: "B", image: "images/2.jpg"},
+    {text: "B", image: "images/2a.jpg"},
+    {text: "C", image: "images/3.jpg"},
+    {text: "C", image: "images/3a.jpg"},
+    {text: "D", image: "images/4.jpg"},
+    {text: "D", image: "images/4a.jpg"},
+    {text: "E", image: "images/5.jpg"},
+    {text: "E", image: "images/5a.jpg"},
+    {text: "F", image: "images/6.jpg"},
+    {text: "F", image: "images/6a.jpg"},
+    {text: "G", image: "images/7.jpg"},
+    {text: "G", image: "images/7a.jpg"}
+    // {text: "H", image: "images/5.jpg"},
+    // {text: "h", image: "images/5.jpg"},
+    // {text: "I", image: "images/6.jpg"},
+    // {text: "i", image: "images/6.jpg"},
+    // {text: "J", image: "images/4.jpg"},
+    // {text: "j", image: "images/4.jpg"},
+    // {text: "K", image: "images/5.jpg"},
+    // {text: "k", image: "images/5.jpg"},
+    // {text: "L", image: "images/6.jpg"},
+    // {text: "l", image: "images/6.jpg"},
+    
+
+];
+
+clickedCard=[];
+
+matchedCard=[];
+
+clicks=20;
+
+///////////////////////////////////////// SHUFFLE DECK
+var shuffleDeck=function(){
+  // Using the Fisher-Yates (Knuth) shuffle
+  var currentIndex = cardArray.length
+  , temporaryValue
+  , randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = cardArray[currentIndex];
+    cardArray[currentIndex] = cardArray[randomIndex];
+    cardArray[randomIndex] = temporaryValue;
+  }
+}
+///////////////////////////////////////// End shuffle DECK
+  shuffleDeck();
+  console.log(cardArray);
+var board=document.getElementById("board");
+
+for(var i=0; i<cardArray.length; i++){
+
+  // appending cards to board
+  var cardsBack=document.createElement("div");
+  cardsBack.classList.add("card");
+  cardsBack.setAttribute("name", cardArray[i].text);
+  board.appendChild(cardsBack);
+
+  // adding images to cardback
+  var images=document.createElement("img");
+  images.src = cardArray[i].image;
+  images.text = cardArray[i].text;
+  images.className="image";
+  cardsBack.appendChild(images);
+  console.log(cardArray[i].image); 
+ // console.log("hey there");
+  
+
+
+
+  // Change color of cards on click
+  cardsBack.addEventListener("click",function(){
+  if (clicks>0){ 
+    clicks--;
+    console.log(clicks);
+    document.getElementById('counter').innerHTML=clicks.toString();
+    var card = this;
+    if (clickedCard.length < 2){
+     card.classList.add("image");
+      card.classList.add("match"); // add class of match to all cards
+      clickedCard.push(card);
+      //console.log();
+      matchedCard.push(card);
+      console.log("this is card" + card);
+
+  console.log("this is clickedCard" + clickedCard);
+      //// compares cards that are clicked on
+      
+      if (clickedCard.length === 2){
+        console.log(clickedCard[0].getAttribute('name')
+        );
+        if (clickedCard[0].getAttribute('name') === clickedCard[1].getAttribute('name')){
+
+          console.log("It's a match!");
+            clickedCard=[];
+            matchedCard=[];
+        } else {
+          console.log("It's not a match!")
+          setTimeout(turnOffAllCards, 1000);
+          for (i=0; i<matchedCard.length; i++){
+            matchedCard[i].classList.remove("match");
+          }
+          matchedCard=[];
+           // calls turnOffAllCards
+        }
+      } // close if statement
+    } // close second if statement
+    }else{
+      prompt("You Lose!");
+    } // close click if statement
+  }) // event listener
+} // close for loop
+
+function turnOffAllCards(){
+  var frontCards = document.querySelectorAll("div.image:not(.match)");
+  for(var i = 0; i < frontCards.length; i++){
+    frontCards[i].classList.remove("image");
+    clickedCard=[];
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
