@@ -175,11 +175,11 @@
 				<!-- Carter: quiz 1 (excersize 2) -->
 				<div id="quiz" class="container">
 					<h3>Quiz</h3>
-					<button onclick="openQ1()" id="startoButton">Start</button>
+					<button onclick="startQuiz()" class="day" id="startoButton">Start</button>
 					<div id="question1">
 						<table style="margin-bottom:1em;">
 							<tr class="playButton">
-								<th onclick="daySound('We')" style="background-color: greenyellow;"><i
+								<th id="play1" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
 								</th>
 								<!--Button to play sound-->
@@ -188,20 +188,20 @@
 
 						<table class="border">
 							<tr>
-								<th onclick="checkAnswer(this)" class="answers0" id="Monday">Monday</th>
+								<th onclick="czechAnswer(this)" class="select1"></th>
 								<!--Possible answers-->
 							</tr>
 							<tr>
-								<th onclick="checkAnswer(this)" class="answers1" id="Wednesday">Wednesday</th>
+								<th onclick="czechAnswer(this)" class="select1"></th>
 								<!--Possible answers-->
 							</tr>
 						</table>
 						<br>
-						<div style="width: 150px; text-align: center;" id="checks1">
+						<div style="width: 150px; text-align: center; margin: auto;" id="checks1">
 							<!--Checkmarks for visual confirmation-->
-							<i id="checks1One" class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
+							<i class="fa fa-circle fa-2x Check1"></i>
+							<i class="fa fa-circle fa-2x Check2"></i>
+							<i class="fa fa-circle fa-2x Check3"></i>
 							<!-- <i class="fa fa-times-circle"></i>
 		<i class="fa fa-check-circle"></i>-->
 						</div>
@@ -213,7 +213,7 @@
 					<div id="question2">
 						<table style="margin-bottom:1em;">
 							<tr class="playButton">
-								<th onclick="daySound('Su')" style="background-color: greenyellow;"><i
+								<th id="play2" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
 								</th>
 							</tr>
@@ -221,20 +221,20 @@
 
 						<table class="border">
 							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="Sunday">Sunday</th>
+								<th onclick="czechAnswer(this)" class="select2" id="Sunday">Sunday</th>
 							</tr>
 							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="Wednesday">Wednesday</th>
+								<th onclick="czechAnswer(this)" class="select2" id="Wednesday">Wednesday</th>
 							</tr>
 							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="Thursday">Thursday</th>
+								<th onclick="czechAnswer(this)" class="select2" id="Thursday">Thursday</th>
 							</tr>
 						</table>
 						<br>
-						<div style="width: 150px; text-align: center;" id="checks2">
-							<i id="checks11One" class="fa fa-circle fa-2x"></i>
-							<i id="checks22Two" class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
+						<div style="width: 150px; text-align: center; margin: auto;" id="checks2">
+							<i class="fa fa-circle fa-2x Check1"></i>
+							<i class="fa fa-circle fa-2x Check2"></i>
+							<i class="fa fa-circle fa-2x Check3"></i>
 							<!-- <i class="fa fa-times-circle"></i>
 				<i class="fa fa-check-circle"></i>-->
 
@@ -247,30 +247,30 @@
 					<div id="question3">
 						<table style="margin-bottom:1em;">
 							<tr class="playButton">
-								<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i
+								<th id="play3" style="background-color: greenyellow;"><i
 										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
 								</th>
 							</tr>
 						</table>
 						<table class="border">
 							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="Saturday">Saturday</th>
+								<th onclick="czechAnswer(this)" class="select3" id="Saturday">Saturday</th>
 							</tr>
 							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="Tuesday">Tuesday</th>
+								<th onclick="czechAnswer(this)" class="select3" id="Tuesday">Tuesday</th>
 							</tr>
 							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="Friday">Friday</th>
+								<th onclick="czechAnswer(this)" class="select3" id="Friday">Friday</th>
 							</tr>
 							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="Monday">Monday</th>
+								<th onclick="czechAnswer(this)" class="select3" id="Monday">Monday</th>
 							</tr>
 						</table>
 						<br>
-						<div style="width: 150px; text-align: center;" id="checks3">
-							<i id="checks111One" class="fa fa-circle fa-2x"></i>
-							<i id="checks222Two" class="fa fa-circle fa-2x"></i>
-							<i id="checks333Three" class="fa fa-circle fa-2x"></i>
+						<div style="width: 150px; text-align: center; margin: auto;" id="checks3">
+							<i class="fa fa-circle fa-2x Check1"></i>
+							<i class="fa fa-circle fa-2x Check2"></i>
+							<i class="fa fa-circle fa-2x Check3"></i>
 							<!-- <i class="fa fa-times-circle"></i>
 					<i class="fa fa-check-circle"></i>-->
 
