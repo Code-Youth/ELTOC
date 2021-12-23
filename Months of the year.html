@@ -218,110 +218,111 @@
 				<div class="border"></div>
 
 				<!-- Carter: Quiz 1 (exercise 2) -->
-				<div id="quiz" class="container">
-					<h3>Quiz</h3>
-					<button onclick="openQ1()" id="startoButton">Start</button>
-					<div id="question1">
-						<table style="margin-bottom:1em;">
-							<tr class="playButton">
-								<th onclick="daySound('Fe')" style="background-color: greenyellow;"><i
-										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
-								</th>
-								<!--Button to play sound-->
-							</tr>
-						</table>
-						<table class="border">
-							<tr>
-								<th onclick="checkAnswer(this)" class="answers" id="July">July</th>
-								<!--Possible answers-->
-							</tr>
-							<tr>
-								<th onclick="checkAnswer(this)" class="answers" id="February">February</th>
-								<!--Possible answers-->
-							</tr>
-						</table>
-						<br>
-						<div style="width: 150px; text-align: center;" id="checks1">
-							<!--Checkmarks for visual confirmation-->
-							<i id="checks1One" class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
-							<!-- <i class="fa fa-times-circle"></i>
-	<i class="fa fa-check-circle"></i>-->
-
-						</div>
-					</div>
-					<br>
-					<div class="border divide">
-					</div>
-					<br>
-					<div id="question2">
-						<table style="margin-bottom:1em;">
-							<tr class="playButton">
-								<th onclick="daySound('Se')" style="background-color: greenyellow;"><i
-										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
-								</th>
-							</tr>
-						</table>
-
-						<table class="border">
-							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="January">January</th>
-							</tr>
-							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="December">December</th>
-							</tr>
-							<tr>
-								<th onclick="checkAnswer2(this)" class="answers" id="September">September</th>
-							</tr>
-						</table>
-						<br>
-						<div style="width: 150px; text-align: center;" id="checks2">
-							<i id="checks11One" class="fa fa-circle fa-2x"></i>
-							<i id="checks22Two" class="fa fa-circle fa-2x"></i>
-							<i class="fa fa-circle fa-2x"></i>
-							<!-- <i class="fa fa-times-circle"></i>
-			<i class="fa fa-check-circle"></i>-->
-
-						</div>
-					</div>
-					<br>
-					<div class="border divide">
-					</div>
-					<br>
-					<div id="question3">
-						<table style="margin-bottom:1em;">
-							<tr class="playButton">
-								<th onclick="daySound('Au')" style="background-color: greenyellow;"><i
-										style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
-								</th>
-							</tr>
-						</table>
-						<table class="border">
-							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="June">June</th>
-							</tr>
-							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="May">May</th>
-							</tr>
-							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="August">August</th>
-							</tr>
-							<tr>
-								<th onclick="checkAnswer3(this)" class="answers" id="April">April</th>
-							</tr>
-						</table>
-						<br>
-						<div style="width: 150px; text-align: center;" id="checks3">
-							<i id="checks111One" class="fa fa-circle fa-2x"></i>
-							<i id="checks222Two" class="fa fa-circle fa-2x"></i>
-							<i id="checks333Three" class="fa fa-circle fa-2x"></i>
-							<!-- <i class="fa fa-times-circle"></i>
+						<!-- Carter: quiz 1 (excersize 2) -->
+						<div id="quiz" class="container">
+							<h3>Quiz</h3>
+							<button onclick="startQuiz()" class="month" id="startoButton">Start</button>
+							<div id="question1">
+								<table style="margin-bottom:1em;">
+									<tr class="playButton">
+										<th id="play1" style="background-color: greenyellow;"><i
+												style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
+										</th>
+										<!--Button to play sound-->
+									</tr>
+								</table>
+		
+								<table class="border">
+									<tr>
+										<th onclick="czechAnswer(this)" class="select1"></th>
+										<!--Possible answers-->
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select1"></th>
+										<!--Possible answers-->
+									</tr>
+								</table>
+								<br>
+								<div style="width: 150px; text-align: center; margin: auto;" id="checks1">
+									<!--Checkmarks for visual confirmation-->
+									<i class="fa fa-circle fa-2x Check1"></i>
+									<i class="fa fa-circle fa-2x Check2"></i>
+									<i class="fa fa-circle fa-2x Check3"></i>
+									<!-- <i class="fa fa-times-circle"></i>
 				<i class="fa fa-check-circle"></i>-->
-
+								</div>
+							</div>
+							<br>
+							<div class="border divide">
+							</div>
+							<br>
+							<div id="question2">
+								<table style="margin-bottom:1em;">
+									<tr class="playButton">
+										<th id="play2" style="background-color: greenyellow;"><i
+												style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
+										</th>
+									</tr>
+								</table>
+		
+								<table class="border">
+									<tr>
+										<th onclick="czechAnswer(this)" class="select2" id="Sunday">Sunday</th>
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select2" id="Wednesday">Wednesday</th>
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select2" id="Thursday">Thursday</th>
+									</tr>
+								</table>
+								<br>
+								<div style="width: 150px; text-align: center; margin: auto;" id="checks2">
+									<i class="fa fa-circle fa-2x Check1"></i>
+									<i class="fa fa-circle fa-2x Check2"></i>
+									<i class="fa fa-circle fa-2x Check3"></i>
+									<!-- <i class="fa fa-times-circle"></i>
+						<i class="fa fa-check-circle"></i>-->
+		
+								</div>
+							</div>
+							<br>
+							<div class="border divide">
+							</div>
+							<br>
+							<div id="question3">
+								<table style="margin-bottom:1em;">
+									<tr class="playButton">
+										<th id="play3" style="background-color: greenyellow;"><i
+												style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i>
+										</th>
+									</tr>
+								</table>
+								<table class="border">
+									<tr>
+										<th onclick="czechAnswer(this)" class="select3" id="Saturday">Saturday</th>
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select3" id="Tuesday">Tuesday</th>
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select3" id="Friday">Friday</th>
+									</tr>
+									<tr>
+										<th onclick="czechAnswer(this)" class="select3" id="Monday">Monday</th>
+									</tr>
+								</table>
+								<br>
+								<div style="width: 150px; text-align: center; margin: auto;" id="checks3">
+									<i class="fa fa-circle fa-2x Check1"></i>
+									<i class="fa fa-circle fa-2x Check2"></i>
+									<i class="fa fa-circle fa-2x Check3"></i>
+									<!-- <i class="fa fa-times-circle"></i>
+							<i class="fa fa-check-circle"></i>-->
+		
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
 
 				<!--Carter Spelling? (section 3)-->
 				<br>
@@ -685,7 +686,7 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 				<script src="js/jquery-ui.js"></script>
 				<script src="js/script.js"></script>
 				<script src="js/newScript.js"></script>
-				<script src="js/quizMonth.js"></script>
+				<script src="js/quizDay.js"></script>
 </body>
 
 </html>
