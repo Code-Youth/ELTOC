@@ -99,7 +99,7 @@ function jump(field, autoMove){
 // reset class of the buttons//
 
 
-// Function for section 4 quiz table (days of the week)
+// Function for exercise 4 quiz table (days of the week)
 
 // The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
 let icon1 = document.querySelector('#ic1')

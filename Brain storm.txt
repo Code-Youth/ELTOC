@@ -1,0 +1,12 @@
+How to make weekday exercise 4 randomized?
+
+Step 1: Randomize the audio file
+- Create an array with all the audio elements
+- Pick a random audio element and append it to the html
+
+Step 2: Randomize the table
+
+Step 3: Have at least one block in the row equal to the audio file
+
+Step 4: Change color of blocks depending on if it's the right or wrong answer
+
