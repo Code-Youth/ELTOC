@@ -10,3 +10,29 @@ Step 3: Have at least one block in the row equal to the audio file
 
 Step 4: Change color of blocks depending on if it's the right or wrong answer
 
+
+
+Carter's Hints:
+- Focus on changing the audio file, not the audio button (get the audio id, not the buttons id)
+
+
+Step 1 Problem: How to change the audio file randomly
+
+Summary 
+I want to create a function that will change the audio file that is being played to a random one.
+
+Solution 1: Change the button to another one
+- I was doing this wrong, I was trying to change it by setting audio2(the audio block on the table) = we_sound(the audio file for wed) but 
+what this was doing was just changing what was being stored inside the variable in JS, but not anything on html
+
+Solution 2: Find a way to change parameter in the onclick function
+
+Attemp1:  audio2.setAttribute('onclick', "daySound(Wed)")
+- This doesn't work, guess you can't set a variable inside a function parameter lol
+
+Attemp2: audio2.setAttribute('onclick', wed) & let wed = "daySound('We')"
+- Can't believe this actually worked XD 
+- Now I just have to see if I can use it from a randomized array
+- *Update, it actually works XD. I'm dying. It seems so stupid but it actually works XD XD XD
+
+

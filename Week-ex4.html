@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/NewStyles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Majid: Days of the week table and audio (exercise 1) -->
+    <div id="section1" class="container">
+        <table>
+            <tr>
+                <th>Days of the week</th>
+                <th>Sounds</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <audio preload="auto" id="Mo" src="Audio/Days of the Week/Monday.mp3"></audio>
+
+                <th onclick="daySound('Mo')"" id='mo_sound' style=" background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <audio preload="auto" id="Tu" src="Audio/Days of the Week/Tuesday.mp3"></audio>
+
+                <th onclick="daySound('Tu')" id='tu_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <audio preload="auto" id="We" src="Audio/Days of the Week/Wednesday.mp3"></audio>
+
+                <th onclick="daySound('We')" id='we_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <audio preload="auto" id="Th" src="Audio/Days of the Week/Thursday.mp3"></audio>
+                <th onclick="daySound('Th')" id='th_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+                </td>
+
+
+
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <audio preload="auto" id="Fr" src="Audio/Days of the Week/Friday_2.mp3"></audio>
+
+                <th onclick="daySound('Fr')" id='fr_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <audio preload="auto" id="Sa" src="Audio/Days of the Week/Saturday.mp3"></audio>
+
+                <th onclick="daySound('Sa')" id='sa_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <audio preload="auto" id="Su" src="Audio/Days of the Week/Sunday.m4a"></audio>
+
+                <th onclick="daySound('Su')" id='su_sound' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <!--Button to play sound-->
+            </tr>
+
+        </table>
+    </div>
+    <hr>
+    <!-- Majid: Quiz 2 (exercise 4) -->
+    <div id='section4' class='container'>
+        <h3>Match the Sound</h3>
+        <table id='table-4'>
+            <!-- First Row of audio and answers -->
+            <tr id='row1'>
+                <th onclick="daySound('Mo')" id='audio1' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <th onclick='answer2(this)' class='wrong4' id='wrTu1'>Tuesday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrTh1'>Thursday</th>
+                <th onclick='answer2(this)' class='right4' id='riMo1'>Monday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrFr1'>Friday</th>
+            </tr>
+            <!-- Second row of audio and answers -->
+            <tr id='row2'>
+                <th onclick="daySound('Sa')" id='audio2' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <th onclick='answer2(this)' class='wrong4' id='wrSu2'>Sunday</th>
+                <th onclick='answer2(this)' class='right4' id='riSa2'>Saturday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrTu2'>Tuesday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrMo2'>Monday</th>
+            </tr>
+            <tr id='row3'>
+                <th onclick="daySound('We')" id='audio3' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <th onclick='answer2(this)' class='wrong4' id='wrMo3'>Monday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrSa3'>Saturday</th>
+                <th onclick='answer2(this)' class='right4' id='riWe3'>Wednesday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrTh3'>Thursday</th>
+            </tr>
+            <tr id='row4'>
+                <th onclick="daySound('Fr')" id='audio4' style="background-color: greenyellow;"><i
+                        style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
+                <th onclick='answer2(this)' class='wrong4' id='wrMo4'>Monday</th>
+                <th onclick='answer2(this)' class='right4' id='riFr4'>Friday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrTu4'>Tuesday</th>
+                <th onclick='answer2(this)' class='wrong4' id='wrSu4'>Sunday</th>
+            </tr>
+        </table>
+        <!-- Check mark and x's to check final score -->
+        <i class="fa fa-circle fa-3x" id='ic1'></i>
+        <i class="fa fa-circle fa-3x" id='ic2'></i>
+        <i class="fa fa-circle fa-3x" id='ic3'></i>
+        <i class="fa fa-circle fa-3x" id='ic4'></i>
+
+        <!-- <i class="fa fa-times-circle fa-3x"></i> -->
+        <!-- Was having a lot of trouble with the icons, turns out you just need to remove
+    the 's' at the end of the first 'fa' because this code is using font-awe ver 4 and the 's' is probably only added on ver 5 -->
+    </div>
+    </div>
+
+    <br>
+    <button onclick='random()'>Randomize</button>
+
+    <script src='js-majid/Week.js'></script>
+
+</body>
+
+</html>

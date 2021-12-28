@@ -329,10 +329,10 @@
 				<!-- Majid: Quiz 2 (exercise 4) -->
 				<div id='section4' class='container'>
 					<h3>Match the Sound</h3>
-					<table>
+					<table id='table-4'>
 						<!-- First Row of audio and answers -->
-						<tr>
-							<th onclick="daySound('Mo')" style="background-color: greenyellow;"><i
+						<tr id='row1'>
+							<th onclick="daySound('Mo')" id='Mo_sound' style="background-color: greenyellow;"><i
 									style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 							<th onclick='answer2(this)' class='wrong4' id='wrTu1'>Tuesday</th>
 							<th onclick='answer2(this)' class='wrong4' id='wrTh1'>Thursday</th>
@@ -340,24 +340,24 @@
 							<th onclick='answer2(this)' class='wrong4' id='wrFr1'>Friday</th>
 						</tr>
 						<!-- Second row of audio and answers -->
-						<tr>
-							<th onclick="daySound('Sa')" style="background-color: greenyellow;"><i
+						<tr id='row2'>
+							<th onclick="daySound('Sa')" id='Sa_sound' style="background-color: greenyellow;"><i
 									style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 							<th onclick='answer2(this)' class='wrong4' id='wrSu2'>Sunday</th>
 							<th onclick='answer2(this)' class='right4' id='riSa2'>Saturday</th>
 							<th onclick='answer2(this)' class='wrong4' id='wrTu2'>Tuesday</th>
 							<th onclick='answer2(this)' class='wrong4' id='wrMo2'>Monday</th>
 						</tr>
-						<tr>
-							<th onclick="daySound('We')" style="background-color: greenyellow;"><i
+						<tr id='row3'>
+							<th onclick="daySound('We')" id='We_sound' style="background-color: greenyellow;"><i
 									style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 							<th onclick='answer2(this)' class='wrong4' id='wrMo3'>Monday</th>
 							<th onclick='answer2(this)' class='wrong4' id='wrSa3'>Saturday</th>
 							<th onclick='answer2(this)' class='right4' id='riWe3'>Wednesday</th>
 							<th onclick='answer2(this)' class='wrong4' id='wrTh3'>Thursday</th>
 						</tr>
-						<tr>
-							<th onclick="daySound('Fr')" style="background-color: greenyellow;"><i
+						<tr id='row4'>
+							<th onclick="daySound('Fr')" id='Mon_sound' style="background-color: greenyellow;"><i
 									style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
 							<th onclick='answer2(this)' class='wrong4' id='wrMo4'>Monday</th>
 							<th onclick='answer2(this)' class='right4' id='riFr4'>Friday</th>
@@ -567,6 +567,8 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 			<script src="js/script.js"></script>
 			<script src="js/newScript.js"></script>
 			<script src="js/quizDay.js"></script>
+			<script src='js-majid/Week.js'></script>
+
 </body>
 
 </html>
