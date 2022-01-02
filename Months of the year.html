@@ -327,45 +327,17 @@
 				<!--Carter Spelling? (section 3)-->
 				<br>
 				<div class="border"></div>
-				<div class="container">
+				<div id="sec3" class="container">
 					<h4>Fill in the blank</h4>
-					<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">October</p>
+					<div title="Months" id="s3Check" style="display: none;"></div>
+					<form class="sec3Form">
 
-					<form style="margin-top: -1%; font-size: large;">
-						<span>O</span><input onkeyup="jump(this, 'j1For2')"
-							class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j1For1"
-							name="fname"><span>to</span><input onkeyup="jump(this,'j1For3')" id="j1For2"
-							class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><span>e</span><input
-							onkeyup="jump(this)" class="border-bottom border-dark fillInBlank" maxlength="1" type="text"
-							id="j1For3">
-						<button style="background-color: white; margin-left: 1em;" type="reset"><i
-								class="fa fa-reply fa-1x"></i></button>
 					</form>
+					<form class="sec3Form">
 
-					<br>
-					<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">August</p>
-
-					<form style="margin-top: -1%; font-size: large;">
-						<input onkeyup="jump(this, 'j2Fiv2')" class="border-bottom border-dark fillInBlank"
-							maxlength="1" type="text" id="j2Fiv1" name="fname"><span>ug</span><input
-							onkeyup="jump(this,'j2Fiv3')" id="j2Fiv2" class="border-bottom border-dark fillInBlank"
-							maxlength="1" type="text"><span>s</span><input onkeyup="jump(this)"
-							class="border-bottom border-dark fillInBlank" maxlength="1" type="text" id="j2Fiv3">
-						<button style="background-color: white; margin-left: 1em;" type="reset"><i
-								class="fa fa-reply fa-1x"></i></button>
 					</form>
-					<br>
-					<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">March</p>
+					<form class="sec3Form">
 
-					<form style="margin-top: -1%; font-size: large;">
-						<span>M</span><input onkeyup="jump(this, 'j3Six2')"
-							class="border-bottom border-dark fillInBlankCapital" maxlength="1" type="text" id="j3Six1"
-							name="fname"><span>r</span><input onkeyup="jump(this,'j3Six3')" id="j3Six2"
-							class="border-bottom border-dark fillInBlank" maxlength="1" type="text"><input
-							onkeyup="jump(this, 'j3Six4')" class="border-bottom border-dark fillInBlank" maxlength="1"
-							type="text" id="j3Six3">
-						<button style="background-color: white; margin-left: 1em;" type="reset"><i
-								class="fa fa-reply fa-1x"></i></button>
 					</form>
 				</div>
 
@@ -438,71 +410,49 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 			<div id="dragAndDropContainer" class="container">
 				<h3>Drag and drop months into the correct order</h3>
 				<br>
-				<div title="Jan" class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Feb" class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Mar" class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Apr" class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="May" class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Jun" class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
+<div>
+				<div  class="drops" id="Jan5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Feb5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Mar5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Apr5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<br>
-				<div title="Jul" class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Aug" class="drops" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Sep" class="drops" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Oct" class="drops" id="div10" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Nov" class="drops" id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
-				<div title="Dec" class="drops" id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</div>
+				<div  class="drops" id="May5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Jun5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Jul5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Aug5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<br>
-				<hr>
-				<br>
+				<div  class="drops" id="Sep5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Oct5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Nov5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Dec5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-				<div class="dragDiv">
-					<img id="drag11" draggable="true" src="images/Months/Nov.png" ondragstart="drag(event)" title="Nov">
-				</div>
-				<div class="dragDiv">
-					<img title="Jun" id="drag6" draggable="true" src="images/Months/Jun.png" ondragstart="drag(event)">
-				</div>
-				<div class="dragDiv">
-					<img title="Jan" id="drag1" draggable="true" src="images/Months/Jan.png" ondragstart="drag(event)">
-				</div>
-				<div class="dragDiv">
-					<img title="May" id="drag5" draggable="true" src="images/Months/May.png" ondragstart="drag(event)">
-				</div>
-				<div class="dragDiv">
-					<img title="Aug" id="drag8" draggable="true" src="images/Months/Aug.png" ondragstart="drag(event)">
-				</div>
-				<div class="dragDiv">
-					<img title="Mar" id="drag3" draggable="true" src="images/Months/Mar.png" ondragstart="drag(event)">
-				</div>
 				<br>
-				<div class="dragDiv">
-					<img title="Apr" id="drag4" draggable="true" src="images/Months/Apr.png" ondragstart="drag(event)">
+				<hr style="border-top: 1px solid black;">
+				<br>
+				<div id="dragBox" class="container">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img id="drag10" draggable="true" src="images/Months/Oct.png" ondragstart="drag(event)" title="Oct">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Feb" id="drag2" draggable="true" src="images/Months/Feb.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Jul" id="drag7" draggable="true" src="images/Months/Jul.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img id="drag12" draggable="true" src="images/Months/Dec.png" ondragstart="drag(event)" title="Dec">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Sep" id="drag9" draggable="true" src="images/Months/Sep.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
 			</div>
 			<hr>
@@ -598,8 +548,8 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 			<div style="height: 500px;">
 			</div>
 		
-			<div style="height: 100px;">
-
+			<div style="height: 200px;">
+				</div>
 				<!-- Main Footer -->
 				<footer class="main-footer">
 					<div class="circle-layer"></div>

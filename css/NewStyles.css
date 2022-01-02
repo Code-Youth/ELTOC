@@ -230,15 +230,21 @@ th {
 }
 
 .fillInBlankCapital {
-  width: 16px;
+  width: 30px;
   text-align: center;
 }
 .fillInBlank {
   text-align: center;
-  width: 14px;
+  width: 30px;
 }
 .divide {
   display: none;
+}
+#sec3 span{
+  font-size: 35px;
+}
+#sec3 input{
+  font-size: 35px;
 }
 
 .matchTable {
@@ -267,7 +273,7 @@ th {
 }
 
 /*Carter drag and drop (section 5)*/
-#div1 {
+/* #div1 {
   width: 150px;
   height: 55px;
   border: 1px solid #aaaaaa;
@@ -338,8 +344,8 @@ th {
   height: 55px;
   border: 1px solid #aaaaaa;
   display: inline-block;
-}
-#drag1{
+} */
+/* #drag1{
   width: auto;
   height: 50px;
   display: inline;
@@ -398,8 +404,8 @@ th {
   width: auto;
   height: 50px;
   display: inline;
-}
-#div1 img{
+} */
+/* #div1 img{
   text-align: center;
   width: auto;
   height: 100%;
@@ -458,15 +464,10 @@ th {
   text-align: center;
   width: auto;
   height: 100%;
-}
+} */
 
 
-.dragDiv {
-  display: inline-block;
-  width: 150px;
-  height: 54px;
-  border: 2px solid black;
-}
+
 #confirmMessage {
   font-size: x-large;
   font-weight: bold;
@@ -490,7 +491,7 @@ th {
     width: 100px !important;
   }
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   #dragAndDropContainer {
     display: none;
   }
@@ -498,7 +499,7 @@ th {
   .screenSizeErrorDnD {
     display: block;
   }
-}
+} */
 @media only screen and (max-width: 650px){
   .pattern-layer-three{
     display: none;
@@ -620,4 +621,44 @@ cursor: pointer;
   font-size: large;
   color: black;
   cursor: pointer;
+}
+
+.inputs{
+width:1em;
+display: inline;
+border-bottom: 1px solid black;
+text-align: center;
+margin-left: 2px;
+margin-right: 2px;
+}
+.notinputs{
+  font-size: 35px;
+display: inline;
+}
+.s3Hints{
+  visibility: hidden;
+}
+
+.dNDText{
+  width: 100%;
+  border: 1px solid black;
+  margin-left: auto;
+  height: 100%;
+}
+.drops{
+  display: inline-block;
+  text-align: center; 
+  border: 2px solid black;
+  width: 10em;
+  height: 3em;
+}
+.dragDiv {
+  display: inline-block;
+  text-align: center; 
+  border: 2px solid black;
+  width: 10em;
+  height: 3em;
+}
+.noDrop:hover{
+  cursor: pointer !important;
 }
