@@ -566,7 +566,7 @@ var tempClass = ""
                         ev.target.appendChild(document.getElementById(data));
                           }
                           else{
-                              alert("no")
+                            dndError()
                           }
                           
                       }
@@ -592,6 +592,17 @@ function dragLeave(e)
 {
     console.log("dragLeave")
 }
+
+function dndError() {
+    // Get the snackbar DIV
+    var bar = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    bar.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ bar.className = bar.className.replace("show", ""); }, 3000);
+  }
 
                       //for future drag and drop api use, try using the dragStart and dragEnd event listeners//
                       
