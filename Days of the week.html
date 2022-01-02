@@ -281,9 +281,19 @@
 				<!--Carter Spelling? (section 3)-->
 				<br>
 				<div class="border"></div>
-				<div class="container">
+				<div id="sec3" class="container">
 					<h4>Fill in the blank</h4>
-					<p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Wednesday</p>
+					<div title="Days" id="s3Check" style="display: none;"></div>
+					<form class="sec3Form">
+
+					</form>
+					<form class="sec3Form">
+
+					</form>
+					<form class="sec3Form">
+
+					</form>
+					<!-- <p style="margin-left: .5%; letter-spacing: 1px;" id="ans1">Wednesday</p>
 
 					<form style="margin-top: -1%; font-size: large;">
 						<input onkeyup="jump(this, 'j1One2')" class="border-bottom border-dark fillInBlankCapital"
@@ -322,7 +332,7 @@
 						<button style="background-color: white; margin-left: 1em;" type="reset"><i
 								class="fa fa-reply fa-1x"></i></button>
 					</form>
-				</div>
+				</div> -->
 				<br>
 				<hr>
 				<br>
@@ -384,40 +394,31 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 			<div id="dragAndDropContainer" class="container">
 				<h3>Drag and drop Days into the correct order</h3>
 				<br>
-				<div title="Mon" class="drops" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Tue" class="drops" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Wed" class="drops" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Thu" class="drops" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Fri" class="drops" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Sat" class="drops" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<div title="Sun" class="drops" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Mon5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Tue5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Wed5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Thu5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Fri5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Sat5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div  class="drops" id="Sun5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<br>
-				<hr>
+				<hr style="border-top: 1px solid black;">
 				<br>
-				<div class="dragDiv">
-					<img title="Tue" id="drag2" draggable="true" src="images/Days/Tuesday.png"
-						ondragstart="drag(event)">
+				<div id="dragBox" class="container">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Sat" id="drag6" draggable="true" src="images/Days/Saturday.png"
-						ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Mon" id="drag1" draggable="true" src="images/Days/Monday.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Fri" id="drag5" draggable="true" src="images/Days/Friday.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Sun" id="drag7" draggable="true" src="images/Days/Sunday.png" ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Wed" id="drag3" draggable="true" src="images/Days/Wednesday.png"
-						ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
 				</div>
-				<div class="dragDiv">
-					<img title="Thu" id="drag4" draggable="true" src="images/Days/Thursday.png"
-						ondragstart="drag(event)">
+				<div ondrop="dragDrop(event)" id="none" ondragover="allowDrop(event)" class="dragDiv">
+				</div>
 				</div>
 			</div>
 			<hr>

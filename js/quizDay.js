@@ -302,3 +302,296 @@ onclick="daySound('We')" style="background-color: greenyellow;"
                         function dayPlay(day){
                      day.play()
                         }
+
+
+var s3DoM = 0
+var tempAns = ""
+var letterRng = 0
+var letters = []
+var removeKey = []
+var s3q = []
+var title = ""
+                        function pickADay(){
+                            if(document.getElementById("s3Check").title == "Days"){
+                                s3DoM = 6
+                            }
+                            else{
+                                s3DoM = 11
+                            }
+                            for(let i = 0; i<3; i++){
+                            s3Min = Math.ceil(0);
+                            s3Max = Math.floor(s3DoM);
+                        let sec3Rng = Math.floor(Math.random()* (s3Max - s3Min + 1) + s3Min);
+                        if(document.getElementById("s3Check").title == "Days"){
+                            tempAns = dayBank[sec3Rng]
+                        }
+                        else{
+                            tempAns = monthBank[sec3Rng]
+                        }
+                         letters = tempAns.split("");
+                        s3Min1 = Math.ceil(2);
+                            s3Max1 = Math.floor(tempAns.length - 3);
+                         amountRng = Math.floor(Math.random()* (s3Max1 - s3Min1 + 1) + s3Min1);
+                         console.log(amountRng)
+
+                         for(let k = 0; k<amountRng;k++){
+                            s3Min2 = Math.ceil(0);
+                            s3Max2 = Math.floor(tempAns.length - 1);
+                         removeLetter = Math.floor(Math.random()* (s3Max2 - s3Min2 + 1) + s3Min2);
+                         console.log(removeKey.includes(letters[removeLetter]))
+                         if(removeKey.includes(letters[removeLetter])!== true){
+                         console.log(removeLetter)
+                         removeKey.push(letters[removeLetter])
+                         console.log(removeKey)
+                         console.log(letters)
+                         console.log(tempAns)
+                         }
+                         else{
+                             k-1
+                         }
+                         
+                        }
+                       let currentQ = document.getElementsByClassName("sec3Form")[i]
+                       let s3h5 = document.createElement("h5")
+                       s3h5.innerHTML = tempAns
+                       currentQ.appendChild(s3h5)
+                       for(let g = 0; g<letters.length;g++){
+                           if(removeKey.includes(letters[g]) == false){
+                               var app = document.createElement("p")
+                               app.setAttribute("class","notinputs")
+                               app.innerHTML = letters[g]
+                           }
+                           else{
+                               var app = document.createElement("input")
+                               app.setAttribute("class","inputs")
+                               app.setAttribute("title",g)
+                               app.setAttribute("maxLength","1")
+                               app.setAttribute("id","s3Question" + (i))
+                               app.setAttribute("onkeyup","s3Czech(this)")
+                           }
+                           currentQ.appendChild(app)
+                       }
+                       s3q.push(tempAns)
+                         removeKey.length = 0
+                    }
+                        
+                                        }
+                    pickADay()
+
+
+                    function s3Czech(ttle){
+                        if (ttle.value.length >= ttle.maxLength){
+                            console.log(document.getElementsByClassName("inputs"))
+                        var arr = [].slice.call(document.getElementsByClassName("inputs"));
+                        console.log(arr)
+                        console.log(arr.indexOf(ttle))
+                        console.log(ttle)
+                        console.log(s3q)
+                        console.log(s3q[ttle.id.slice(ttle.id.length-1)])
+                        console.log(ttle.value)
+                        console.log(s3q[ttle.id.slice(ttle.id.length-1)].charAt(ttle.title))
+                        if(ttle.value == s3q[ttle.id.slice(ttle.id.length-1)].charAt(ttle.title)){
+                            console.log("huzzah")
+                            ttle.style.color = "greenyellow"
+                        }
+                        else{
+                            ttle.style.color = "red"
+                        }
+                        let thisIndex = arr.indexOf(ttle)
+                        if(document.getElementsByClassName("inputs")[thisIndex + 1].id == ttle.id){
+                        document.getElementsByClassName("inputs")[thisIndex + 1].focus()
+                        }
+                    }
+                }
+                    //if the input's title == index of s3q[question]{
+                    //   correct
+                    // } 
+
+                    //Drag and Dorp
+                                          //<h5 class="dNDText" id="drag1" draggable="true" ondragstart="drag(event)">Tuesday</h5>
+var dADBank = []
+var autoArr = []
+var autoPos = 0
+var three = 3
+var checkCount = 0
+var beingDragged = ""
+var tempClass = ""
+                function dragAndDropRNG(){
+                    if(document.getElementById("s3Check").title == "Days"){
+                        dADBank = dayBank
+                        console.log(dADBank)
+                    }
+                    else{
+                        dADBank = monthBank
+                        three = 6
+                    }
+                    shuffle(dADBank)
+                    let bankCheck = 0
+                    for(let i = 0; i<dADBank.length;i++){
+                        if(dADBank[i] == dayBank[i]){
+                            bankCheck+=1
+                        }
+
+                        if((bankCheck == 3 && dADBank.length == 7) || (bankCheck == 6 && dADBank.length == 12)){
+                            shuffle(dADBank)
+                            i= -1
+                        }
+                    }
+                    for(let i = 0;i<three;i++){
+                         dNDMin = Math.ceil(0);
+                            dNDMax = Math.floor(dADBank.length - 1);
+                         autoIndex = Math.floor(Math.random()* (dNDMax - dNDMin + 1) + dNDMin);
+                         if(dADBank[autoIndex] !== "NA"){
+                         autoArr[i] = dADBank[autoIndex]
+                         dADBank[autoIndex] = "NA"
+                         }
+                         else{
+                             i-=1
+                         }
+                         console.log(autoArr)
+                    }
+                    for(let i=0; i<dADBank.length;i++){
+                        if(dADBank[i] !== "NA"){
+                       let dragText = document.createElement("h5")
+                       dragText.setAttribute("class","dNDText")
+                       dragText.setAttribute("id","drag" + (i+1))
+                       dragText.setAttribute("draggable","true")
+                       dragText.setAttribute("ondragstart","drag(event)")
+                       dragText.innerHTML = dADBank[i]
+                        document.getElementsByClassName("dragDiv")[i].appendChild(dragText)
+                        document.getElementsByClassName("dragDiv")[i].id = dADBank[i] + "U"
+                        }
+                        else{
+                                    let auto = document.getElementById(autoArr[autoPos].slice(0,3) + "5")
+                                    console.log(autoArr[autoPos].slice(0,3) + "5")
+                                    let dragText = document.createElement("h5")
+                       dragText.setAttribute("class","dNDText")
+                       dragText.setAttribute("id","drag" + (i+1))
+                       dragText.setAttribute("style","border: none")
+                       auto.setAttribute("title","Correct")
+                       dragText.innerHTML = autoArr[autoPos]
+                       auto.appendChild(dragText)
+                        document.getElementsByClassName("dragDiv")[i].style.display = "none"
+                        autoPos+=1
+                        }
+                        }
+                    }
+                    console.log(dADBank)
+                dragAndDropRNG()
+                    function allowDrop(ev) {
+                        ev.preventDefault();
+                      }
+                      
+                      function drag(ev) {
+                          console.log(ev.target.parentElement)
+                          console.log(ev.target.parentElement.id)
+                          console.log(ev.target)
+                          beingDragged = ev.target.innerHTML
+                          tempClass = ev.target.id
+                          for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){
+                              if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){
+                                  document.getElementsByClassName("dragDiv")[i].style.backgroundColor = "grey"
+                                  document.getElementsByClassName("dragDiv")[i].addEventListener('dragenter', dragEnter, false);
+                                  document.getElementsByClassName("dragDiv")[i].addEventListener('dragleave', dragLeave, false);
+                                  
+                              }
+                          }
+                          ev.target.addEventListener('dragend', dragEnd, false);
+                        ev.dataTransfer.setData("text", ev.target.id);
+                    
+                      }
+            
+                      function drop(ev) {
+                          if(ev.target.className == "dragDiv" || ev.target.className == "drops"){
+                            if(ev.target.firstElementChild == null){
+                                console.log(ev.target.firstElementChild)
+                            ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.getElementById(data));
+                        console.log(ev.target.firstElementChild)
+                        if(ev.target.firstElementChild.innerHTML.slice(0,3) + "5" == ev.target.id){
+                            ev.target.style.border = "2px solid greenyellow"
+                            ev.target.firstElementChild.style.border = "none"
+                            ev.target.firstElementChild.removeAttribute("ondragstart")
+                            ev.target.firstElementChild.draggable = false
+                            ev.target.title = "Correct"
+                            document.getElementById(ev.target.firstElementChild.innerHTML + "U").style.display = "none"
+                        }
+                        else{
+                            ev.target.style.border = "2px solid red"
+                        }
+                    for(let b = 0; b<document.getElementsByClassName("drops").length;b++){
+                        if(document.getElementsByClassName("drops")[b].title == "Correct"){
+                            checkCount+=1
+                            console.log(checkCount)
+                            console.log(document.getElementsByClassName("drops").length)
+                        }
+                    }
+                    if(checkCount == document.getElementsByClassName("drops").length){
+                                     document.getElementById("dragBox").style.display="none"
+                    }
+                    checkCount = 0
+                    for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){
+                        if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){
+                            document.getElementsByClassName("dragDiv")[i].style.backgroundColor = "white"
+                        }
+                    }
+                      }
+                    }
+                }
+
+
+                      function shuffle(array) {
+                        let currentIndex = array.length,  randomIndex;
+                      
+                        // While there remain elements to shuffle...
+                        while (currentIndex != 0) {
+                      
+                          // Pick a remaining element...
+                          randomIndex = Math.floor(Math.random() * currentIndex);
+                          currentIndex--;
+                      
+                          // And swap it with the current element.
+                          [array[currentIndex], array[randomIndex]] = [
+                            array[randomIndex], array[currentIndex]];
+                        }
+                      
+                        return array;
+                      }
+
+                      function dragDrop(ev){
+                          if(ev.target.id == beingDragged + "U"){
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.getElementById(data));
+                          }
+                          else{
+                              alert("no")
+                          }
+                          
+                      }
+                      //This function will make sure that the dragDiv boxes turn back to white even if the user dosent drag the box anywhere//
+                      //You can see dragEnd being called in an event listener in the drag function//
+                      function dragEnd(e) 
+                      {
+                        for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){
+                            if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){
+                                document.getElementsByClassName("dragDiv")[i].style.backgroundColor = "white"
+                                document.getElementsByClassName("dragDiv")[i].removeEventListener('dragenter', dragEnter, false);
+                                document.getElementsByClassName("dragDiv")[i].removeEventListener('dragleave', dragLeave, false);
+
+
+                            }
+                        }                    
+                      };  
+                      function dragEnter(e) 
+{
+   console.log("dragEnter")
+};
+function dragLeave(e)
+{
+    console.log("dragLeave")
+}
+
+                      //for future drag and drop api use, try using the dragStart and dragEnd event listeners//
+                      

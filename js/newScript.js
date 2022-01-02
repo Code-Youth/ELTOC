@@ -375,105 +375,105 @@ else if (item.id=='wrAu4'||item.id=='wrMar4'||item.id=='wrJa4') {
 
 //Carter drag and drop (section 5)//
 //Stops default browser behaviour//
-function allowDrop(ev) {
-    ev.preventDefault();
-  }
-  var checkStore = 0
-  var autoNums = 0
-  autoId = []
-  //Randomizes which days are auto completed on page load//
-  function autostuff(){
-      console.log("running")
-      //bigI runs for 2 iterations because 2 days are auto completed//
-      for(let bigI = 0; bigI <5; bigI++){
-          //i is set to run until rng is less than 7//
-      for(let i = 0; i<50; i++){
-  var rng = Math.random()*100
-  rng = Math.floor(rng)
-  if(rng > 12 || rng == 0 || rng == checkStore){
-      i-1
-  }
-  else{
-      i = 500
-  }
-  console.log(rng)
-  }
-//Appending the randomized days and modifying the empty divs they leave behind//
-  document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
-  autoId.push("drag" + rng)
-  document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
-  document.getElementById("div" + rng).className = "dropsCorrect"
-  document.getElementById("drag" + rng).removeAttribute("ondragstart")
-  document.getElementById("drag" + rng).removeAttribute("draggable")
+// function allowDrop(ev) {
+//     ev.preventDefault();
+//   }
+//   var checkStore = 0
+//   var autoNums = 0
+//   autoId = []
+//   //Randomizes which days are auto completed on page load//
+//   function autostuff(){
+//       console.log("running")
+//       //bigI runs for 2 iterations because 2 days are auto completed//
+//       for(let bigI = 0; bigI <5; bigI++){
+//           //i is set to run until rng is less than 7//
+//       for(let i = 0; i<50; i++){
+//   var rng = Math.random()*100
+//   rng = Math.floor(rng)
+//   if(rng > 12 || rng == 0 || rng == checkStore){
+//       i-1
+//   }
+//   else{
+//       i = 500
+//   }
+//   console.log(rng)
+//   }
+// //Appending the randomized days and modifying the empty divs they leave behind//
+//   document.getElementById("drag" + rng).parentElement.setAttribute("class","dragDiv drag" + rng)
+//   autoId.push("drag" + rng)
+//   document.getElementById("div" + rng).appendChild(document.getElementById("drag" + rng))
+//   document.getElementById("div" + rng).className = "dropsCorrect"
+//   document.getElementById("drag" + rng).removeAttribute("ondragstart")
+//   document.getElementById("drag" + rng).removeAttribute("draggable")
 
   
-autoNums += rng
-  checkStore = rng
-  rng = 0
-  }
-  }
-  if(document.getElementsByClassName("screenSizeErrorDnD").display == "none"){
-    autostuff()
-    }
+// autoNums += rng
+//   checkStore = rng
+//   rng = 0
+//   }
+//   }
+//   if(document.getElementsByClassName("screenSizeErrorDnD").display == "none"){
+//     autostuff()
+//     }
 
   
-  autoNums -= checkStore
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-    console.log(ev.target.parentElement.className)
-    console.log(ev.target.parentElement.hasAttribute("ondrop"))
-    if((ev.target.parentElement.className == "drops" || ev.target.parentElement.className == "dragDiv") && ev.target.parentElement.hasAttribute("ondrop") == false){
-        ev.target.parentElement.setAttribute("ondrop","drop(event)")
-        ev.target.parentElement.style.border = "1px solid #aaaaaa"
-        if(ev.target.parentElement.hasAttribute("ondragover") == false){
-            ev.target.parentElement.setAttribute("ondragover","allowDrop(event)")
-            ev.target.parentElement.style.border = "2px solid black"
-        }
-      }
-      if(ev.target.parentElement.className == "dragDiv" || ev.target.parentElement.className.slice(0, ev.target.parentElement.className.length-1) == "dragDiv drag"){
-          ev.target.parentElement.className = "dragDiv " + ev.target.id
-          ev.target.parentElement.id = "dragDropDistance" + ev.target.id.slice(ev.target.length-1)
-          console.log(document.getElementsByClassName("drag1"))
-      }
-  }
-  var correctAgain = 4
-  var correctId = []
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    console.log(ev.target.firstChild)
-    if(ev.target.title !== ev.target.firstElementChild.title){
-        ev.target.style.border = "2px solid red"
-    }
-    else{
-        ev.target.style.border = "2px solid greenyellow"
-        ev.target.className = "dropsCorrect"
-         ev.target.firstChild.removeAttribute("ondragstart")
-      ev.target.firstChild.draggable = "false"
-      console.log(ev.target.firstChild.id)
-      console.log(document.getElementsByClassName("dragDiv").length)
-      correctAgain += 1
-    console.log(correctAgain)
-        correctId.push(ev.target.firstChild.id)
-        console.log(correctId)
-      if(correctAgain == 12){
+//   autoNums -= checkStore
+//   function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+//     console.log(ev.target.parentElement.className)
+//     console.log(ev.target.parentElement.hasAttribute("ondrop"))
+//     if((ev.target.parentElement.className == "drops" || ev.target.parentElement.className == "dragDiv") && ev.target.parentElement.hasAttribute("ondrop") == false){
+//         ev.target.parentElement.setAttribute("ondrop","drop(event)")
+//         ev.target.parentElement.style.border = "1px solid #aaaaaa"
+//         if(ev.target.parentElement.hasAttribute("ondragover") == false){
+//             ev.target.parentElement.setAttribute("ondragover","allowDrop(event)")
+//             ev.target.parentElement.style.border = "2px solid black"
+//         }
+//       }
+//       if(ev.target.parentElement.className == "dragDiv" || ev.target.parentElement.className.slice(0, ev.target.parentElement.className.length-1) == "dragDiv drag"){
+//           ev.target.parentElement.className = "dragDiv " + ev.target.id
+//           ev.target.parentElement.id = "dragDropDistance" + ev.target.id.slice(ev.target.length-1)
+//           console.log(document.getElementsByClassName("drag1"))
+//       }
+//   }
+//   var correctAgain = 4
+//   var correctId = []
+//   function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+//     console.log(ev.target.firstChild)
+//     if(ev.target.title !== ev.target.firstElementChild.title){
+//         ev.target.style.border = "2px solid red"
+//     }
+//     else{
+//         ev.target.style.border = "2px solid greenyellow"
+//         ev.target.className = "dropsCorrect"
+//          ev.target.firstChild.removeAttribute("ondragstart")
+//       ev.target.firstChild.draggable = "false"
+//       console.log(ev.target.firstChild.id)
+//       console.log(document.getElementsByClassName("dragDiv").length)
+//       correctAgain += 1
+//     console.log(correctAgain)
+//         correctId.push(ev.target.firstChild.id)
+//         console.log(correctId)
+//       if(correctAgain == 12){
     
-          let confirm = document.createElement("p")
-          confirm.setAttribute("id","confirmMessage")
-          confirm.innerHTML = "Correct!"
-          document.getElementById("dragAndDropContainer").appendChild(confirm)
-          for(let k = 0; k<11; k++){
-              console.log(document.getElementsByClassName("dragDiv " + correctId[k])[0])
-              document.getElementsByClassName("dragDiv " + correctId[k])[0].style.display = "none"
-              for(let aut = 0; aut<5; aut++){
-                  document.getElementsByClassName("dragDiv " + autoId[aut])[0].style.display = "none"
-              }
-            }
-      }
-      }
-    ev.target.removeAttribute("ondrop")
-  }  
+//           let confirm = document.createElement("p")
+//           confirm.setAttribute("id","confirmMessage")
+//           confirm.innerHTML = "Correct!"
+//           document.getElementById("dragAndDropContainer").appendChild(confirm)
+//           for(let k = 0; k<11; k++){
+//               console.log(document.getElementsByClassName("dragDiv " + correctId[k])[0])
+//               document.getElementsByClassName("dragDiv " + correctId[k])[0].style.display = "none"
+//               for(let aut = 0; aut<5; aut++){
+//                   document.getElementsByClassName("dragDiv " + autoId[aut])[0].style.display = "none"
+//               }
+//             }
+//       }
+//       }
+//     ev.target.removeAttribute("ondrop")
+//   }  
 
   //<h6 style="letter-spacing: 3px;">abcdefghijklmnopqrstuvwxyz</h6>
 
