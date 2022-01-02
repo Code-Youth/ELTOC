@@ -508,15 +508,16 @@ th {
 .lASTable{
   font-size: large;
   display: inline-table;
+  width: 15em;
 }
 .lASTable tr{
   border: 1px solid black;
-
+  height: 4em;
 }
 .lASTable th{
   width: 40px;
   height: 40px;
-
+  font-size: 35px;
 }
 .s2Num:hover{
   border: dashed;
