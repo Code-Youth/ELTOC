@@ -710,3 +710,13 @@ display: inline;
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+.fullWords li{
+  list-style: disc;
+}
+
+.s7Left li{
+  margin-top: 1em;
+  font-size: 35px;
+}
+

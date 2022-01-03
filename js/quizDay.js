@@ -409,14 +409,15 @@ var title = ""
 
                     //Drag and Dorp
                                           //<h5 class="dNDText" id="drag1" draggable="true" ondragstart="drag(event)">Tuesday</h5>
-var dADBank = []
-var autoArr = []
-var autoPos = 0
-var three = 3
-var checkCount = 0
-var beingDragged = ""
-var tempClass = ""
+var dADBank = []    //Shuffled array
+var autoArr = []    //Days/Months chosen to be completed on page load
+var autoPos = 0     //Counter to check which index of autoArr to use
+var three = 3       //Counter to check how many days/months are chosen to be completed on page load
+var checkCount = 0  //Counter to see if all answers are correct (To be removed)
+var beingDragged = ""   //This is set when user is dragging an element. It tracks which element is being dragged. This is used because drag and drop API does'nt have a built in system for this
+var tempClass = ""  //Unused
                 function dragAndDropRNG(){
+                    //This is where the code checks if it should use Day specific variables or Month ones
                     if(document.getElementById("s3Check").title == "Days"){
                         dADBank = dayBank
                         console.log(dADBank)
@@ -426,7 +427,7 @@ var tempClass = ""
                         three = 6
                     }
                     shuffle(dADBank)
-                    let bankCheck = 0
+                    let bankCheck = 0   //This variable and the loop ahead will check to see if the shuffled array and the original array have to many matching positions
                     for(let i = 0; i<dADBank.length;i++){
                         if(dADBank[i] == dayBank[i]){
                             bankCheck+=1
@@ -441,9 +442,10 @@ var tempClass = ""
                          dNDMin = Math.ceil(0);
                             dNDMax = Math.floor(dADBank.length - 1);
                          autoIndex = Math.floor(Math.random()* (dNDMax - dNDMin + 1) + dNDMin);
+                         //Checks to see if a day/month has been used in the autoArr yet
                          if(dADBank[autoIndex] !== "NA"){
                          autoArr[i] = dADBank[autoIndex]
-                         dADBank[autoIndex] = "NA"
+                         dADBank[autoIndex] = "NA"  //Sets the chosen word to equal NA
                          }
                          else{
                              i-=1
@@ -451,7 +453,7 @@ var tempClass = ""
                          console.log(autoArr)
                     }
                     for(let i=0; i<dADBank.length;i++){
-                        if(dADBank[i] !== "NA"){
+                        if(dADBank[i] !== "NA"){    //If the position at i is not NA, Create the drag box normally
                        let dragText = document.createElement("h5")
                        dragText.setAttribute("class","dNDText")
                        dragText.setAttribute("id","drag" + (i+1))
@@ -461,7 +463,7 @@ var tempClass = ""
                         document.getElementsByClassName("dragDiv")[i].appendChild(dragText)
                         document.getElementsByClassName("dragDiv")[i].id = dADBank[i] + "U"
                         }
-                        else{
+                        else{   //if the position at i is NA, Append autoArr[autoPos] to the correct answer box.
                                     let auto = document.getElementById(autoArr[autoPos].slice(0,3) + "5")
                                     console.log(autoArr[autoPos].slice(0,3) + "5")
                                     let dragText = document.createElement("h5")
@@ -478,49 +480,54 @@ var tempClass = ""
                     }
                     console.log(dADBank)
                 dragAndDropRNG()
-                    function allowDrop(ev) {
+
+                    /*In the next functions ev will be set as a parameter, ev refers to an event and its not important. What is important is that ev.target will refer
+                    to different things depending on the function, i will comment what it refers to at the start of each function*/
+
+                    function allowDrop(ev) {    //allowDrop just stops the browser from doing the default action, in this case dragging and dropping something would normally open the element in a new tab
                         ev.preventDefault();
                       }
                       
-                      function drag(ev) {
+                      function drag(ev) {   //drag happens when you start dragging an element. ev.target refers to the element being dragged
                           console.log(ev.target.parentElement)
                           console.log(ev.target.parentElement.id)
                           console.log(ev.target)
-                          beingDragged = ev.target.innerHTML
-                          tempClass = ev.target.id
-                          for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){
-                              if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){
+                          beingDragged = ev.target.innerHTML    //specifying what is being dragged
+                          tempClass = ev.target.id  //Unused
+                          for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){  
+                              if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){  //Changes other answer boxes to grey to specify that you cant drop the element there
                                   document.getElementsByClassName("dragDiv")[i].style.backgroundColor = "grey"
                                   document.getElementsByClassName("dragDiv")[i].addEventListener('dragenter', dragEnter, false);
                                   document.getElementsByClassName("dragDiv")[i].addEventListener('dragleave', dragLeave, false);
                                   
                               }
                           }
-                          ev.target.addEventListener('dragend', dragEnd, false);
+                          ev.target.addEventListener('dragend', dragEnd, false);    //event listener for when the user stops dragging
                         ev.dataTransfer.setData("text", ev.target.id);
                     
                       }
-            
+            /*drop happens when an element is dropped in an element with the ondragover="allowDrop()" attribute. ev.target refers to the element that is having something
+            dropped into it. ev.target.firstElementChild refers to the element being dropped into it*/
                       function drop(ev) {
                           if(ev.target.className == "dragDiv" || ev.target.className == "drops"){
-                            if(ev.target.firstElementChild == null){
+                            if(ev.target.firstElementChild == null){    //drop will only happen if it is empty
                                 console.log(ev.target.firstElementChild)
                             ev.preventDefault();
                         var data = ev.dataTransfer.getData("text");
-                        ev.target.appendChild(document.getElementById(data));
+                        ev.target.appendChild(document.getElementById(data));   //where the data is appended, previously ev.target.firstElementChild has refered to any element in the target, After this it will refer to the dropped element
                         console.log(ev.target.firstElementChild)
-                        if(ev.target.firstElementChild.innerHTML.slice(0,3) + "5" == ev.target.id){
+                        if(ev.target.firstElementChild.innerHTML.slice(0,3) + "5" == ev.target.id){ //Checking if the dropped element is correct.
                             ev.target.style.border = "2px solid greenyellow"
                             ev.target.firstElementChild.style.border = "none"
-                            ev.target.firstElementChild.removeAttribute("ondragstart")
+                            ev.target.firstElementChild.removeAttribute("ondragstart")  //Making the elements undraggable
                             ev.target.firstElementChild.draggable = false
                             ev.target.title = "Correct"
-                            document.getElementById(ev.target.firstElementChild.innerHTML + "U").style.display = "none"
+                            document.getElementById(ev.target.firstElementChild.innerHTML + "U").style.display = "none" //Hiding the elements origin box
                         }
                         else{
                             ev.target.style.border = "2px solid red"
                         }
-                    for(let b = 0; b<document.getElementsByClassName("drops").length;b++){
+                    for(let b = 0; b<document.getElementsByClassName("drops").length;b++){  //Checking if all answers are correct
                         if(document.getElementsByClassName("drops")[b].title == "Correct"){
                             checkCount+=1
                             console.log(checkCount)
@@ -531,7 +538,7 @@ var tempClass = ""
                                      document.getElementById("dragBox").style.display="none"
                     }
                     checkCount = 0
-                    for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){
+                    for(let i = 0; i<document.getElementsByClassName("dragDiv").length;i++){    //Changes the origin boxes back to white from grey after an element is dropped
                         if(document.getElementsByClassName("dragDiv")[i].id !== beingDragged + "U"){
                             document.getElementsByClassName("dragDiv")[i].style.backgroundColor = "white"
                         }
@@ -559,7 +566,7 @@ var tempClass = ""
                         return array;
                       }
 
-                      function dragDrop(ev){
+                      function dragDrop(ev){    //seperate ondrop function for the origin boxes
                           if(ev.target.id == beingDragged + "U"){
                         ev.preventDefault();
                         var data = ev.dataTransfer.getData("text");
