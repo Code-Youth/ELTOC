@@ -34,40 +34,41 @@ let row2 = document.querySelector('#row2')
 let row3 = document.querySelector('#row3')
 let row4 = document.querySelector('#row4')
 
+    // Reference to audio of each row
 let audio1 = document.querySelector('#audio1')
 let audio2 = document.querySelector('#audio2')
 let audio3 = document.querySelector('#audio3')
 let audio4 = document.querySelector('#audio4')
 
 
+    // Reference to every table cell 
+let Mon = document.querySelector("#Mon1")
+let Tue = document.querySelector("#Tue1")
+let Wed = document.querySelector("#Wed1")
+let Thu = document.querySelector("#Thu1")
+let Fri = document.querySelector("#Fri1")
+let Sat = document.querySelector("#Sat1")
+let Sun = document.querySelector("#Sun1")
 
 
 
 // Randomize audio
 
     // Reference to all the sounds     
-let mo_sound = document.querySelector('#mo_sound')
-let tu_sound = document.querySelector('#tu_sound')
-let we_sound = document.querySelector('#we_sound')
-let th_sound = document.querySelector('#th_sound')
-let fr_sound = document.querySelector('#fr_sound')
-let sa_sound = document.querySelector('#sa_sound')
-let su_sound = document.querySelector('#su_sound')
-
-let Mon = "daySound('Mo')"
-let Tue = "daySound('Tu')"
-let Wed = "daySound('We')"
-let Thu = "daySound('Th')"
-let Fri = "daySound('Fr')"
-let Sat = "daySound('Sa')"
-let Sun = "daySound('Su')"
-
-console.log(Wed)
+let mo_sound = document.querySelector('#mo_sound1')
+let tu_sound = document.querySelector('#tu_sound1')
+let we_sound = document.querySelector('#we_sound1')
+let th_sound = document.querySelector('#th_sound1')
+let fr_sound = document.querySelector('#fr_sound1')
+let sa_sound = document.querySelector('#sa_sound1')
+let su_sound = document.querySelector('#su_sound1')
 
 
-    // Shuffle array 
-let array = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
-console.log(array)
+
+
+
+    // Shuffle array for all the sound buttongs
+let arraySound = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
 
 function shuffleArray(arr) {
         let newPos;
@@ -80,10 +81,11 @@ function shuffleArray(arr) {
           arr[newPos] = temp;
         }//End of loop
         return arr
+
 }
 
-let weekArray = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
-console.log(array)
+    // Shuffle array for all the weekday table cells
+let arrayWeek = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
 
 function shuffleArray(arr) {
         let newPos;
@@ -96,25 +98,57 @@ function shuffleArray(arr) {
           arr[newPos] = temp;
         }//End of loop
         return arr
-}
+    }
 
-let newArray = shuffleArray(weekArray)
-console.log(newArray)
+    let arrayShuffle1 = shuffleArray(arraySound)
+
+
+    let arrayShuffle2 = shuffleArray(arrayWeek)
+
+    console.log(arrayShuffle2)
+
+    
+
+    // Matching audio and table
+
+  for(let i = 0; i < arrayShuffle1.length; i++) {
+    console.log(arrayShuffle1)
+    if(arrayShuffle1) {
+
+    }
+  }
 
     // Append random audio to row
 
-function random() {
-    audio1.setAttribute('onclick', "daySound('Fr')")
-    audio2.setAttribute('onclick', newArray[0])
-    audio3.setAttribute('onclick', newArray[1] )
-    audio4.setAttribute('onclick', newArray[2] )
 
-    console.log(audio1)
-    console.log(audio2)
-    console.log(audio3)
-    console.log(audio4)
 
-}
+    function random() {
+
+/* All of this is for row 1 */ 
+
+    // Randomize the audio files
+        $("#audio1").replaceWith(arrayShuffle1[0])
+        console.log(audio1)
+
+    // Randomize the days of the week
+        $("#wrTu1").replaceWith(arrayShuffle2[0])
+        $("#wrTh1").replaceWith(arrayShuffle2[1])
+        $("#riMo1").replaceWith(arrayShuffle2[2])
+        $("#wrFr1").replaceWith(arrayShuffle2[3])
+
+
+
+
+
+    }
+
+// function random() {
+//     audio1.setAttribute('onclick', "daySound('Fr')")
+//     audio2.setAttribute('onclick', newArray[0])
+//     audio3.setAttribute('onclick', newArray[1])
+//     audio4.setAttribute('onclick', newArray[2])
+// }
+
 
 
 

@@ -34,5 +34,30 @@ Attemp2: audio2.setAttribute('onclick', wed) & let wed = "daySound('We')"
 - Can't believe this actually worked XD 
 - Now I just have to see if I can use it from a randomized array
 - *Update, it actually works XD. I'm dying. It seems so stupid but it actually works XD XD XD
+- **Update, it won't work with randomizing the tables :( Were back to square one
+
+Attemp3: Use Jquery to replace the entire button
+- Yup this works, thank you JQuery!
+- The key here was using the .replaceWith() and creating a second set of audio and days to replace with but making them hidden (this is because replace with would take the elements on the page on move them there)
+
+Step 2: Problem: How to randomize table cells?
+
+Summary
+I wanto to have the days of the week in the table all randomize 
+
+Solution 1: Use the child element in Jquery to change 4 table cells in each row
+** I think I'm fine with this for now. Just find the id of the table cell in that spot and replace it
+
+
+Step 3: Problem: How to find the matching audio to the weekday in 2 arrays, and then put it in a variable?
+
+Summary
+This is the hardest part of this. I have to find a way to ensure that the weekday that matches the audio is always is put in the row. 
+
+Attemp1: Create an if statment the random function that will make 
+
+**Update
+- Going to try and create a completely different approach where I pick a random itme from an array then I can match their indexes
+
 
 
