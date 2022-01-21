@@ -696,10 +696,33 @@
 	</div>
 	<!--Carter Alphabet part End-->
 
-	<div>
+	<!-- <div>
 		<h3><a href='Puzle.HTML'>Extra ABC exericse: Puzzle Game</a></h3>
+	</div> -->
+	<hr>
+	<div class="container">
+		<div class="border Boxes">
+			<p id="firstJ">1:Monster</p>
+		</div>
+		<div class="border Boxes">
+			<p id="secondJ">2:Jam</p>
+		</div>
+		<div>
+			<button onclick="swap()">Swap</button>
+		</div>
 	</div>
-
+	<style>
+		.Boxes{
+			display: inline-block;
+			width: 7em;
+			height: 5em;
+		}
+	</style>
+	<script>
+		function swap(){
+			$("#secondJ").clone().appendTo(".Boxes")[0]
+				}
+	</script>
 	</footer>
 
 

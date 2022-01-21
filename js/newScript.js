@@ -1093,3 +1093,7 @@ var iteration = 0
 						document.getElementsByClassName("s4Ans" + ut)[i].className = "loser"
 					}
 			}
+
+            function showDemo(demo){
+                
+            }

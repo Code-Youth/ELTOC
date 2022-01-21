@@ -392,7 +392,14 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 				<p>Drag and drop section not available on smaller screens</p>
 			</div>
 			<div id="dragAndDropContainer" class="container">
-				<h3>Drag and drop Days into the correct order</h3>
+				<h3 style="display: inline;">Drag and drop Days into the correct order</h3>
+				<div id="demoBox" style="display: inline;">
+				<i style="font-size: 20px; float: right; color: dodgerblue;" onclick="showDemo(this)" id="DDragAndDrop" class="fa fa-question-circle"></i>
+				<div style="position: absolute; z-index: 1; right: 5%; padding-top: 20px; background-color: gray;" class="border">
+					<button style="position: absolute; margin-top: -20px; right: 2%; background-color: gray;">X</button>
+					<img src="images/Demonstrations/DragAndDropDemonstration.gif" alt="">
+				</div>
+				</div>
 				<br>
 				<div  class="drops" id="Mon5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<div  class="drops" id="Tue5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -421,6 +428,7 @@ the 's' at the end of the first 'fa' because this code is using font-awe ver 4 a
 				</div>
 				</div>
 			</div>
+	
 			<div id="snackbar">Incorrect Box</div>
 
 			<hr>
