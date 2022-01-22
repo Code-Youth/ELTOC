@@ -34,12 +34,34 @@ let row2 = document.querySelector('#row2')
 let row3 = document.querySelector('#row3')
 let row4 = document.querySelector('#row4')
 
+let td1_1 = document.querySelector('#td1_1')
+
+
 let audio1 = document.querySelector('#audio1')
 let audio2 = document.querySelector('#audio2')
 let audio3 = document.querySelector('#audio3')
 let audio4 = document.querySelector('#audio4')
 
+console.log(audio2.id[4])
 
+
+
+    // Reference list for each day of the week for appending
+let Monday = document.querySelector('#Mo-td')
+let Tuesday = document.querySelector('#Tu-td')
+let Wednesday = document.querySelector('#We-td')
+let Thursday = document.querySelector('#Th-td')
+let Friday = document.querySelector('#Fr-td')
+let Saturday = document.querySelector('#Sa-td')
+let Sunday = document.querySelector('#Su-td')
+
+console.log(Monday.className)
+
+
+let tdArray = [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+
+let row1Array = Array.from(row1)
+row1Array.push(tdArray)
 
 
 
@@ -62,12 +84,16 @@ let Fri = "daySound('Fr')"
 let Sat = "daySound('Sa')"
 let Sun = "daySound('Su')"
 
-console.log(Wed)
+
+
 
 
     // Shuffle array 
+
+    
+
+        // This array shuffles the sounds, currently not using
 let array = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
-console.log(array)
 
 function shuffleArray(arr) {
         let newPos;
@@ -81,9 +107,9 @@ function shuffleArray(arr) {
         }//End of loop
         return arr
 }
-
+        
+        // This array shuffles 'onclick' names
 let weekArray = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
-console.log(array)
 
 function shuffleArray(arr) {
         let newPos;
@@ -99,25 +125,25 @@ function shuffleArray(arr) {
 }
 
 let newArray = shuffleArray(weekArray)
-console.log(newArray)
 
     // Append random audio to row
 
 function random() {
-    audio1.setAttribute('onclick', "daySound('Fr')")
-    audio2.setAttribute('onclick', newArray[0])
-    audio3.setAttribute('onclick', newArray[1] )
-    audio4.setAttribute('onclick', newArray[2] )
 
-    console.log(audio1)
-    console.log(audio2)
-    console.log(audio3)
-    console.log(audio4)
+    // Randomizing the audio
+    audio1.setAttribute('onclick', "daySound('Mo)")
+    audio2.setAttribute('onclick', newArray[1])
+    audio3.setAttribute('onclick', newArray[2])
+    audio4.setAttribute('onclick', newArray[3])
+
+    console.log(audio1.attributes[0])
+
+    // Attempt at a function to check if answer is right
+
 
 }
 
-
-
+ 
 
 
 
@@ -227,4 +253,5 @@ function answer2(item) {                                    // 'Item' refers to 
         icon4.className = 'fa fa-check-circle fa-3x green'
     }
 
-}// end of function
+}
+// end of function

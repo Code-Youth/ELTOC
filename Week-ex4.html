@@ -58,8 +58,6 @@
                 <!--Button to play sound-->
                 </td>
 
-
-
             </tr>
             <tr>
                 <td>Friday</td>
@@ -97,7 +95,7 @@
             <tr id='row1'>
                 <th onclick="daySound('Mo')" id='audio1' style="background-color: greenyellow;"><i
                         style="margin-left: 5.5%; color:white" class="fa fa-play-circle fa-2x"></i></th>
-                <th onclick='answer2(this)' class='wrong4' id='wrTu1'>Tuesday</th>
+                <th onclick='answer2(this)' class='wrong4' id='td1_1'>Tuesday</th>
                 <th onclick='answer2(this)' class='wrong4' id='wrTh1'>Thursday</th>
                 <th onclick='answer2(this)' class='right4' id='riMo1'>Monday</th>
                 <th onclick='answer2(this)' class='wrong4' id='wrFr1'>Friday</th>
@@ -142,6 +140,25 @@
 
     <br>
     <button onclick='random()'>Randomize</button>
+
+    <hr>
+
+    <!-- Shuffle cell in table  -->
+    <p id='hello'>Hello</p>
+
+    <table>
+        <tr>
+            <th onclick='answer2(this)' class='wrong4' id='Mo-td'>Monday</th>
+            <th onclick='answer2(this)' class='wrong4' id='Tu-td'>Tuesday</th>
+            <th onclick='answer2(this)' class='wrong4' id='We-td'>Wednesday</th>
+            <th onclick='answer2(this)' class='wrong4' id='Th-td'>Thursday</th>
+            <th onclick='answer2(this)' class='wrong4' id='Fr-td'>Friday</th>
+            <th onclick='answer2(this)' class='wrong4' id='Sa-td'>Saturday</th>
+            <th onclick='answer2(this)' class='wrong4' id='Su-td'>Sunday</th>
+        </tr>
+    </table>
+
+
 
     <script src='js-majid/Week.js'></script>
 

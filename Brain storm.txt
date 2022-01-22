@@ -1,19 +1,17 @@
+Plan 
+
 How to make weekday exercise 4 randomized?
 
-Step 1: Randomize the audio file
+Step 1: Randomize the audio file [Complete]
 - Create an array with all the audio elements
 - Pick a random audio element and append it to the html
 
-Step 2: Randomize the table
+Step 2: Randomize the table [In progress]
 
 Step 3: Have at least one block in the row equal to the audio file
 
 Step 4: Change color of blocks depending on if it's the right or wrong answer
 
-
-
-Carter's Hints:
-- Focus on changing the audio file, not the audio button (get the audio id, not the buttons id)
 
 
 Step 1 Problem: How to change the audio file randomly
@@ -33,6 +31,22 @@ Attemp1:  audio2.setAttribute('onclick', "daySound(Wed)")
 Attemp2: audio2.setAttribute('onclick', wed) & let wed = "daySound('We')"
 - Can't believe this actually worked XD 
 - Now I just have to see if I can use it from a randomized array
-- *Update, it actually works XD. I'm dying. It seems so stupid but it actually works XD XD XD
+
+
+Step 2 Problem: How to ensure the random cell will match the random audio
+
+Summary
+When I knew what the audio would, I could just match the if statement condition to it. But when it's random, how will I match them? I've tried matching by using
+classnames in the past but that didn't work.
+
+!!The way I randomized the audio is a problem. How am I supposed to find a matching condition for the cell with the audio when the only thing I'm changing is
+the text in the onclick funciton? 
+
+Solution 1: Add text to the audio button, make it invisible, and have the if statement matching condition  based on innerHTML
+- This doesn't work. I forgot I'm not adding or changing audio, I'm only changing the name of the onclick argument
+
+Solution 2: Set the id names to the same text that is changed in the onclick function
+
+ 
 
 
