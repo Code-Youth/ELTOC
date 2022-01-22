@@ -1,0 +1,24 @@
+{
+  "name": "Ed-Tech-Revised",
+  "version": "1.0.0",
+  "description": "This is a web application designed to help newcomers learn English. A previous developer had started the project but they unfortunately didn't make it very far. \r Our goal is to pick up the pieces they left behind and turn this into a a functional web application.",
+  "main": "script.js",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Code-Youth/ELTOC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Code-Youth/ELTOC/issues"
+  },
+  "homepage": "https://github.com/Code-Youth/ELTOC#readme"
+}
