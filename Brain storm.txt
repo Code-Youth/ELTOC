@@ -38,16 +38,29 @@ Attemp3: Use Jquery to replace the entire button
 - Yup this works, thank you JQuery!
 - The key here was using the .replaceWith() and creating a second set of audio and days to replace with but making them hidden (this is because replace with would take the elements on the page on move them there)
 
-Step 2: Problem: How to randomize table cells?
+
+
+
+
+
+Step 2: Problem1: How to randomize table cells?
 
 Summary
-I wanto to have the days of the week in the table all randomize 
+I want to have the days of the week in the table all randomize 
 
 Solution 1: Use the child element in Jquery to change 4 table cells in each row
 ** I think I'm fine with this for now. Just find the id of the table cell in that spot and replace it
 
+Step 2: Problem2: Ensure each table cell is different from the answer and each other
 
-Step 3: Problem: How to find the matching audio to the weekday in 2 arrays, and then put it in a variable?
+Summary
+Now that I'm able to find and append the answer into the table, how do I ensure that the other 3 spots will not match the answer and each other?
+
+
+
+
+
+[Solved]Step 3: Problem1: How to find the matching audio to the weekday in 2 arrays, and then put it in a variable? 
 
 Summary
 This is the hardest part of this. I have to find a way to ensure that the weekday that matches the audio is always is put in the row. 
@@ -56,6 +69,8 @@ Attemp1: Create an if statment the random function that will make
 
 **Update
 - Going to try and create a completely different approach where I pick a random itme from an array then I can match their indexes
+*- This ended up working. What I had to do was pick a random sound from the array, then find it's original position by looping through the array and finding
+the index of the position where it matched itself
 
 
 

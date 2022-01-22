@@ -40,7 +40,7 @@ let audio2 = document.querySelector('#audio2')
 let audio3 = document.querySelector('#audio3')
 let audio4 = document.querySelector('#audio4')
 
-console.log(audio2.id[4])
+
 
 
 
@@ -112,42 +112,64 @@ function shuffleArray(arr) {
         return arr
     }
 
-    let arrayShuffle1 = shuffleArray(arraySound)
+  
+    //If I want to get the right answer to always show up, I need to know what index it the sound will be and match that index to index in the weekday array
 
-
-    let arrayShuffle2 = shuffleArray(arrayWeek)
-
-    console.log(arrayShuffle2)
 
     
+    // Choosing a random audio from arraySound
+    var randomAudio = arraySound[Math.floor(Math.random()*arraySound.length)];
+    // Place holder for the index of the random audio in the arraySound
+    var answer = 0
+    var row1Td2 = 0
+    var row1Td3 = 0
+    var row1Td4 = 0
 
-    // Matching audio and table
+    console.log("answer")
+    console.log(answer)
+    console.log("row1Td2")
+    console.log(row1Td2)
 
-  for(let i = 0; i < arrayShuffle1.length; i++) {
-    console.log(arrayShuffle1)
-    if(arrayShuffle1) {
 
+
+  
+    /* Go through the array and find out the index of the random sound by finding where it matches in it's original array, arraySound*/
+    for(let i = 0; i < arraySound.length; i++) {
+        if(i == randomAudio) {
+            var answer = arraySound.indexOf(i)
+        }
     }
-  }
+
+      // Random day for second table cell
+      for(let i = 0; i < arrayWeek.length; i++ ) {
+        if(!i == answer) {
+            var row1Td2 = arrayWeek.indexOf(i)
+            
+        }
+    }
+
+
+
+
+
+
+
 
     // Append random audio to row
-
-
-
     function random() {
 
 /* All of this is for row 1 */ 
 
     // Randomize the audio files
-        $("#audio1").replaceWith(arrayShuffle1[0])
-        console.log(audio1)
+        $("#audio1").replaceWith(arraySound[answer])
+        console.log(answer)
 
     // Randomize the days of the week
-        $("#wrTu1").replaceWith(arrayShuffle2[0])
-        $("#wrTh1").replaceWith(arrayShuffle2[1])
-        $("#riMo1").replaceWith(arrayShuffle2[2])
-        $("#wrFr1").replaceWith(arrayShuffle2[3])
-
+        // The answer
+        $("#wrTu1").replaceWith(arrayWeek[answer])
+         $("#wrTh1").replaceWith(arrayWeek[row1Td2])
+        $("#riMo1").replaceWith(arrayWeek[row1Td3])
+        $("#wrFr1").replaceWith(arrayWeek[row1Td4])
 
 
 
@@ -163,12 +185,9 @@ function shuffleArray(arr) {
 
 
 
-}
+
 
  
-
-
-
 
 
 
