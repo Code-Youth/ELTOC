@@ -100,54 +100,119 @@ function shuffleArray(arr) {
         return arr
     }
 
-    let arrayShuffle1 = shuffleArray(arraySound)
-
-
-    let arrayShuffle2 = shuffleArray(arrayWeek)
-
-    console.log(arrayShuffle2)
 
     
 
-    // Matching audio and table
-
-  for(let i = 0; i < arrayShuffle1.length; i++) {
-    console.log(arrayShuffle1)
-    if(arrayShuffle1) {
-
-    }
-  }
+    
 
     // Append random audio to row
 
+    let randomSound = arraySound[Math.floor(Math.random()*arraySound.length)];
+    let randomWeek = arrayWeek[Math.floor(Math.random()*arraySound.length)]
+ 
+    
+
+ 
+
+ let answer = 0
+ 
 
 
-    function random() {
-
-/* All of this is for row 1 */ 
-
-    // Randomize the audio files
-        $("#audio1").replaceWith(arrayShuffle1[0])
-        console.log(audio1)
-
-    // Randomize the days of the week
-        $("#wrTu1").replaceWith(arrayShuffle2[0])
-        $("#wrTh1").replaceWith(arrayShuffle2[1])
-        $("#riMo1").replaceWith(arrayShuffle2[2])
-        $("#wrFr1").replaceWith(arrayShuffle2[3])
+// The array that doesn't have the answer in it
+let row1Random = [] 
+console.log('row1random')
+console.log(row1Random)
 
 
 
 
 
+// The random sound of the first row
+let randomSound1 = []
+// console.log('This is the first random sound')
+// console.log(randomSound1)
+
+
+
+
+    // This finds the original index of the audio in the array
+
+    for(let i = 0; i < arraySound.length; i++) {
+        if (arraySound[i] == randomSound) {
+            answer = i
+            randomSound1.push(arraySound[i])
+            console.log(answer)
+        }
+    }
+    console.log('this is the answer')
+    console.log(answer)
+
+
+    // A weekday array that doesn't have the answer in it
+    let row1Rand = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+row1Rand.splice(answer, 1)
+console.log('This is the row1Rand array')
+console.log(row1Rand)
+
+
+    // Randomized version of array that doesn't have answer in it
+let row1Rand1 = shuffleArray(row1Rand)
+console.log('This is the row1Rand array')
+console.log(row1Rand)
+
+    // Slice array until there are only 3 weekdays in it
+let row1Rand2 = row1Rand1.slice(0, 3)
+console.log('row1Rand2')
+console.log(row1Rand2)
+
+    // Add the answer back into the array
+    row1Rand2.push(arrayWeek[answer])
+
+    // Randomized version of final array
+    let row1Rand3 = shuffleArray(row1Rand2)
+
+console.log(row1Rand2)
+
+    // This get an array that doesn't have the answer in it
+    for(let i = 0; i < arrayWeek.length; i++) {
+        if(i != answer) {
+        row1Random.push(arrayWeek[i])
+        break
+        }
+
+        let randy5 = shuffleArray(row1Random)
+        console.log('The shuffled version of the row')
+        console.log(randy5)
     }
 
-// function random() {
-//     audio1.setAttribute('onclick', "daySound('Fr')")
-//     audio2.setAttribute('onclick', newArray[0])
-//     audio3.setAttribute('onclick', newArray[1])
-//     audio4.setAttribute('onclick', newArray[2])
-// }
+
+
+function random() {
+    /* All of this is for row 1 */ 
+
+    // Randomize the audio files
+    $("#audio1").replaceWith(randomSound)
+
+
+// Randomize the days of the week
+
+
+    $("#wrTu1").replaceWith(row1Rand3[0])
+    $("#wrTh1").replaceWith(row1Rand3[1])
+    $("#riMo1").replaceWith(row1Rand3[2])
+    $("#wrFr1").replaceWith(row1Rand3[3])
+
+     
+     }
+
+        // $("#row1:nth-child(0)").css("border", "none")
+
+
+    // End of function 
+
+    
+
+            
 
 
 
