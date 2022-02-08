@@ -10,12 +10,16 @@ var tB = document.getElementById("testBox")
 var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var beta = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 function playSound(letter){
+    console.log(letter)
     let wawa = alpha.indexOf(letter) 
     console.log(wawa)
     console.log(beta[wawa])
     var letId = document.getElementById(beta[wawa]).play()
 }
-
+function playSound2(letter2){
+    console.log(letter2)
+    letter2.play()
+}
 var numRow = document.getElementById("numRow")
 function loadNumbers(){
     for(var i = 1; i<11; i++){
@@ -845,15 +849,16 @@ function s2playsoundN(numSound){
 	for(let appendI = 0; appendI<26;appendI++){
 		if(typeof alphaBank[appendI] == "string"){
 		appendee = document.createElement("p")
-		appendee.setAttribute("style","display: inline; margin-left: 10px; font-size: 150%")
+		appendee.setAttribute("style","display: inline; margin-left: 10px; font-size: 35px")
 		appendee.innerHTML = alphaBank[appendI]
 		}
 		else{
 			appendee = document.createElement("input")
+           // $(appendee).attr({"maxLength":"1","type":"text","onkeyup":"jumpCheck(this)","style":"display: inline; margin-left: 10px; font-size: 35px; width: 3%; border-bottom: 1px solid black; text-align: center","id":"Position" + posData})
 			appendee.setAttribute("maxLength","1")
 			appendee.setAttribute("type","text")
 			appendee.setAttribute("onkeyup","jumpCheck(this)")
-			appendee.setAttribute("style","display: inline; margin-left: 10px; font-size: 150%; width: 3%; border-bottom: 1px solid black; text-align: center")
+			appendee.setAttribute("style","display: inline; margin-left: 10px; font-size: 35px; width: 3%; border-bottom: 1px solid black; text-align: center")
 			appendee.setAttribute("id","Position" + posData)
 			posData+=1
 		}
