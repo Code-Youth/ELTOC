@@ -540,36 +540,35 @@ border-radius: 40px;
 .s4Answers{
   width: 40px;
   height: 40px;
-  font-size: 200%;
+  font-size: 40px;
 }
 .s4Answers:hover{
   border: dashed;
-border-width: 2px 2px;
-border-radius: 40px;
+border-width: 3px 3px;
 cursor: pointer;
 }
 .s4First{
   width: 40px;
   height: 40px;
-  font-size: 200%;
+  font-size: 40px;
   border-right: 2px solid black;
 
 }
 .winnerWinner{
   width: 40px;
   height: 40px;
-  font-size: 200%;
+  font-size: 40px;
   color: yellowgreen;
 }
 .loser{
   width: 40px;
   height: 40px;
-  font-size: 200%;
+  font-size: 40px;
 }
 .loserLoser{
   width: 40px;
   height: 40px;
-  font-size: 200%;
+  font-size: 40px;
   color: red;
 }
 * {
@@ -720,3 +719,11 @@ display: inline;
   font-size: 35px;
 }
 
+#humanHead{
+  background: transparent;
+  border: none !important;
+  font-size:0;
+}
+.bodyMap:hover{
+  cursor: pointer;
+}
