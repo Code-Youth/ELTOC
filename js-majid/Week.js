@@ -144,12 +144,12 @@ let randomSound1 = []
             console.log(answer)
         }
     }
+
     console.log('this is the answer')
     console.log(answer)
 
-
     // A weekday array that doesn't have the answer in it
-    let row1Rand = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+let row1Rand = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
 row1Rand.splice(answer, 1)
 console.log('This is the row1Rand array')
 console.log(row1Rand)
@@ -205,23 +205,12 @@ function random() {
      
      }
 
-        // $("#row1:nth-child(0)").css("border", "none")
-
-
     // End of function 
 
+let row1Answer = arrayWeek[answer]
+console.log('This is the answer for row 1')
+console.log(row1Answer)
     
-
-            
-
-
-
-
-
-
-
-
-
 
 // Changes the background color of the days in the tables
 function answer2(item) {                                    // 'Item' refers to each day of the week table header
@@ -236,18 +225,21 @@ function answer2(item) {                                    // 'Item' refers to 
 // Making boxes unclickable after answering, and highlighting right answer
 
     // Making first row unclickable after first attempt and show wrong choice and right answer
-    if (item.id == 'wrTu1') {
-        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTh1.className = 'noclick' , wrFr1.className = 'noclick'
+    if (item == row1Answer) {
+        item.className = 'noclick backGreen' , riMo1.className = 'noclick backGreen' , wrTh1.className = 'noclick' , wrFr1.className = 'noclick'
     }
-    else if (item.id == 'wrTh1') {
-        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrFr1.className = 'noclick'
+    else {
+        item.className = 'noclick backRed'
     }
-    else if (item.id == 'riMo1') {
-        item.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick' ,  wrFr1.className = 'noclick'
-    }
-    else if (item.id == 'wrFr1') {
-        item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick'
-    }
+    // else if (item.id == 'wrTh1') {
+    //     item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrFr1.className = 'noclick'
+    // }
+    // else if (item.id == 'riMo1') {
+    //     item.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick' ,  wrFr1.className = 'noclick'
+    // }
+    // else if (item.id == 'wrFr1') {
+    //     item.className = 'noclick backRed' , riMo1.className = 'noclick backGreen' , wrTu1.className = 'noclick' , wrTh1.className = 'noclick'
+    // }
   
         //Making the second row unclickable after first attempt and show wrong choice and right answer
     if (item.id == 'wrSu2') {
