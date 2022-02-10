@@ -352,9 +352,16 @@ var title = ""
                          
                         }
                        let currentQ = document.getElementsByClassName("sec3Form")[i]
-                       let s3h5 = document.createElement("h5")
-                       s3h5.innerHTML = tempAns
-                       currentQ.appendChild(s3h5)
+
+                       let s3h5 = $("<h5></h5>").text("<Hint>").attr({"id":tempAns,"class":"Hint","style":"width: fit-content; color: darkgray;"})
+                       $(s3h5).on("mouseenter",(event)=>{
+                           console.log($(event.target).text())
+                           $(event.target).text($(event.target).attr("id"))
+                       })
+                       $(s3h5).on("mouseleave",(event)=>{
+                        $(event.target).text("<Hint>")
+                       })
+                        $(currentQ).append(s3h5)
                        for(let g = 0; g<letters.length;g++){
                            if(removeKey.includes(letters[g]) == false){
                                var app = document.createElement("p")

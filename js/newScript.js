@@ -667,6 +667,10 @@ else{
 
 
 function s2RngA(){
+    if(localStorage.getItem("lettersSoundAndAnswerScore") !== null){
+        $("#lettersSoundAndAnswerBestScore1").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).Score)
+        $("#lettersSoundAndAnswerScoreDate").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).ScoreDate)
+    }
 // let qBank = {one1:[1,2,3],two2:[4,5,6],three3:[7,8,9]}
     for(let s2i2 = 0; s2i2 < 10; s2i2++){
         //Rng for what position the playbutton should refrence for audio//
@@ -748,13 +752,15 @@ function s2playsoundA(letter){
 // 		numAnswer.className = "incorrect"
 // 	}
 // }
-
+let countoid = 0
 function AnswerTheQuestionN(ww){
-if(ww.innerHTML == ww.parentElement.firstElementChild.title){
+    countoid+=1
+    if(ww.innerHTML == ww.parentElement.firstElementChild.title){
     for(let c = 1; c<4; c++){
         ww.className = "correct"
     ww.parentElement.children[c].removeAttribute("onclick")
 }
+$("#lettersSoundAndAnswerCurrentScore1").text(parseInt($("#lettersSoundAndAnswerCurrentScore1").text()) + 1)
 }
 else{
     ww.className="incorrect"
@@ -766,8 +772,40 @@ else{
 
     }
 }
+if(countoid == 10){
+    submitScore("lettersSoundAndAnswer")
 }
-
+}
+function submitScore(excersiseName){
+    if(localStorage.getItem(excersiseName + "Score") !== null){
+        if($(`#${excersiseName}CurrentScore1`).text() >= JSON.parse(localStorage.getItem(excersiseName + "Score")).Score){
+            console.log("hellolololo")
+            let date = new Date
+            date = date.toString()
+            date = (date).slice(0,10)
+            let score = {
+                "Score" : $(`#${excersiseName}CurrentScore1`).text(),
+                "ScoreDate" : date
+            }
+            localStorage.setItem(excersiseName + "Score", JSON.stringify(score))
+            $("#lettersSoundAndAnswerBestScore1").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).Score)
+            $("#lettersSoundAndAnswerScoreDate").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).ScoreDate)
+    }
+    }
+    else{
+        console.log("hellolololo")
+        let date = new Date
+        date = date.toString()
+        date = (date).slice(0,10)
+        let score = {
+            "Score" : $(`#${excersiseName}CurrentScore1`).text(),
+            "ScoreDate" : date
+        }
+        localStorage.setItem(excersiseName + "Score", JSON.stringify(score))
+        $("#lettersSoundAndAnswerBestScore1").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).Score)
+        $("#lettersSoundAndAnswerScoreDate").text(JSON.parse(localStorage.getItem("lettersSoundAndAnswerScore")).ScoreDate)
+    }
+}
 
 
 function s2RngN(){

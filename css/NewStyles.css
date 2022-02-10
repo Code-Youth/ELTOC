@@ -644,12 +644,14 @@ display: inline;
   border: 1px solid black;
   margin-left: auto;
   height: 100%;
+  vertical-align: top;
 }
 .drops{
   display: inline-block;
   text-align: center; 
   border: 2px solid black;
   width: 10em;
+  vertical-align: top;
   height: 3em;
 }
 .dragDiv {
