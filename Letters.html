@@ -724,9 +724,131 @@
 	<input onkeyup="checkLet(this)" maxlength="1" class="acInput" id="ac3" type="text">
 	<input onkeyup="checkLet(this)" maxlength="1" class="acInput" id="ac4" type="text">
 </div> -->
-
+<br>
+<hr>
+<br>
+	<div class="container TypingTest">
+		<div class="typingBox">
+			<h1 class="kBW"></h1>
+		</div>
+		<div class="keysRow1">
+		<div onclick="keyboard(this)" class="keys">
+			<h2>Q</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>W</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>E</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>R</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>T</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>Y</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>U</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>I</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>O</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>P</h2>
+		</div>
+		</div>
+	<div class="keysRow2">
+		<div onclick="keyboard(this)" class="keys">
+			<h2>A</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>S</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>D</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>F</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>G</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>H</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>J</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>K</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>L</h2>
+		</div>
+	</div>
+	<div class="keysRow3">
+		<div onclick="keyboard(this)" class="keys">
+			<h2>Z</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>X</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>C</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>V</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>B</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>N</h2>
+		</div>
+		<div onclick="keyboard(this)" class="keys">
+			<h2>M</h2>
+		</div>
+	</div>
+	<p>Score: <span id="keyboardScore">0</span></p>
+	</div>
 	</footer>
+	<style>
+.keys {
+    display: inline-block;
+    border: 1px solid;
+    width: 3em;
+    text-align: center;
+    margin-left: .5em;
+    margin-top: .5em;
+	border-radius: 1em;
+}
+		.keysRow1{
+			margin: auto;
+			width: fit-content;
+		}
+		.keysRow2{
+			margin: auto;
+			width: fit-content;
 
+		}
+		.keysRow3{
+			margin: auto;
+			width: fit-content;
+
+		}
+		.typingBox{
+			text-align: center;
+		}
+		.typingBox h1{
+			color: rgb(182, 182, 182);
+		}
+	</style>
 
 	<!-- Main Footer -->
 	<footer class="main-footer">
@@ -812,6 +934,7 @@
 	<script src="js/Alpha.js"></script>
 	<script src="js/newScript.js"></script>
 	<script src="fourInARow.js"></script>
+	<script src="js/TypingTest.js"></script>
 </body>
 
 </html>
