@@ -1,25 +1,53 @@
-let answer = 0
- 
+function row2Randomize() {
+    let row1RandSound = []
 
+    // arraySound without row 1 answer
+    let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
+    console.log(arraySound2)
 
-// The array that doesn't have the answer in it
-let row1Random = [] 
-console.log('row1random')
-console.log(row1Random)
-
-
-let randy5 = shuffleArray(row1Random)
-console.log('The shuffled version of the row')
-console.log(randy5)
+    console.log(row1RandSound)
+    console.log(randomSound1)
+}
 
 
 
-// This get an array that doesn't have the answer in it
-for(let i = 0; i < arrayWeek.length; i++) {
-      if(i != answer) {
-       row1Random.push(arrayWeek[i])
-        }
-    }
 
 
+
+// The last bit of working code saved
+
+function row2Randomize() {
+       // Random audio for row 2
+       let row2RandSound = []
     
+       // arraySound without row 1 answer
+
+       let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
+
+       arraySound2.splice(answer, 1)
+       row2RandSound.push(arraySound2[Math.floor(Math.random()*arraySound2.length)])
+    
+     
+
+       // Finding index of random sound 2 in sound array
+       let answer2Index = 0
+
+       for(let i = 0; i < arraySound.length; i++) {
+           if (arraySound[i] == row2RandSound) {
+                   console.log(i)
+                  
+                  }
+              }
+
+}// End of function
+
+
+
+
+for(let i = 0; i < arraySound.length; i++) {
+    if (arraySound[i] == randomSound) {
+             answer = i
+              randomSound1.push(arraySound[i])
+           
+           }
+       }

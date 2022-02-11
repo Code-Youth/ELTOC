@@ -11,7 +11,6 @@ function daySound(sound){ //The parameter 'sound' refers to the argument put int
 
 
 
-
 // Function for exercise 4 quiz table (days of the week)
 
 // The fa icons at the bottom of the sec 4 table (for the purpose of referencing them)
@@ -101,69 +100,48 @@ function shuffleArray(arr) {
     }
 
 
-    
-
-    
-
-    // Append random audio to row
+    // Get random audio that will be appended random audio to row 1
 
     let randomSound = arraySound[Math.floor(Math.random()*arraySound.length)];
     let randomWeek = arrayWeek[Math.floor(Math.random()*arraySound.length)]
- 
-    
 
  
-
+// Answer for the first row
  let answer = 0
  
 
-
 // The array that doesn't have the answer in it
 let row1Random = [] 
-console.log('row1random')
-console.log(row1Random)
-
-
-
 
 
 // The random sound of the first row
 let randomSound1 = []
-// console.log('This is the first random sound')
-// console.log(randomSound1)
 
 
+// This finds the original index of the audio in the array
 
-
-    // This finds the original index of the audio in the array
-
-    for(let i = 0; i < arraySound.length; i++) {
-        if (arraySound[i] == randomSound) {
-            answer = i
-            randomSound1.push(arraySound[i])
-            console.log(answer)
+for(let i = 0; i < arraySound.length; i++) {
+ if (arraySound[i] == randomSound) {
+          answer = i
+           randomSound1.push(arraySound[i])
+        
         }
     }
 
-    console.log('this is the answer')
-    console.log(answer)
 
     // A weekday array that doesn't have the answer in it
 let row1Rand = [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
 row1Rand.splice(answer, 1)
-console.log('This is the row1Rand array')
-console.log(row1Rand)
+
 
 
     // Randomized version of array that doesn't have answer in it
 let row1Rand1 = shuffleArray(row1Rand)
-console.log('This is the row1Rand array')
-console.log(row1Rand)
+
 
     // Slice array until there are only 3 weekdays in it
 let row1Rand2 = row1Rand1.slice(0, 3)
-console.log('row1Rand2')
-console.log(row1Rand2)
+
 
     // Add the answer back into the array
     row1Rand2.push(arrayWeek[answer])
@@ -171,7 +149,7 @@ console.log(row1Rand2)
     // Randomized version of final array
     let row1Rand3 = shuffleArray(row1Rand2)
 
-console.log(row1Rand2)
+
 
     // This get an array that doesn't have the answer in it
     for(let i = 0; i < arrayWeek.length; i++) {
@@ -181,10 +159,38 @@ console.log(row1Rand2)
         }
 
         let randy5 = shuffleArray(row1Random)
-        console.log('The shuffled version of the row')
-        console.log(randy5)
+    
     }
 
+
+    function row2Randomize() {
+        // arraySound without row 1 answer
+
+        let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
+
+        arraySound2.splice(answer, 1)
+        let row2RandSound = (arraySound2[Math.floor(Math.random()*arraySound2.length)])
+     
+        console.log(row2RandSound)
+
+        // Finding index of random sound 2 in sound array
+        let answer2Index = 0
+
+        for(let i = 0; i < arraySound.length; i++) {
+            if (arraySound[i] == row2RandSound) {
+                    console.log(i)
+                   
+                   }
+               }
+
+        console.log('Testing2')
+
+
+    }// End of function
+
+
+
+row2Randomize()
 
 
 function random() {
@@ -208,8 +214,7 @@ function random() {
     // End of function 
 
 let row1Answer = arrayWeek[answer]
-console.log('This is the answer for row 1')
-console.log(row1Answer)
+
     
 
 // Changes the background color of the days in the tables
@@ -226,7 +231,7 @@ function answer2(item) {                                    // 'Item' refers to 
 
     // Making first row unclickable after first attempt and show wrong choice and right answer
     if (item == row1Answer) {
-        item.className = 'noclick backGreen' , riMo1.className = 'noclick backGreen' , wrTh1.className = 'noclick' , wrFr1.className = 'noclick'
+        item.className = 'noclick backGreen' , icon1.className = 'fa fa-check-circle fa-3x green' 
     }
     else {
         item.className = 'noclick backRed'
@@ -290,11 +295,11 @@ function answer2(item) {                                    // 'Item' refers to 
 //Change the circle icon below the table to indicate if person got answer right or wrong
 
     // This if statement is to change the first dark circle based on answer given in first row
-    if (item.id == 'wrTu1' || item.id == 'wrTh1' || item.id == 'wrFr1') {  
-        icon1.className = 'fa fa-times-circle fa-3x red'   // 1: Black circle changes to a red (X) 2: the color will be red 
+    if (item == row1Answer) {  
+        icon1.className = 'fa fa-check-circle fa-3x green'   // 1: Black circle changes to a red (X) 2: the color will be red 
     }
-    else if (item.id == 'riMo1') {
-        icon1.className = 'fa fa-check-circle fa-3x green' // 1: X changes to check mark 2: the color will be green
+    else if (item !== row1Answer) {
+        icon1.className = 'fa fa-times-circle fa-3x red' // 1: X changes to check mark 2: the color will be green
     }
     // This if statement is to change the second dark circle based on answer given in second row
     if (item.id === 'wrSu2' || item.id === 'wrSa2' || item.id === 'wrMo2') {
