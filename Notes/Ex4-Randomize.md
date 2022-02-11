@@ -2,6 +2,13 @@
 I just got a random sound for row 2 that won't ever match the first row.
 **Next Step**
 - My next step is to find the 2nd random sounds positions in the array (once I have that, I can find it's answer in the weekday array)
+**Idea**
+- Create a object that will have all the important variables for row 2 
+ex: let row2Var = {
+    randomSound: 
+    soundIndex:
+    etc
+}
 
 
 
