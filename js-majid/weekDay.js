@@ -16,38 +16,40 @@ function row2Randomize() {
 
 // The last bit of working code saved
 
+
 function row2Randomize() {
-       // Random audio for row 2
-       let row2RandSound = []
-    
-       // arraySound without row 1 answer
+    'use strict';
 
-       let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
+    let row2Info = {
+        randomSound: null,
+        answerIndex: []
+    }
 
-       arraySound2.splice(answer, 1)
-       row2RandSound.push(arraySound2[Math.floor(Math.random()*arraySound2.length)])
-    
-     
 
-       // Finding index of random sound 2 in sound array
-       let answer2Index = 0
 
-       for(let i = 0; i < arraySound.length; i++) {
-           if (arraySound[i] == row2RandSound) {
-                   console.log(i)
-                  
-                  }
-              }
+    // arraySound without row 1 answer
+    let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
+
+    arraySound2.splice(answer, 1)
+    row2Info.randomSound = (arraySound2[Math.floor(Math.random()*arraySound2.length)])
+ 
+    console.log('Random sound inside object')
+    console.log(row2Info.randomSound)
+
+    // Finding the original index of the randomSound
+    for(let i = 0; i < arraySound.length; i++) {
+        if (arraySound[i] == row2Info.randomSound) {
+
+                console.log(`This is the position of the random sound  ${i}`)
+                row2Info.answerIndex.push(i)
+                
+               }
+           }
+
+
+    console.log('index of random sound in an object')
+    console.log(row2Info.answerIndex)
 
 }// End of function
+}// End of function
 
-
-
-
-for(let i = 0; i < arraySound.length; i++) {
-    if (arraySound[i] == randomSound) {
-             answer = i
-              randomSound1.push(arraySound[i])
-           
-           }
-       }

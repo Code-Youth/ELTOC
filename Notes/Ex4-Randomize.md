@@ -1,14 +1,9 @@
 # Where I left out 
-I just got a random sound for row 2 that won't ever match the first row.
+I've created an object that will store all the info for randomizing row 2 and I've added the random sound in it, now I've added the index of the answer
 **Next Step**
-- My next step is to find the 2nd random sounds positions in the array (once I have that, I can find it's answer in the weekday array)
+- See if I can replace the second row with the random audio
 **Idea**
-- Create a object that will have all the important variables for row 2 
-ex: let row2Var = {
-    randomSound: 
-    soundIndex:
-    etc
-}
+
 
 
 
@@ -22,3 +17,5 @@ I've currently solved an issue where I needed to remove the answer from my array
 => Though this worked, I figured out the issue was I was trying to shuffle the row before the loop would run and fil it up. This came down to not understanding synchronous and asynchronous. 
 
 # Issue 2: Getting undefined sometimes for my random sound in row 2
+**Solution**
+- Little mistake, in the array randomiser I used the first array and not the second one that had one item spliced out. So I would get 'undefined' because it would search for a 7th item sometimes when there wasn't one in there

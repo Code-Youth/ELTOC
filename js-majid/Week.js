@@ -105,6 +105,8 @@ function shuffleArray(arr) {
     let randomSound = arraySound[Math.floor(Math.random()*arraySound.length)];
     let randomWeek = arrayWeek[Math.floor(Math.random()*arraySound.length)]
 
+
+/* Randomizing for row1  */    
  
 // Answer for the first row
  let answer = 0
@@ -161,38 +163,50 @@ let row1Rand2 = row1Rand1.slice(0, 3)
         let randy5 = shuffleArray(row1Random)
     
     }
+/* End of randomizing for row1 */
+
+/* Start of randomizing for row2 */
+
+        let row2Info = {
+            randomSound: null,
+            answerIndex: null
+        }
 
 
-    function row2Randomize() {
+
         // arraySound without row 1 answer
-
         let arraySound2 = [mo_sound, tu_sound, we_sound, th_sound, fr_sound, sa_sound, su_sound]
 
         arraySound2.splice(answer, 1)
-        let row2RandSound = (arraySound2[Math.floor(Math.random()*arraySound2.length)])
+        row2Info.randomSound = (arraySound2[Math.floor(Math.random()*arraySound2.length)])
      
-        console.log(row2RandSound)
+        console.log('Random sound inside object')
+        console.log(row2Info.randomSound)
 
-        // Finding index of random sound 2 in sound array
-        let answer2Index = 0
-
+        // Finding the original index of the randomSound
         for(let i = 0; i < arraySound.length; i++) {
-            if (arraySound[i] == row2RandSound) {
-                    console.log(i)
-                   
+            if (arraySound[i] == row2Info.randomSound) {
+
+                    console.log(`This is the position of the random sound  ${i}`)
+                    row2Info.answerIndex = i
+                    
                    }
                }
 
-        console.log('Testing2')
+
+        console.log('index of random sound in an object')
+        console.log(row2Info.answerIndex)
+
+   
 
 
-    }// End of function
 
 
+console.log('Testing if I can access items in row2Randomize function')
+console.log(row2Info)
 
-row2Randomize()
 
-
+// This randomizes the table
 function random() {
     /* All of this is for row 1 */ 
 
@@ -200,18 +214,20 @@ function random() {
     $("#audio1").replaceWith(randomSound)
 
 
-// Randomize the days of the week
-
-
+// Randomize the days of the week for row 1
     $("#wrTu1").replaceWith(row1Rand3[0])
     $("#wrTh1").replaceWith(row1Rand3[1])
     $("#riMo1").replaceWith(row1Rand3[2])
     $("#wrFr1").replaceWith(row1Rand3[3])
 
+
+    /* Row 2 randomizing */
+
+    // Changing the audio
+    $("#audio2").replaceWith(row2Info.randomSound)
      
      }
-
-    // End of function 
+    // End of random function 
 
 let row1Answer = arrayWeek[answer]
 
