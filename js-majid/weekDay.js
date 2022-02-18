@@ -51,5 +51,27 @@ function row2Randomize() {
     console.log(row2Info.answerIndex)
 
 }// End of function
-}// End of function
 
+
+
+
+// An idea for how I could structure all my row objects
+
+let obj = {
+    row1info: {
+        randomSound: null,
+        answerIndex: null,
+    },
+    row2Info: {
+        randomSouund: null,
+    } 
+}
+
+
+
+for (let i = 0; Object.keys(obj).length; i++ ) {
+    console.log(obj[`row${i}info`].randomSound)
+}
+
+// Object.key turns object keys into array
+// The ${i} will change the row number ex: row1Info to row2Info, and so forth

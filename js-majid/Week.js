@@ -167,11 +167,11 @@ let row1Rand2 = row1Rand1.slice(0, 3)
 
 /* Start of randomizing for row2 */
 
+
         let row2Info = {
             randomSound: null,
             answerIndex: null
         }
-
 
 
         // arraySound without row 1 answer
